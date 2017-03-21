@@ -25,6 +25,11 @@ Atomic műveletek:
    
 // ez az egész jó bonyi
   
+Optimalizálás:
+  idő optimalizáció fontos nekünk
+  időmérés -> std::chrono
+  minimumot vegyünk többszöri programfutási időkre
   
- 
- 
+  típusok:
+    feladat
+    folyamat
