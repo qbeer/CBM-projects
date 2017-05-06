@@ -5,13 +5,13 @@
 #include <array>
 #include <string>
 #include <fstream>
+#include <numeric> // for std::accumulate
 #include <sstream>
 #include <algorithm>
 #include <cmath>
 #include <list>
 
-const double MAX_VAL = 10e8;
-const double max_dist = 50.0;
+const double MAX_VAL = 50.0;
 
 typedef std::vector<double> vec_d; // distance
 typedef std::vector<int> vec_int; // vertices
@@ -67,7 +67,7 @@ std::istream& operator>>(std::istream& is, DataPoints& points){
 
 }
 
-std::ostream& operator<<(std::ostream& os, DataPoints& points){
+std::ostream& operator<<(std::ostream& os,const DataPoints& points){
 
     os << "Positions (x,y,z):\n";
 
@@ -125,8 +125,14 @@ std::ostream& operator<<(std::ostream& os, std::array<double, 3>& arr){
 
 bool prim(vec_d& dst, std::vector<bool>& visited, vec_int& ancest,vec_pair_int& edges, DataPoints& data, vec_vec_pair_int_d& Graph, std::list<int>& open_nodes){
 
-    std::cout << "\n";
+    std::list<int> open_nodes_before = open_nodes;
+
+    std::cout << "\nOpen nodes before: ";
+
+    std::for_each(open_nodes.begin(),open_nodes.end(),[&](int& x){ std::cout << x << " "; });
     
+    std::cout << "\n";
+
     int start_vertex = open_nodes.front();
 
     open_nodes.remove(start_vertex);
@@ -175,7 +181,9 @@ bool prim(vec_d& dst, std::vector<bool>& visited, vec_int& ancest,vec_pair_int& 
 
         open_nodes.remove(next_vertex);
 
-        if(next_vertex != start_vertex){ // at first 0 is the first vertex and zero is from 0 distance from itself
+        if(next_vertex != start_vertex  
+        /* && ( std::find(open_nodes.begin(),open_nodes.end(),start_vertex ) != open_nodes.end()  ) */){ 
+                                        // at first 0 is the first vertex and zero is from 0 distance from itself
                                         // so then it is skipped because the next_vertex is zero
                                         // this starts with 0's neighbor when ancest is already set
 
@@ -192,7 +200,7 @@ bool prim(vec_d& dst, std::vector<bool>& visited, vec_int& ancest,vec_pair_int& 
                                                                     // next vertex to check
                 double weight = Graph[next_vertex][i].second; // set the weight of the egde between them
 
-                if(dst[next_next_vertex] > weight && weight < max_dist ){ // if there's a connection between the vertices then the weight must be smaller
+                if(dst[next_next_vertex] > weight){ // if there's a connection between the vertices then the weight must be smaller
                                                     // than the distance of the next vertex 
 
                     mySet.erase(mySet.find( std::make_pair(dst[next_next_vertex],next_next_vertex) )); 
@@ -210,11 +218,34 @@ bool prim(vec_d& dst, std::vector<bool>& visited, vec_int& ancest,vec_pair_int& 
 
     }
 
+    std::list<int> clustered;
+
+    std::set_difference(open_nodes_before.begin(), open_nodes_before.end(),
+                        open_nodes.begin(), open_nodes.end(),
+                        std::back_inserter(clustered));
+
+    if(clustered.size() == 1){
+
+        std::cout << "Isolated point: " << data.pos[clustered.front()] << "\n";
+
+    }else{
+
+    std::cout << "Clustered vertices: ";
+    std::for_each(clustered.begin(), clustered.end(), [&](int& x){ std::cout << x << " "; });
+    std::cout << "\n";
+
     std::cout << "MST is set:\n";
 
     for( unsigned int i = 0; i < edges.size(); i++ ){
 
-        std::cout << data.pos[edges[i].first] << " --> " << data.pos[edges[i].second] << "\n";
+            if( std::find(clustered.begin(), clustered.end(), edges[i].first) != clustered.end()
+            &&  std::find(clustered.begin(), clustered.end(), edges[i].second) != clustered.end() ){
+         
+                std::cout << data.pos[edges[i].first] << " --> " << data.pos[edges[i].second] << "\n";
+
+            }
+
+    }
 
     }
 
@@ -239,6 +270,10 @@ bool prim(vec_d& dst, std::vector<bool>& visited, vec_int& ancest,vec_pair_int& 
         }
 
     }
+
+    std::cout << "Open nodes after: ";
+    std::for_each(open_nodes.begin(),open_nodes.end(),[&](int& x){ std::cout << x << " "; });
+    std::cout << "\n";
 
     return (counter==0) ? true : false;
 
