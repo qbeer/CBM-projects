@@ -3,6 +3,6 @@ This is my official **_GitHub_** page. I am going to share some code and Tex fil
 
 -[Instagram](https://www.instagram.com/qbeer666)
 
--[WebPage](http://www.olaralex.web.elte.hu)
+-[WebPage](http://olaralex.web.elte.hu)
 
 Best regards: _Olar Alex_
