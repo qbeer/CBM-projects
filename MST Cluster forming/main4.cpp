@@ -22,7 +22,7 @@ const double MAX_VAL = 0.0000001;
 //typedef std::vector< std::pair< int, double > > vec_pair_int_d; // vector of edges and distances
 //typedef std::vector< std::vector< std::pair< int, double > > > vec_vec_pair_int_d; // graph
 
-struct DataPoints{
+struct DataPoints{ 
 
     std::vector< std::array< double, 3 > > pos;
     std::vector< std::array< double, 3 > > mom;
