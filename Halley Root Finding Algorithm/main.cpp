@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include <fstream>
 #include <thread>
 #include <cmath>
@@ -8,7 +9,8 @@
 #include <iterator>
 #include <future>
 
-const double eps = 10e-32;
+const double eps = 10e-11;
+const double o_eps = 10e-6;
 
 double p( const std::vector< double >& poly, double x ){
 
@@ -27,6 +29,18 @@ std::vector< double > deriv( const std::vector< double >& poly ){
     }
 
     return dpoly;
+
+}
+
+std::ostream& operator<<( std::ostream& os, const std::vector<double>& v ){
+
+    for (auto i : v){
+
+        os << i << " ";
+
+    }
+
+    return os;
 
 }
 
@@ -62,19 +76,38 @@ int main( int argc, char* argv[] )
     auto n = std::thread::hardware_concurrency(); // n holds the number of
                                                   // concurrent nodes
 
-    std::vector< std::future< double > > x_n(n);
+    std::vector< std::future< std::vector<double> > > x_n(n);
 
     double range = (to-from)/n;
 
     auto root_finder = [&]( double start, double finish ){
 
-        double x = finish - eps;
+        // try to launch it with several initial guesses and only return the
+        // solution of different outcomes
 
-        double f, df, ddf;
+        std::vector<double> initial_guesses((int)(finish-start)*10000);
 
-        double temp;
+        std::vector<double> roots;
 
-        while( std::fabs(p(poly, x)) > eps && (x>=start && x<=finish)){
+        double step = (finish-start)/(double)initial_guesses.size();
+
+        double a = start+eps;
+
+        std::for_each(initial_guesses.begin(),initial_guesses.end(),[&](double& i)
+                      {
+                         i = a;
+                         a += step;
+                         //std::cout << i << " ";
+                      });
+
+        double f, df, ddf, temp;
+
+        std::for_each(initial_guesses.begin(),initial_guesses.end(),
+                      [&](double x){
+
+        int iteration = 0;
+
+        do{
 
             f = p(poly, x);
 
@@ -86,9 +119,38 @@ int main( int argc, char* argv[] )
 
             x -= 2*f*df*(1/temp);
 
+            iteration++;
+
+        }while( std::fabs(f) > eps && (x>=start && x<finish) && iteration < 20000);
+
+        //std::cout << x << " ";
+
+        if(iteration!=20000 && std::fabs(f) <= eps){
+
+            if( std::find(roots.begin(),roots.end(),x) != roots.end() && roots.size() > 0){
+
+                roots.push_back(x);
+
+                //std::cout << "Found root.\n";
+
+            }else{
+
+                roots.push_back(x);
+
+            }
+
         }
 
-        return x;
+        });
+
+        //std::cout << roots << "\n";
+
+        std::sort( roots.begin(), roots.end() );
+        roots.erase(std::unique( roots.begin(), roots.end(),[&](double& a, double& b)
+                                { if( std::fabs(b-a) < o_eps){ return true; }else{ return false; } })
+                    , roots.end() );
+
+        return roots;
 
     };
 
@@ -98,7 +160,9 @@ int main( int argc, char* argv[] )
 
     }
 
-    std::for_each(x_n.begin(),x_n.end(),[&]( std::future<double>& f ){ std::cout << f.get() << "\n"; });
+    std::setprecision(4);
+
+    std::for_each(x_n.begin(),x_n.end(),[&]( std::future< std::vector<double> >& f ){ std::cout << f.get() << "\n"; });
 
     return 0;
 }
