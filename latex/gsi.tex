@@ -105,5 +105,60 @@
 \vspace{3mm}
 \par The CBM project is currently only a plan. The construction of FAIR has started this summer and the first beams are expected by 2022. Until then CBM intends to install a reduced setup at the accelerator available at the GSI to test the systems and prepare for data processing.
 \vspace{3mm}
-\par Scientist of the FAIR project has developed a robust simulation so far built on ROOT. They call it cbmROOT and is available to the public. They use different well-known heavy ion collision simulation methods such as: UrQMD \footnote{ Ultra Relativistic Quantum Molecular Dynamics } or PHSD \footnote{ Parton Hadron String Dynamics }. These models are widely used among scientist in the field. 
+\par Scientist of the FAIR project has developed a robust simulation so far built on ROOT. They call it cbmROOT and is available to the public. They use different well-known heavy ion collision simulation methods such as: UrQMD \footnote{ Ultra Relativistic Quantum Molecular Dynamics } or PHSD \footnote{ Parton Hadron String Dynamics }. These models are widely used among scientist in the field.
+\section{My project}
+\subsection{$\Phi$-meson reconstruction}
+\vspace{3mm}
+\par CBM is going to be a general-purpose heavy ion experiment to study the phase diagram of strongly interacting matter. Resonances are highly useful to study the high density matter created during the collisions. One of these is the $\Phi$-meson which has a small hadronic cross section so  it's  very unlikely to interact with the huge amount of hadrons. The $\Phi$-meson is made of a strange and an anti-strange quark and can be a tool to study strangeness production in the partonic phase. The $\Phi$-meson decays into $K^{+}$,$K^{-}$ pairs with an approximate of 50 \% chance and to dileptons. The mean lifetime of a $\Phi$-meson is really short, $1.55\cdot10^{-22}~s$ so it might decay into kaons and dileptons during the collision and only the byproducts would be detected by the detectors. It's mass is $1.019~MeV$ which can be seen in the invariant mass of the kaons as a peak.
+\vspace{3mm}
+\par I analyzed data acquired by PHSD simulation. It was an Au+Au central collision at $\sqrt{s} = 10~GeV$. The output of the simulation was passed through cbmROOT reconstruction. There were more than $5 million$ events in the $.root$ file I used for analysis.
+\vspace{3mm}
+\par On a histogram where the x-axis represents the invariant mass of $K^{+}$,$K^{-}$ pairs and the y-axis the entries, a clear peak can be seen on the combinatorial background at approximately $1.02~GeV$. Those were the produced $\Phi$-mesons during the collision.
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{0.49\textwidth}
+		\centering
+		\includegraphics[width=0.95\textwidth]{phi_KK_M.png}
+		\caption{ The combinatorial background and a small but recognizable peak. }
+	\end{subfigure}
+	\begin{subfigure}{0.49\textwidth}
+		\centering
+		\includegraphics[width=0.95\textwidth]{phi_KK_Mzoom.png}
+		\caption{ Zoomed in on the region of interest. }
+	\end{subfigure}
+\end{figure}
+\par I tried to approximate the background with a second order polynomial. The acquired parameters for this were ($ax^{2} + bx +c$) :
+\begin{center}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		Parameter name & Value [] & Error \\
+		\hline
+		a & -7.70559e+06 & 78750.5 \\
+		\hline
+		b & 1.42738e+07 & 150055 \\
+		\hline
+		c & -6.49147e+06 & 71438.9 \\
+		\hline
+	\end{tabular}
+\end{center}
+\par Here the fit of the background:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.35\textwidth]{combiback_fit.png}
+	\caption{ The fit of the combinatorial background. }
+\end{figure}
+\par For the peak I used a different method. I used a low multiplicity signal to approximate the shape of the peak with a Gaussian function and then scaled that shape up to the peak with the background still remaining the same. Here are my results:
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{0.49\textwidth}
+		\centering
+		\includegraphics[width=0.95\textwidth]{phi_KK_Mfit.png}
+		\caption{ The combinatorial background and a small but recognizable peak fitted. }
+	\end{subfigure}
+	\begin{subfigure}{0.49\textwidth}
+		\centering
+		\includegraphics[width=0.95\textwidth]{phi_KK_Mfitzoom.png}
+		\caption{ Zoomed in on the region of interest. }
+	\end{subfigure}
+\end{figure}
 \end{document}
