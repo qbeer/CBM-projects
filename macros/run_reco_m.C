@@ -19,7 +19,7 @@ void run_reco_m(Int_t nEvents = 1000, const char* setupName = "sis100_electron")
   
   
   TString inFile = "sim.root";
-  TString parFile = "param.root";
+  TString parFile = "params.root";
   TString outFile = "reco.root";
 //   TString inFile = "/d/cbm05/vassiliev/urqmd.nini.15gev.centr.02990.mc.root";
 //   TString parFile = "/d/cbm05/vassiliev/urqmd.nini.15gev.centr.02990.params.root";
