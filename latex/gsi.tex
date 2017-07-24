@@ -62,29 +62,29 @@
 \renewcommand{\thesubsubsection}{\thesubsection\arabic{subsubsection}.}
 \begin{abstract}
 	\par I have spent one month in summer at the GSI facility, Darmstadt to study the CBM simulation which will be part of FAIR \footnote{ Facility for Antiproton and Ion Research } . During this month I have become experienced with software such as ROOT \footnote{ CERN software for particle physics} , cbmROOT \footnote{ CBM ( Compressed Barionic Matter  ) software for heavy ion physics developped at GSI}, etc.
-	\vspace{3mm}
+	\vspace{5mm}
 	\par I have learned much about detector technologies and natural phenomena during my stay and I was happy to be part of this huge project and see how scientist work on a daily basis.
 \end{abstract}
 \tableofcontents
 \newpage
 \section{Fundamentals}
 \subsection{QCD}
-\vspace{3mm}
+\vspace{5mm}
 \par In the 20th century physicist realized that symmetries play a crucial role in further understanding the universe. Symmetries led us to conservation laws, the discovery of anti-particles, quarks and much more. 
-\vspace{3mm}
+\vspace{5mm}
 \par When quarks were discovered they brought order to the ever increasing particle zoo, as Niels Bohr referred to it. At first, physicist only knew three of the six existing quarks, such as: $\textsl{u}$ (up), $\textsl{d}$ (down), $\textsl{s}$ (strange). The hadrons can be separated into two distinct groups: $\textsl{mesons}$ and $\textsl{baryons}$, containing a quark-anti-quark pair and three quarks, respectively. The property that distinguishes the quarks is called $\textsl{flavour}$.
-\vspace{3mm}
+\vspace{5mm}
 \par A unique feature of the strong interaction, which is the fundamental interaction between quarks, is confinement, meaning that quarks do not appear in isolation. The charge of the strong interaction is called colours. Due to confinement it means that an elementary particle has to be colour neutral or usually referred to as ''white''. The fundamental theory describing the strong interaction is called Quantum Chromo Dynamics - QCD.
-\vspace{3mm}
+\vspace{5mm}
 \par The elementary particles of the QCD are quarks and anti-quarks which interact by gluons which also carry charge. There are eight types of gluons since they must describe every elementary colour transformation. These gluons interact with themselves as well.
 \subsection{ CBM physics }
-\vspace{3mm}
+\vspace{5mm}
 \par When dealing with barionic matter the goal is to understand and map the phase diagram and its transitions. To begin with, I should first have to go through basic thermodynamics and its concepts about phases and their transitions.
-\vspace{3mm}
+\vspace{5mm}
 \par The phase diagram of water shows the different phases of it according to pressure and temperature. It is well known that there is a triple point where all three forms of water can coexist such as: liquid water,  solid ice, and water vapor. There are distinct lines between these phases denote, along these lines two phase can coexist at the same time but when changing conditions  the substance must undergo a so called first order phase transition. There is also a critical point which is a state from where to phases differ no more, it is called a smooth $\textsl{crossover}$ from one phase to another.
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.66\textwidth]{water_phase.jpg}
+\includegraphics[width=0.76\textwidth]{water_phase.jpg}
 \caption{ The previously mentioned phase diagram. }
 \end{figure}
 \par Now, that I went through the phase diagram of water ( or at least a part of it ) I should move on to matter governed by the strong force. The whole phase diagram of strongly interacting matter is not yet experimentally proved, purely theoretical. It depicts very different and vital phases for being able to describe the early universe or the interior of neutron stars. Each point is described by density and temperature.
@@ -101,16 +101,16 @@
 \end{subfigure}
 \end{figure}
  \par As presented above a phase called quark-gluon plasma was present at the Big Bang and later on ceased to exist when temperature dropped. It can be seen that the interior of neutron stars supposedly contains quark-gluon plasma as well as the density is high enough to enable matter to exist in that phase although the very low temperature. 
-\vspace{3mm}
+\vspace{5mm}
 \par Obviously the only way to investigate strongly interacting matter on Earth is via high energy particle collisions. It is a characteristic feature of QCD that the coupling between quarks decreases as the collision energy is raised ( crossover ). This is referred to as asymptotic freedom. Another interesting symmetry of particle physics is chirality. It describes whether the particle's spin points to its direction of motion or to the opposite if the particles is massless. If the velocity and spin are pointing to the same direction the particle is called right-handed, otherwise left-handed. Due to the fact that the up and down quarks have such a small mass QCD has approximate chiral symmetry. However, this is spontaneously broken at low temperatures and densities because of the slight difference in the mass of the lightest quarks. For this reason one chiral direction is favored over the other.
 \section{CBM detector}
 \subsection{Theory}
-\vspace{3mm}
+\vspace{5mm}
 \par The analysis of heavy nuclei collisions is extremely complex since the transient nature of the reaction. The goal is to find out more about phase diagram but the collision takes $10^{-22}~s$ and the strongly interacting matter can only be measured by the byproducts of the collision.
 \par Over the past decade the main experimental activity occurred in RHIC \footnote{ Relativistic Heavy Ion Collider - Brookhaven } and at the LHC \footnote{ CERN - Large Hadron Collider }, On one hand these facilities produce important results concerning the phase diagram. These facilities are mapping the low density, high temperature area of the phase diagram and can analyze the crossover between hadron gas phase and quark-gluon plasma. On the other hand, the FAIR project is going to create much higher baryon densities to be able to explore the first-order phase transition and the critical end point of it.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.40\textwidth]{CBM_phase_trans.png}
+	\includegraphics[width=0.96\textwidth]{CBM_phase_trans.png}
 	\caption{ The above discussed hypothetical phase diagram and the transitions between phases. }
 \end{figure}
 \subsection{Setup and simulation}
@@ -130,17 +130,17 @@
 	\caption{ View of the setup }
 \end{figure}
 \par The silicon tracking system is intended to reconstruct the trajectories of the particles it detects. It can only detect charged particles but also able to detect their momenta as well. The time-of-flight wall can achieve high resolution time measurements of about 60 ps.
-\vspace{3mm}
+\vspace{5mm}
 \par The CBM project is currently only a plan. The construction of FAIR has started this summer and the first beams are expected by 2022. Until then CBM intends to install a reduced setup at the accelerator available at the GSI to test the systems and prepare for data processing.
-\vspace{3mm}
+\vspace{5mm}
 \par Scientist of the FAIR project has developed a robust simulation so far built on ROOT. They call it cbmROOT and is available to the public. They use different well-known heavy ion collision simulation methods such as: UrQMD \footnote{ Ultra Relativistic Quantum Molecular Dynamics } or PHSD \footnote{ Parton Hadron String Dynamics }. These models are widely used among scientist in the field.
 \section{My project}
 \subsection{$\Phi$-meson reconstruction}
-\vspace{3mm}
+\vspace{5mm}
 \par CBM is going to be a general-purpose heavy ion experiment to study the phase diagram of strongly interacting matter. Resonances are highly useful to study the high density matter created during the collisions. One of these is the $\Phi$-meson which has a small hadronic cross section so  it's  very unlikely to interact with the huge amount of hadrons. The $\Phi$-meson is made of a strange and an anti-strange quark and can be a tool to study strangeness production in the partonic phase. The $\Phi$-meson decays into $K^{+}$,$K^{-}$ pairs with an approximate of 50 \% chance and to dileptons. The mean lifetime of a $\Phi$-meson is really short, $1.55\cdot10^{-22}~s$ so it might decay into kaons and dileptons during the collision and only the byproducts would be detected by the detectors. It's mass is $1.019~MeV$ which can be seen in the invariant mass of the kaons as a peak.
-\vspace{3mm}
+\vspace{5mm}
 \par I analyzed data acquired by PHSD simulation. It was an Au+Au central collision at $\sqrt{s} = 10~GeV$. The output of the simulation was passed through cbmROOT reconstruction. There were more than $5 million$ events in the $.root$ file I used for analysis.
-\vspace{3mm}
+\vspace{5mm}
 \par On a histogram where the x-axis represents the invariant mass of $K^{+}$,$K^{-}$ pairs and the y-axis the entries, a clear peak can be seen on the combinatorial background at approximately $1.02~GeV$. Those were the produced $\Phi$-mesons during the collision.
 \begin{figure}[H]
 	\centering
@@ -192,23 +192,55 @@
 \par I include the ROOT macro I used for the analysis.
 \lstinputlisting[language=C++]{fit.C}
 \subsection{$\Phi$-meson detection in the CBM}
-\vspace{3mm}
+\vspace{5mm}
 \par It is going to be a really hard task to efficiently detect $\Phi$-mesons in the future CBM detector system. Not only does the these particles are short live but also a huge combinatorial background is making it hard to detect that small peak in multiplicity. However, it is reasonable to say that CBM will be capable of $\Phi$-meson detection and of understanding strange production in strongly interacting matter more in depth.
-\vspace{3mm}
+\vspace{5mm}
 \par The projected efficiency in different momenta is not very high but steady enough. These data was acquired by the simulation. 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.5\textwidth]{efficieny.png}
+	\includegraphics[width=0.65\textwidth]{efficieny.png}
 	\caption{ Efficiency in means of momentum }
 \end{figure}
 \section{The simulation}
 \vspace{3mm}
 \subsection{Installation}
-\vspace{3mm}
+\vspace{5mm}
 \par There are three main components to the CBM simulation such as: FairROOR, Fairsoft and cbmROOT. They all can be installed on any machine from this link:
 \url{https://redmine.cbm.gsi.de/projects/cbmroot/wiki/InstallCbmRootAuto} \newline
 \par It is advisory to do it this way because otherwise one might have serious problems with the software pack. It takes up around 25 GB (probably a tiny bit more with its dependencies which are necessary for it to function properly).
 \subsection{Introduction}
-\vspace{3mm}
-\par hs
+\vspace{5mm}
+\par The collision is simulated via UrQMD and PHSD. These models have been developed for ALICE, RHIC, LHC and last but not least CBM. I mostly used UrQMD data for the time I spent here but I came across PHSD files as well.
+\vspace{5mm}
+\par At first, one has to run the Monte Carlo simulation to be able to match the 'real' data with generated events. It is designed to filter out hits and find points that can be reconstructed into trajectories.
+\vspace{5mm}
+\par They use Geant3 and Geant4 to simulate the passage of elementary particles through matter. It is part of the Monte Carlo simulation that needs to be ran first.
+\vspace{5mm}
+\par The output of this macro is the simulation file which contains true hits detected by the STS and MVD detectors as well as by the others. Using these the reconstruction of trajectories is due. Stating with the MVD the program tries to find clusters within the detector then moves on to the STS to do the same thing. These methods spread to other detectors as well which I won't mention here because I mainly concentrated on these two. Moving on to the track finding in MVD and STS the trajectories are being reconstructed and the primary vertex is distinguished during the process. 
+\vspace{5mm}
+\par Obviously the hits and paths are being matched several times during the run to make sure that the inquired data is correct in every way and there are no mismatched results. 
+\vspace{5mm}
+\par After the successful finish of reconstruction a reconstructed file is acquired from the raw data. Now there is only one remaining task to be done which is matching the trajectories to particles and identifying most of them. This is done by KFParticleFinder which is substantial package of complex code to identify particles.
+\vspace{5mm}
+\par The output of this program is a .root file which contains numerous particles and accompanying histograms of efficiencies of reconstruction, background, armenteros diagrams, signals, etc. The structure looks like this:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.42\textwidth]{particle_file.png}
+	\caption{ The top portion of the data in the file. }
+\end{figure}
+\vspace{5mm} 
+\par  The CBM project has a powerful visualization tool as well to visualize the detector geometry and the reconstructed tracks inside. The following pictures demonstrates this:
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{0.49\textwidth}
+		\centering
+		\includegraphics[width=0.95\textwidth]{reco2.png}
+		\caption{ Reconstructed track in the MVD and STS detectors. }
+	\end{subfigure}
+	\begin{subfigure}{0.49\textwidth}
+		\centering
+		\includegraphics[width=0.95\textwidth]{reco1.png}
+		\caption{ From a different angle. }
+	\end{subfigure}
+\end{figure}
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2017.3.9)  21 JUL 2017 11:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2017.3.9)  24 JUL 2017 13:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -600,7 +600,7 @@ Overfull \hbox (1.3469pt too wide) detected at line 11
 File: water_phase.jpg Graphic file (type jpg)
  <use water_phase.jpg>
 Package pdftex.def Info: water_phase.jpg used on input line 87.
-(pdftex.def)             Requested size: 281.68385pt x 217.6685pt.
+(pdftex.def)             Requested size: 324.35907pt x 250.64403pt.
 
 [3] <cbm_phase1.png, id=29, 265.99374pt x 260.975pt>
 File: cbm_phase1.png Graphic file (type png)
@@ -619,7 +619,7 @@ File: CBM_phase_trans.png Graphic file (type png)
 
 <use CBM_phase_trans.png>
 Package pdftex.def Info: CBM_phase_trans.png used on input line 113.
-(pdftex.def)             Requested size: 170.71393pt x 110.46007pt.
+(pdftex.def)             Requested size: 409.72255pt x 265.11418pt.
  [5]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 119.
 
@@ -636,39 +636,40 @@ File: cbm_detector.png Graphic file (type png)
 Package pdftex.def Info: cbm_detector.png used on input line 129.
 (pdftex.def)             Requested size: 281.68385pt x 183.41795pt.
 
-[6 <./CBM_phase_trans.png (PNG copy)> <./cbm_detector.png>]
-<phi_KK_M.png, id=48, 640.3925pt x 455.7025pt>
+[6 <./CBM_phase_trans.png (PNG copy)>] [7 <./cbm_detector.png>]
+<phi_KK_M.png, id=52, 640.3925pt x 455.7025pt>
 File: phi_KK_M.png Graphic file (type png)
  <use phi_KK_M.png>
 Package pdftex.def Info: phi_KK_M.png used on input line 149.
 (pdftex.def)             Requested size: 198.67294pt x 141.3706pt.
 
-<phi_KK_Mzoom.png, id=49, 694.595pt x 842.14626pt>
+<phi_KK_Mzoom.png, id=53, 694.595pt x 842.14626pt>
 File: phi_KK_Mzoom.png Graphic file (type png)
  <use phi_KK_Mzoom.png>
 Package pdftex.def Info: phi_KK_Mzoom.png used on input line 154.
 (pdftex.def)             Requested size: 198.67294pt x 240.87514pt.
 
-[7] <combiback_fit.png, id=54, 694.595pt x 842.14626pt>
+<combiback_fit.png, id=54, 694.595pt x 842.14626pt>
 File: combiback_fit.png Graphic file (type png)
-
-<use combiback_fit.png>
+ <use combiback_fit.png>
 Package pdftex.def Info: combiback_fit.png used on input line 175.
 (pdftex.def)             Requested size: 149.37958pt x 181.10931pt.
- <phi_KK_Mfit.png, id=55, 640.3925pt x 455.7025pt>
-File: phi_KK_Mfit.png Graphic file (type png)
 
-<use phi_KK_Mfit.png>
+[8 <./phi_KK_M.png> <./phi_KK_Mzoom.png>]
+<phi_KK_Mfit.png, id=58, 640.3925pt x 455.7025pt>
+File: phi_KK_Mfit.png Graphic file (type png)
+ <use phi_KK_Mfit.png>
 Package pdftex.def Info: phi_KK_Mfit.png used on input line 183.
 (pdftex.def)             Requested size: 198.67294pt x 141.3706pt.
- <phi_KK_Mfitzoom.png, id=56, 640.3925pt x 455.7025pt>
+
+<phi_KK_Mfitzoom.png, id=59, 640.3925pt x 455.7025pt>
 File: phi_KK_Mfitzoom.png Graphic file (type png)
 
 <use phi_KK_Mfitzoom.png>
 Package pdftex.def Info: phi_KK_Mfitzoom.png used on input line 188.
 (pdftex.def)             Requested size: 198.67294pt x 141.3706pt.
- [8 <./phi_KK_M.png> <./phi_KK_Mzoom.png> <./combiback_fit.png>] (/usr/share/te
-xlive/texmf-dist/tex/latex/listings/lstlang1.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2014/09/06 1.5e listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -680,13 +681,12 @@ File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 3.
 
-[9 <./phi_KK_Mfit.png> <./phi_KK_Mfitzoom.png>])
-<efficieny.png, id=64, 694.595pt x 842.14626pt>
+[9 <./combiback_fit.png> <./phi_KK_Mfit.png> <./phi_KK_Mfitzoom.png>] [10])
+<efficieny.png, id=67, 694.595pt x 842.14626pt>
 File: efficieny.png Graphic file (type png)
  <use efficieny.png>
 Package pdftex.def Info: efficieny.png used on input line 201.
-(pdftex.def)             Requested size: 213.39568pt x 258.72392pt.
- [10]
+(pdftex.def)             Requested size: 277.41176pt x 336.35138pt.
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 209.
 
 
@@ -697,36 +697,54 @@ Underfull \hbox (badness 10000) in paragraph at lines 208--210
 
  []
 
-[11 <./efficieny.png>] (./gsi.aux) ) 
+[11 <./efficieny.png>] [12]
+<particle_file.png, id=75, 424.58624pt x 753.81625pt>
+File: particle_file.png Graphic file (type png)
+ <use particle_file.png>
+Package pdftex.def Info: particle_file.png used on input line 228.
+(pdftex.def)             Requested size: 179.25157pt x 318.2455pt.
+
+<reco2.png, id=76, 1445.4pt x 813.0375pt>
+File: reco2.png Graphic file (type png)
+ <use reco2.png>
+Package pdftex.def Info: reco2.png used on input line 237.
+(pdftex.def)             Requested size: 198.67294pt x 111.75267pt.
+
+<reco1.png, id=77, 1445.4pt x 813.0375pt>
+File: reco1.png Graphic file (type png)
+ <use reco1.png>
+Package pdftex.def Info: reco1.png used on input line 242.
+(pdftex.def)             Requested size: 198.67294pt x 111.75267pt.
+ [13 <./particle_file.png>] [14 <./reco2.png> <./reco1.png>] (./gsi.aux) ) 
 Here is how much of TeX's memory you used:
- 6689 strings out of 493694
- 93221 string characters out of 6149628
- 263475 words of memory out of 5000000
- 9853 multiletter control sequences out of 15000+600000
+ 6704 strings out of 493694
+ 93453 string characters out of 6149628
+ 328663 words of memory out of 5000000
+ 9865 multiletter control sequences out of 15000+600000
  22568 words of font info for 53 fonts, out of 8000000 for 9000
  846 hyphenation exceptions out of 8191
  38i,9n,61p,932b,1763s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/
-cm-super-t1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf/
-fonts/type1/public/cm-super/sfbx1095.pfb></usr/share/texmf/fonts/type1/public/c
-m-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb
-></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/f
-onts/type1/public/cm-super/sfrm0600.pfb></usr/share/texmf/fonts/type1/public/cm
--super/sfrm0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb>
-</usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fo
-nts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-
-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb><
-/usr/share/texmf/fonts/type1/public/cm-super/sfrm2074.pfb></usr/share/texmf/fon
-ts/type1/public/cm-super/sfsl1200.pfb></usr/share/texmf/fonts/type1/public/cm-s
-uper/sftt1200.pfb>
-Output written on gsi.pdf (11 pages, 789250 bytes).
+{/usr
+/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1095.pfb>
+</usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fo
+nts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-
+super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0600.pfb><
+/usr/share/texmf/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf/fon
+ts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-s
+uper/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></
+usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/font
+s/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-su
+per/sfrm2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsl1200.pfb></u
+sr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on gsi.pdf (14 pages, 1259524 bytes).
 PDF statistics:
- 133 PDF objects out of 1000 (max. 8388607)
- 85 compressed objects within 1 object stream
+ 147 PDF objects out of 1000 (max. 8388607)
+ 92 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 76 words of extra memory for PDF output out of 10000 (max. 10000000)
 
