@@ -243,4 +243,95 @@
 		\caption{ From a different angle. }
 	\end{subfigure}
 \end{figure}
+\subsection{How-tos}
+\vspace{3mm}
+\par As I mentioned before, at first one should use the Monte Carlo simulation with some input file. This can be a .root or a simple ASCII file which contains particle IDs and momentum distribution. The output of a PHSD or UrQMD simulation is mainly a .root file but other generators like HIJING use plain text for example. In the CBM simulation software there are tools to process both ASCII and .root input files.
+\vspace{3mm}
+\par I learned to use the signal generator with which one can create any type of input file for the simulation. I mainly used it to create $\Phi$-s and see how they decay into various particles. The input file looks like the following:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{input.png}
+\end{figure}
+\par 333 is the particle ID for the $\Phi$-meson. The simulation then knows how to process this particle and is able to decay it with the suitable probabilities. To be able to process plain text one has to use the
+\begin{lstlisting}[language=C++]
+FairAsciiGenerator *SignalGen = new FairAsciiGenerator(inFile);
+primGen->AddGenerator(SignalGen);
+\end{lstlisting}
+above generator instead the one for .root input called $CbmUnigenGenerator$. There's another important step if someone would like to visualize the output of a simulation-reconstruction-identification cycle. In the simulation file one has to enable trajectory saving. It is not efficient if there are too many events so it is advised to not use it just for low event counts.
+\begin{lstlisting}[language=C++]
+ // -Trajectories Visualization (TGeoManager Only )
+ run->SetStoreTraj(kTRUE);  //->
+ // -----------------------------------------------
+\end{lstlisting}
+\par So after finishing the reconstruction and particle identification on any input signal it is possible to display the events one-by-one with the $eventDisplay.C$ macro. This macro will output the whole CBM geometry and the found tracks as well. Here is a picture of a $\Phi$-decay into kaons.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.85\textwidth]{k-k+decayofphi.png}
+	\caption{ Event visualization in the MVD and STS detectors. }
+\end{figure}
+\subsection{Generating $\Phi$-mesons and analyzing the output}
+\vspace{5mm}
+\par I ran the signal generator to generate 10000 events of phi right in the center of the target. It is useful to analyze such data because with the results one can separate the facts from the fancy when experimenting later. With known $\Phi$ multiplicity and efficiencies it is possible to test theoretical forecast according the outcome.
+\par In the generator macro it is possible to modify the beam energy (in GeV), the temperature (in GeV) and of course the particles which we want to generate.
+\begin{lstlisting}[language=C++]
+double fSlope = .154; // temperature
+...
+double eBeam = 10.; // beam energy
+double pBeam = TMath::Sqrt(eBeam*eBeam - kProtonMass*kProtonMass);
+...
+ const int NParticlesPerEvent = 1;
+ const double kSignalMass[NParticlesPerEvent] = {1.019455};    //  mass in GeV
+ const int    kSignalID[NParticlesPerEvent] =  {333};
+ ...
+   for (int i=0; i<NEvent; i++){
+   // Generate rapidity, pt and azimuth
+   outputfile<<NParticlesPerEvent<<"   "<<i + 1<<"  "<<0.<<"  "<<0.<<"  "<<0.<<endl;
+   for(int j=0;j<NParticlesPerEvent;++j) {      
+   double yD   = gRandom->Gaus(fYcm, fRapSigma);
+   double ptD  = fThermal[j].GetRandom();
+   double phiD = gRandom->Uniform(0., kTwoPi);
+   
+   // Calculate momentum, energy, beta and gamma
+   double pxD    = ptD * TMath::Cos(phiD);
+   double pyD    = ptD * TMath::Sin(phiD);
+   double mtD    = TMath::Sqrt(kSignalMass[j]*kSignalMass[j] + ptD*ptD);
+   double pzD    = mtD * TMath::SinH(yD);
+   
+   outputfile<<kSignalID[j]<<"  "<<pxD<<"  "<<pyD<<"  "<<pzD<<endl;
+   
+   }
+   }
+\end{lstlisting}
+\par It can be easily seen that modifying this file is fairly easy and one can generate any desirable input. After generating the ASCII signal file it should be provided to the simulation macro with the event count.
+\begin{lstlisting}[language=C++]
+void run_mc_phi(TString inFile="Signal_phi_10000.txt", const char* setupName = "sis100_electron", Int_t nEvents = 10000)
+{
+  TString outFile = "sim_phi_10000.root";
+  TString parFile = "param_phi_10000.root";
+...
+  // --- Define the target geometry -----------------------------------------
+  //
+  // The target is not part of the setup, since one and the same setup can
+  // and will be used with different targets.
+  // The target is constructed as a tube in z direction with the specified
+  // diameter (in x and y) and thickness (in z). It will be placed at the
+  // specified position as daughter volume of the volume present there. It is
+  // in the responsibility of the user that no overlaps or extrusions are
+  // created by the placement of the target.
+  //
+  TString  targetElement   = "Gold";
+  Double_t targetThickness = 0.025;  // full thickness in cm
+  Double_t targetDiameter  = 2.5;    // diameter in cm
+  Double_t targetPosX      = 0.;     // target x position in global c.s. [cm]
+  Double_t targetPosY      = 0.;     // target y position in global c.s. [cm]
+  Double_t targetPosZ      = 0.;     // target z position in global c.s. [cm]
+  Double_t targetRotY      = 0.;     // target rotation angle around the y axis [deg]
+}
+\end{lstlisting} 
+\par The output is a .root simulation file with data of the hits in the detectors. It is worth mentioning that the target is self-defined, so it is completely up to the user to place it correctly and define it suitably.
+\vspace{5mm}
+\par After these the reconstruction file must be modified slightly with the event number and the appropriate input files. This file as I mentioned above reconstructs the trajectories of particles by trying to fit circles on the hit points provided be the simulation. Lastly it is due to run the physics macro to identify the tracks with real life particles and create the $KFParticleFinder.root$ file which contains the appropriate histograms. From this I have plots to show:
+\begin{figure}[H]
+	\centering
+\end{figure}
 \end{document}

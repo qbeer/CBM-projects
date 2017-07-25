@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2017.3.9)  24 JUL 2017 13:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2017.3.9)  25 JUL 2017 12:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -715,36 +715,53 @@ File: reco1.png Graphic file (type png)
  <use reco1.png>
 Package pdftex.def Info: reco1.png used on input line 242.
 (pdftex.def)             Requested size: 198.67294pt x 111.75267pt.
- [13 <./particle_file.png>] [14 <./reco2.png> <./reco1.png>] (./gsi.aux) ) 
+ [13 <./particle_file.png>] <input.png, id=83, 279.0425pt x 287.0725pt>
+File: input.png Graphic file (type png)
+ <use input.png>
+Package pdftex.def Info: input.png used on input line 253.
+(pdftex.def)             Requested size: 213.39568pt x 219.54404pt.
+ [14 <./reco2.png> <./reco1.png> <./input.png>]
+Overfull \hbox (3.95099pt too wide) in paragraph at lines 260--261
+\T1/cmr/m/n/12 above gen-er-a-tor in-stead the one for .root in-put called $\OM
+L/cmm/m/it/12 CbmUnigenGenerator$\T1/cmr/m/n/12 . There's
+ []
+
+<k-k+decayofphi.png, id=88, 1800.7275pt x 521.95pt>
+File: k-k+decayofphi.png Graphic file (type png)
+ <use k-k+decayofphi.png>
+Package pdftex.def Info: k-k+decayofphi.png used on input line 269.
+(pdftex.def)             Requested size: 362.77525pt x 105.14474pt.
+
+[15 <./k-k+decayofphi.png>] [16] [17] (./gsi.aux) ) 
 Here is how much of TeX's memory you used:
- 6704 strings out of 493694
- 93453 string characters out of 6149628
- 328663 words of memory out of 5000000
- 9865 multiletter control sequences out of 15000+600000
+ 6828 strings out of 493694
+ 94994 string characters out of 6149628
+ 349663 words of memory out of 5000000
+ 9988 multiletter control sequences out of 15000+600000
  22568 words of font info for 53 fonts, out of 8000000 for 9000
  846 hyphenation exceptions out of 8191
  38i,9n,61p,932b,1763s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr
-/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1095.pfb>
-</usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fo
-nts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-
-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0600.pfb><
-/usr/share/texmf/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf/fon
-ts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-s
-uper/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></
-usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/font
-s/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-su
-per/sfrm2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsl1200.pfb></u
-sr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on gsi.pdf (14 pages, 1259524 bytes).
+{/usr/share/texmf/fonts/enc/
+dvips/cm-super/cm-super-t1.enc}</usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></u
+sr/share/texmf/fonts/type1/public/cm-super/sfbx1095.pfb></usr/share/texmf/fonts
+/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-sup
+er/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></us
+r/share/texmf/fonts/type1/public/cm-super/sfrm0600.pfb></usr/share/texmf/fonts/
+type1/public/cm-super/sfrm0700.pfb></usr/share/texmf/fonts/type1/public/cm-supe
+r/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr
+/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/t
+ype1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super
+/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm2074.pfb></usr/
+share/texmf/fonts/type1/public/cm-super/sfsl1200.pfb></usr/share/texmf/fonts/ty
+pe1/public/cm-super/sftt1200.pfb>
+Output written on gsi.pdf (17 pages, 1321060 bytes).
 PDF statistics:
- 147 PDF objects out of 1000 (max. 8388607)
- 92 compressed objects within 1 object stream
+ 160 PDF objects out of 1000 (max. 8388607)
+ 98 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 76 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 86 words of extra memory for PDF output out of 10000 (max. 10000000)
 
