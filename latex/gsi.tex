@@ -218,7 +218,7 @@
 \vspace{5mm}
 \par The output of this macro is the simulation file which contains true hits detected by the STS and MVD detectors as well as by the others. Using these the reconstruction of trajectories is due. Stating with the MVD the program tries to find clusters within the detector then moves on to the STS to do the same thing. These methods spread to other detectors as well which I won't mention here because I mainly concentrated on these two. Moving on to the track finding in MVD and STS the trajectories are being reconstructed and the primary vertex is distinguished during the process. 
 \vspace{5mm}
-\par Obviously the hits and paths are being matched several times during the run to make sure that the inquired data is correct in every way and there are no mismatched results. 
+\par Obviously the hits and paths are being matched several times during the run to make sure that the inquired data is correct in every way and there are no mismatched results. This where the digitization happens. It means that the program tries to simulate the detector response similar to real life.
 \vspace{5mm}
 \par After the successful finish of reconstruction a reconstructed file is acquired from the raw data. Now there is only one remaining task to be done which is matching the trajectories to particles and identifying most of them. This is done by KFParticleFinder which is substantial package of complex code to identify particles.
 \vspace{5mm}
