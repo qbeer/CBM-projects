@@ -1,15 +1,15 @@
 \select@language {english}
-\contentsline {section}{\numberline {I.}Fundamentals}{3}
-\contentsline {subsection}{\numberline {I.1.}QCD}{3}
+\contentsline {section}{\numberline {I.} Fundamentals}{3}
+\contentsline {subsection}{\numberline {I.1.} QCD}{3}
 \contentsline {subsection}{\numberline {I.2.} CBM physics }{3}
-\contentsline {section}{\numberline {II.}CBM detector}{5}
-\contentsline {subsection}{\numberline {II.1.}Theory}{5}
-\contentsline {subsection}{\numberline {II.2.}Setup and simulation}{6}
-\contentsline {section}{\numberline {III.}My project}{7}
-\contentsline {subsection}{\numberline {III.1.}$\Phi $-meson reconstruction}{7}
+\contentsline {section}{\numberline {II.} CBM detector}{5}
+\contentsline {subsection}{\numberline {II.1.} Theory}{5}
+\contentsline {subsection}{\numberline {II.2.} Setup and simulation}{6}
+\contentsline {section}{\numberline {III.} About the $\Phi $-meson}{7}
+\contentsline {subsection}{\numberline {III.1.} $\Phi $-meson reconstruction}{7}
 \contentsline {subsection}{\numberline {III.2.}$\Phi $-meson detection in the CBM}{11}
-\contentsline {section}{\numberline {IV.}The simulation}{12}
-\contentsline {subsection}{\numberline {IV.1.}Installation}{12}
-\contentsline {subsection}{\numberline {IV.2.}Introduction}{12}
-\contentsline {subsection}{\numberline {IV.3.}How-tos}{14}
-\contentsline {subsection}{\numberline {IV.4.}Generating $\Phi $-mesons and analyzing the output}{15}
+\contentsline {section}{\numberline {IV.} The simulation}{12}
+\contentsline {subsection}{\numberline {IV.1.} Installation}{12}
+\contentsline {subsection}{\numberline {IV.2.} Introduction}{12}
+\contentsline {subsection}{\numberline {IV.3.} How-tos}{14}
+\contentsline {subsection}{\numberline {IV.4.} Generating $\Phi $-mesons and analyzing the output}{15}

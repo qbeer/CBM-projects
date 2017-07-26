@@ -67,8 +67,8 @@
 \end{abstract}
 \tableofcontents
 \newpage
-\section{Fundamentals}
-\subsection{QCD}
+\section{ Fundamentals}
+\subsection{ QCD}
 \vspace{5mm}
 \par In the 20th century physicist realized that symmetries play a crucial role in further understanding the universe. Symmetries led us to conservation laws, the discovery of anti-particles, quarks and much more. 
 \vspace{5mm}
@@ -103,8 +103,8 @@
  \par As presented above a phase called quark-gluon plasma was present at the Big Bang and later on ceased to exist when temperature dropped. It can be seen that the interior of neutron stars supposedly contains quark-gluon plasma as well as the density is high enough to enable matter to exist in that phase although the very low temperature. 
 \vspace{5mm}
 \par Obviously the only way to investigate strongly interacting matter on Earth is via high energy particle collisions. It is a characteristic feature of QCD that the coupling between quarks decreases as the collision energy is raised ( crossover ). This is referred to as asymptotic freedom. Another interesting symmetry of particle physics is chirality. It describes whether the particle's spin points to its direction of motion or to the opposite if the particles is massless. If the velocity and spin are pointing to the same direction the particle is called right-handed, otherwise left-handed. Due to the fact that the up and down quarks have such a small mass QCD has approximate chiral symmetry. However, this is spontaneously broken at low temperatures and densities because of the slight difference in the mass of the lightest quarks. For this reason one chiral direction is favored over the other.
-\section{CBM detector}
-\subsection{Theory}
+\section{ CBM detector}
+\subsection{ Theory}
 \vspace{5mm}
 \par The analysis of heavy nuclei collisions is extremely complex since the transient nature of the reaction. The goal is to find out more about phase diagram but the collision takes $10^{-22}~s$ and the strongly interacting matter can only be measured by the byproducts of the collision.
 \par Over the past decade the main experimental activity occurred in RHIC \footnote{ Relativistic Heavy Ion Collider - Brookhaven } and at the LHC \footnote{ CERN - Large Hadron Collider }, On one hand these facilities produce important results concerning the phase diagram. These facilities are mapping the low density, high temperature area of the phase diagram and can analyze the crossover between hadron gas phase and quark-gluon plasma. On the other hand, the FAIR project is going to create much higher baryon densities to be able to explore the first-order phase transition and the critical end point of it.
@@ -113,7 +113,7 @@
 	\includegraphics[width=0.96\textwidth]{CBM_phase_trans.png}
 	\caption{ The above discussed hypothetical phase diagram and the transitions between phases. }
 \end{figure}
-\subsection{Setup and simulation}
+\subsection{ Setup and simulation}
 \par The setup of the future CBM detector is the following from left to right.
 \begin{itemize}
 	\item CBM superconducting magnet with silicon spectrometer
@@ -134,8 +134,8 @@
 \par The CBM project is currently only a plan. The construction of FAIR has started this summer and the first beams are expected by 2022. Until then CBM intends to install a reduced setup at the accelerator available at the GSI to test the systems and prepare for data processing.
 \vspace{5mm}
 \par Scientist of the FAIR project has developed a robust simulation so far built on ROOT. They call it cbmROOT and is available to the public. They use different well-known heavy ion collision simulation methods such as: UrQMD \footnote{ Ultra Relativistic Quantum Molecular Dynamics } or PHSD \footnote{ Parton Hadron String Dynamics }. These models are widely used among scientist in the field.
-\section{My project}
-\subsection{$\Phi$-meson reconstruction}
+\section{ About the $\Phi$-meson}
+\subsection{ $\Phi$-meson reconstruction}
 \vspace{5mm}
 \par CBM is going to be a general-purpose heavy ion experiment to study the phase diagram of strongly interacting matter. Resonances are highly useful to study the high density matter created during the collisions. One of these is the $\Phi$-meson which has a small hadronic cross section so  it's  very unlikely to interact with the huge amount of hadrons. The $\Phi$-meson is made of a strange and an anti-strange quark and can be a tool to study strangeness production in the partonic phase. The $\Phi$-meson decays into $K^{+}$,$K^{-}$ pairs with an approximate of 50 \% chance and to dileptons. The mean lifetime of a $\Phi$-meson is really short, $1.55\cdot10^{-22}~s$ so it might decay into kaons and dileptons during the collision and only the byproducts would be detected by the detectors. It's mass is $1.019~MeV$ which can be seen in the invariant mass of the kaons as a peak.
 \vspace{5mm}
@@ -201,14 +201,14 @@
 	\includegraphics[width=0.65\textwidth]{efficieny.png}
 	\caption{ Efficiency in means of momentum }
 \end{figure}
-\section{The simulation}
+\section{ The simulation}
 \vspace{3mm}
-\subsection{Installation}
+\subsection{ Installation}
 \vspace{5mm}
 \par There are three main components to the CBM simulation such as: FairROOR, Fairsoft and cbmROOT. They all can be installed on any machine from this link:
 \url{https://redmine.cbm.gsi.de/projects/cbmroot/wiki/InstallCbmRootAuto} \newline
 \par It is advisory to do it this way because otherwise one might have serious problems with the software pack. It takes up around 25 GB (probably a tiny bit more with its dependencies which are necessary for it to function properly).
-\subsection{Introduction}
+\subsection{ Introduction}
 \vspace{5mm}
 \par The collision is simulated via UrQMD and PHSD. These models have been developed for ALICE, RHIC, LHC and last but not least CBM. I mostly used UrQMD data for the time I spent here but I came across PHSD files as well.
 \vspace{5mm}
@@ -243,7 +243,7 @@
 		\caption{ From a different angle. }
 	\end{subfigure}
 \end{figure}
-\subsection{How-tos}
+\subsection{ How-tos}
 \vspace{3mm}
 \par As I mentioned before, at first one should use the Monte Carlo simulation with some input file. This can be a .root or a simple ASCII file which contains particle IDs and momentum distribution. The output of a PHSD or UrQMD simulation is mainly a .root file but other generators like HIJING use plain text for example. In the CBM simulation software there are tools to process both ASCII and .root input files.
 \vspace{3mm}
@@ -269,9 +269,9 @@ above generator instead the one for .root input called $CbmUnigenGenerator$. The
 	\includegraphics[width=0.85\textwidth]{k-k+decayofphi.png}
 	\caption{ Event visualization in the MVD and STS detectors. }
 \end{figure}
-\subsection{Generating $\Phi$-mesons and analyzing the output}
+\subsection{ Generating $\Phi$-mesons and analyzing the output}
 \vspace{5mm}
-\par I ran the signal generator to generate 10000 events of phi right in the center of the target. It is useful to analyze such data because with the results one can separate the facts from the fancy when experimenting later. With known $\Phi$ multiplicity and efficiencies it is possible to test theoretical forecast according the outcome.
+\par I ran the signal generator to generate 2500 events of phi right in the center of the target. It is useful to analyze such data because with the results one can separate the facts from the fancy when experimenting later. With known $\Phi$ multiplicity and efficiencies it is possible to test theoretical forecast according the outcome.
 \par In the generator macro it is possible to modify the beam energy (in GeV), the temperature (in GeV) and of course the particles which we want to generate.
 \begin{lstlisting}[language=C++]
 double fSlope = .154; // temperature
@@ -304,10 +304,10 @@ double pBeam = TMath::Sqrt(eBeam*eBeam - kProtonMass*kProtonMass);
 \end{lstlisting}
 \par It can be easily seen that modifying this file is fairly easy and one can generate any desirable input. After generating the ASCII signal file it should be provided to the simulation macro with the event count.
 \begin{lstlisting}[language=C++]
-void run_mc_phi(TString inFile="Signal_phi_10000.txt", const char* setupName = "sis100_electron", Int_t nEvents = 10000)
+void run_mc_phi(TString inFile="Signal_phi_2500.txt", const char* setupName = "sis100_electron", Int_t nEvents = 2500)
 {
-  TString outFile = "sim_phi_10000.root";
-  TString parFile = "param_phi_10000.root";
+  TString outFile = "sim_phi_2500.root";
+  TString parFile = "param_phi_2500.root";
 ...
   // --- Define the target geometry -----------------------------------------
   //
@@ -333,5 +333,27 @@ void run_mc_phi(TString inFile="Signal_phi_10000.txt", const char* setupName = "
 \par After these the reconstruction file must be modified slightly with the event number and the appropriate input files. This file as I mentioned above reconstructs the trajectories of particles by trying to fit circles on the hit points provided be the simulation. Lastly it is due to run the physics macro to identify the tracks with real life particles and create the $KFParticleFinder.root$ file which contains the appropriate histograms. From this I have plots to show:
 \begin{figure}[H]
 	\centering
+	\includegraphics[width=0.5\textwidth]{phiKK_2500phi.png}
+	\caption{ In the invariant mass we can see the peak at 1.02 GeV which is the $\Phi$-meson. }
 \end{figure}
+\par This signal consisted of 2500 events. It is approximately 50 $\%$ that they decay into kaons. The efficiency of the reconstruction in average was around 15 $\%$ in this run which corresponds to 180 reconstructed $\Phi$-mesons. Of course these are probabilities so the 120 entries here is completely normal.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{reconstructed_eff_phi2500.png}
+\end{figure}
+\par Also it is easy to find the particles which were the $\Phi$-mesons were decayed into. So one can find pions, kaons, $K^{0}_{S}$ particles.
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{0.49\textwidth}
+		\centering
+		\includegraphics[width=0.95\textwidth]{kshort_phi2500.png}
+		\caption{ The $K^{0}_{S}$ entries. }
+	\end{subfigure}
+	\begin{subfigure}{0.49\textwidth}
+		\centering
+		\includegraphics[width=0.95\textwidth]{k-_phi2500.png}
+		\caption{ The negative kaons. }
+	\end{subfigure}
+\end{figure}
+\par I did not include the pions here due to the fact that not only does the $\Phi$-mesons have pion daughters but also the kaons and others as well.
 \end{document}
