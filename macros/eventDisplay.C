@@ -1,8 +1,9 @@
+
 void eventDisplay(const char* setup = "sis100_electron")
 {
   TString dataDir   = "data/";
-  TString InputFile = "sim_draw.root";
-  TString ParFile   = "param_draw.root";
+  TString InputFile = "sim_phi_10.root";
+  TString ParFile   = "param_phi_10.root";
 
   // -----   Reconstruction run   -------------------------------------------
   FairRunAna *fRun= new FairRunAna();
