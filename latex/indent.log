@@ -1,0 +1,20 @@
+Wed Sep 13 12:25:15 2017
+latexindent version 2.1R, a script to indent .tex files
+latexindent lives here: /usr/share/texlive/texmf-dist/scripts/latexindent/
+
+Directory for backup files and indent.log: /home/qbeer666/CBM-projects/latex
+Reading defaultSettings.yaml from /usr/share/texlive/texmf-dist/scripts/latexindent/defaultSettings.yaml
+
+Home directory is /home/qbeer666
+To specify user settings you would put indentconfig.yaml here: 
+	/home/qbeer666/indentconfig.yaml
+
+Alternatively, you can use the hidden file .indentconfig.yaml as: 
+	/home/qbeer666/.indentconfig.yaml
+
+Just out put to the terminal :)
+
+Line Count of /home/qbeer666/CBM-projects/latex/gsi.tex: 377
+Line Count of indented /home/qbeer666/CBM-projects/latex/gsi.tex: 377
+
+Line counts of original file and indented file match

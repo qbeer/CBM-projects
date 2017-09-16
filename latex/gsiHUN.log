@@ -1,10 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  13 SEP 2017 17:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  16 SEP 2017 16:03
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/qbeer666/CBM-projects/latex/gsi.tex
-(/home/qbeer666/CBM-projects/latex/gsi.tex
+**gsiHUN.tex
+(./gsiHUN.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -59,17 +58,17 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2016/02/24 3.9q The Babel package
 
-(/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
-Language: english 2012/08/20 v3.3p English support from the babel system
+(/usr/share/texlive/texmf-dist/tex/generic/babel-hungarian/magyar.ldf
+Language: hungarian 2015/11/24 v1.5c Magyar support from the babel v3.7 system
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2016/02/24 3.9q Babel common definitions
 \babel@savecnt=\count88
 \U@D=\dimen105
 )
-\l@canadian = a dialect from \language\l@american 
-\l@australian = a dialect from \language\l@british 
-\l@newzealand = a dialect from \language\l@british 
+Package babel Info: Making ` an active character on input line 2735.
+\c@footnote@add=\count89
+\c@footnote@ch=\count90
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
@@ -411,13 +410,13 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count89
+\inf@bad=\count91
 LaTeX Info: Redefining \frac on input line 199.
-\uproot@=\count90
-\leftroot@=\count91
+\uproot@=\count92
+\leftroot@=\count93
 LaTeX Info: Redefining \overline on input line 297.
-\classnum@=\count92
-\DOTSCASE@=\count93
+\classnum@=\count94
+\DOTSCASE@=\count95
 LaTeX Info: Redefining \ldots on input line 394.
 LaTeX Info: Redefining \dots on input line 397.
 LaTeX Info: Redefining \cdots on input line 518.
@@ -426,15 +425,15 @@ LaTeX Info: Redefining \cdots on input line 518.
 \big@size=\dimen109
 LaTeX Font Info:    Redeclaring font encoding OML on input line 630.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
-\macc@depth=\count94
-\c@MaxMatrixCols=\count95
+\macc@depth=\count96
+\c@MaxMatrixCols=\count97
 \dotsspace@=\muskip10
-\c@parentequation=\count96
-\dspbrk@lvl=\count97
+\c@parentequation=\count98
+\dspbrk@lvl=\count99
 \tag@help=\toks18
-\row@=\count98
-\column@=\count99
-\maxfields@=\count100
+\row@=\count100
+\column@=\count101
+\maxfields@=\count102
 \andhelp@=\toks19
 \eqnshift@=\dimen110
 \alignsep@=\dimen111
@@ -451,7 +450,7 @@ LaTeX Info: Redefining \] on input line 2736.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count101
+\c@float@type=\count103
 \float@exts=\toks22
 \float@box=\box28
 \@float@everytoks=\toks23
@@ -475,13 +474,14 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 \caption@parindent=\dimen121
 \caption@hangindent=\dimen122
 )
-\c@ContinuedFloat=\count102
+\c@ContinuedFloat=\count104
+Package caption Info: hungarian babel option is loaded.
 Package caption Info: float package is loaded.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2016/02/20 v1.1-142 Sub-captions (AR)
-\c@subfigure=\count103
-\c@subtable=\count104
+\c@subfigure=\count105
+\c@subtable=\count106
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
@@ -516,9 +516,9 @@ Package ifvtex Info: VTeX not detected.
 (/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count105
-\Gm@cntv=\count106
-\c@Gm@tempcnt=\count107
+\Gm@cnth=\count107
+\Gm@cntv=\count108
+\c@Gm@tempcnt=\count109
 \Gm@bindingoffset=\dimen125
 \Gm@wd@mp=\dimen126
 \Gm@odd@mp=\dimen127
@@ -534,31 +534,31 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count108
+\lst@mode=\count110
 \lst@gtempboxa=\box30
 \lst@token=\toks27
-\lst@length=\count109
+\lst@length=\count111
 \lst@currlwidth=\dimen133
-\lst@column=\count110
-\lst@pos=\count111
+\lst@column=\count112
+\lst@pos=\count113
 \lst@lostspace=\dimen134
 \lst@width=\dimen135
-\lst@newlines=\count112
-\lst@lineno=\count113
+\lst@newlines=\count114
+\lst@lineno=\count115
 \lst@maxwidth=\dimen136
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count114
-\lst@skipnumbers=\count115
+\c@lstnumber=\count116
+\lst@skipnumbers=\count117
 \lst@framebox=\box31
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
- (./gsi.aux)
-\openout1 = `gsi.aux'.
+ (./gsiHUN.aux)
+\openout1 = `gsiHUN.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
 LaTeX Font Info:    ... okay on input line 52.
@@ -572,19 +572,18 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
 LaTeX Font Info:    ... okay on input line 52.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
 LaTeX Font Info:    ... okay on input line 52.
-
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count116
+\scratchcounter=\count118
 \scratchdimen=\dimen137
 \scratchbox=\box32
-\nofMPsegments=\count117
-\nofMParguments=\count118
+\nofMPsegments=\count119
+\nofMParguments=\count120
 \everyMPshowfont=\toks28
-\MPscratchCnt=\count119
+\MPscratchCnt=\count121
 \MPscratchDim=\dimen138
-\MPnumerator=\count120
-\makeMPintoPDFobject=\count121
+\MPnumerator=\count122
+\makeMPintoPDFobject=\count123
 \everyMPtoPDFconversion=\toks29
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
@@ -668,7 +667,11 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count122
+\c@lstlisting=\count124
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+LaTeX Info: Redefining \cal on input line 511.
+LaTeX Info: Redefining \mit on input line 512.
+)
 <gsi.png, id=1, 419.31656pt x 566.115pt>
 File: gsi.png Graphic file (type png)
  <use gsi.png>
@@ -676,94 +679,101 @@ Package pdftex.def Info: gsi.png used on input line 56.
 (pdftex.def)             Requested size: 281.68385pt x 380.2971pt.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./gsi.png>] (./gsi.toc
-Overfull \hbox (1.95786pt too wide) detected at line 8
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./gsi.png>] (./gsiHUN.toc
+Overfull \hbox (1.95786pt too wide) detected at line 7
 \T1/cmr/bx/n/12 III. 
  []
 
 
-Overfull \hbox (1.3469pt too wide) detected at line 11
+Overfull \hbox (1.3469pt too wide) detected at line 10
 \T1/cmr/bx/n/12 IV. 
  []
 
 )
 \tf@toc=\write3
-\openout3 = `gsi.toc'.
+\openout3 = `gsiHUN.toc'.
 
- [2] <water_phase.jpg, id=23, 794.97pt x 614.295pt>
+ [2
+
+pdfTeX warning: /usr/bin/pdflatex: pop empty color page stack 0
+] <water_phase.jpg, id=23, 794.97pt x 614.295pt>
 File: water_phase.jpg Graphic file (type jpg)
  <use water_phase.jpg>
-Package pdftex.def Info: water_phase.jpg used on input line 105.
+Package pdftex.def Info: water_phase.jpg used on input line 92.
 (pdftex.def)             Requested size: 324.35907pt x 250.64403pt.
+
+Overfull \hbox (9.74362pt too wide) in paragraph at lines 85--94
+[]\T1/cmr/m/n/12 A víz fá-zis-di-ag-ram-ja meg-mu-tat-ja an-nak kül-öbö-z® fá-z
+i-a-sa-it egy nyomás-h®mérséklet
+ []
 
 [3] <cbm_phase1.png, id=29, 265.99374pt x 260.975pt>
 File: cbm_phase1.png Graphic file (type png)
  <use cbm_phase1.png>
-Package pdftex.def Info: cbm_phase1.png used on input line 116.
+Package pdftex.def Info: cbm_phase1.png used on input line 103.
 (pdftex.def)             Requested size: 192.39929pt x 188.77394pt.
 
 <cbm_phase2.jpg, id=30, 351.3125pt x 269.005pt>
 File: cbm_phase2.jpg Graphic file (type jpg)
  <use cbm_phase2.jpg>
-Package pdftex.def Info: cbm_phase2.jpg used on input line 120.
+Package pdftex.def Info: cbm_phase2.jpg used on input line 107.
 (pdftex.def)             Requested size: 192.39929pt x 147.32518pt.
- [4 <./water_phase.jpg> <./cbm_phase1.png> <./cbm_phase2.jpg>]
-<CBM_phase_trans.png, id=35, 563.10374pt x 364.36125pt>
+ [4 <./water_phase.jpg>] [5 <./cbm_phase1.png> <./cbm_phase2.jpg>]
+<CBM_phase_trans.png, id=38, 563.10374pt x 364.36125pt>
 File: CBM_phase_trans.png Graphic file (type png)
 
 <use CBM_phase_trans.png>
-Package pdftex.def Info: CBM_phase_trans.png used on input line 159.
+Package pdftex.def Info: CBM_phase_trans.png used on input line 136.
 (pdftex.def)             Requested size: 409.72255pt x 265.11418pt.
- [5]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 165.
+ [6 <./CBM_phase_trans.png (PNG copy)>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 142.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 165.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 142.
 
-<cbm_detector.png, id=42, 561.09625pt x 365.365pt>
+<cbm_detector.png, id=45, 561.09625pt x 365.365pt>
 File: cbm_detector.png Graphic file (type png)
  <use cbm_detector.png>
-Package pdftex.def Info: cbm_detector.png used on input line 175.
+Package pdftex.def Info: cbm_detector.png used on input line 152.
 (pdftex.def)             Requested size: 281.68385pt x 183.41795pt.
 
-[6 <./CBM_phase_trans.png (PNG copy)>] [7 <./cbm_detector.png>]
-<phi_KK_M.png, id=53, 640.3925pt x 455.7025pt>
+[7 <./cbm_detector.png>] <phi_KK_M.png, id=52, 640.3925pt x 455.7025pt>
 File: phi_KK_M.png Graphic file (type png)
- <use phi_KK_M.png>
-Package pdftex.def Info: phi_KK_M.png used on input line 207.
-(pdftex.def)             Requested size: 198.67294pt x 141.3706pt.
 
-<phi_KK_Mzoom.png, id=54, 694.595pt x 842.14626pt>
+<use phi_KK_M.png>
+Package pdftex.def Info: phi_KK_M.png used on input line 192.
+(pdftex.def)             Requested size: 198.67294pt x 141.3706pt.
+ <phi_KK_Mzoom.png, id=53, 694.595pt x 842.14626pt>
 File: phi_KK_Mzoom.png Graphic file (type png)
- <use phi_KK_Mzoom.png>
-Package pdftex.def Info: phi_KK_Mzoom.png used on input line 212.
+
+<use phi_KK_Mzoom.png>
+Package pdftex.def Info: phi_KK_Mzoom.png used on input line 197.
 (pdftex.def)             Requested size: 198.67294pt x 240.87514pt.
-
-<combiback_fit.png, id=55, 694.595pt x 842.14626pt>
+ [8] <combiback_fit.png, id=58, 694.595pt x 842.14626pt>
 File: combiback_fit.png Graphic file (type png)
- <use combiback_fit.png>
-Package pdftex.def Info: combiback_fit.png used on input line 233.
+
+<use combiback_fit.png>
+Package pdftex.def Info: combiback_fit.png used on input line 218.
 (pdftex.def)             Requested size: 149.37958pt x 181.10931pt.
-
-[8 <./phi_KK_M.png> <./phi_KK_Mzoom.png>]
-<phi_KK_Mfit.png, id=59, 640.3925pt x 455.7025pt>
+ <phi_KK_Mfit.png, id=59, 640.3925pt x 455.7025pt>
 File: phi_KK_Mfit.png Graphic file (type png)
- <use phi_KK_Mfit.png>
-Package pdftex.def Info: phi_KK_Mfit.png used on input line 242.
-(pdftex.def)             Requested size: 198.67294pt x 141.3706pt.
 
-<phi_KK_Mfitzoom.png, id=60, 640.3925pt x 455.7025pt>
+<use phi_KK_Mfit.png>
+Package pdftex.def Info: phi_KK_Mfit.png used on input line 227.
+(pdftex.def)             Requested size: 198.67294pt x 141.3706pt.
+ <phi_KK_Mfitzoom.png, id=60, 640.3925pt x 455.7025pt>
 File: phi_KK_Mfitzoom.png Graphic file (type png)
 
 <use phi_KK_Mfitzoom.png>
-Package pdftex.def Info: phi_KK_Mfitzoom.png used on input line 247.
+Package pdftex.def Info: phi_KK_Mfitzoom.png used on input line 232.
 (pdftex.def)             Requested size: 198.67294pt x 141.3706pt.
-
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+ [9 <./phi_KK_M.png> <./phi_KK_Mzoom.png> <./combiback_fit.png>] (/usr/share/te
+xlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -775,116 +785,113 @@ File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 3.
 
-[9 <./combiback_fit.png> <./phi_KK_Mfit.png> <./phi_KK_Mfitzoom.png>] [10])
+[10 <./phi_KK_Mfit.png> <./phi_KK_Mfitzoom.png>])
 <efficieny.png, id=68, 694.595pt x 842.14626pt>
 File: efficieny.png Graphic file (type png)
  <use efficieny.png>
-Package pdftex.def Info: efficieny.png used on input line 263.
+Package pdftex.def Info: efficieny.png used on input line 249.
 (pdftex.def)             Requested size: 277.41176pt x 336.35138pt.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 272.
+ [11]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 258.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-Underfull \hbox (badness 10000) in paragraph at lines 270--273
+Underfull \hbox (badness 10000) in paragraph at lines 256--259
 
  []
 
-[11 <./efficieny.png>] [12]
-<particle_file.png, id=76, 424.58624pt x 753.81625pt>
+[12 <./efficieny.png>] <particle_file.png, id=76, 424.58624pt x 753.81625pt>
 File: particle_file.png Graphic file (type png)
- <use particle_file.png>
-Package pdftex.def Info: particle_file.png used on input line 304.
+
+<use particle_file.png>
+Package pdftex.def Info: particle_file.png used on input line 295.
 (pdftex.def)             Requested size: 179.25157pt x 318.2455pt.
-
-<reco2.png, id=77, 1445.4pt x 813.0375pt>
+ [13] <reco2.png, id=81, 1445.4pt x 813.0375pt>
 File: reco2.png Graphic file (type png)
- <use reco2.png>
-Package pdftex.def Info: reco2.png used on input line 314.
-(pdftex.def)             Requested size: 198.67294pt x 111.75267pt.
 
-<reco1.png, id=78, 1445.4pt x 813.0375pt>
+<use reco2.png>
+Package pdftex.def Info: reco2.png used on input line 304.
+(pdftex.def)             Requested size: 198.67294pt x 111.75267pt.
+ <reco1.png, id=82, 1445.4pt x 813.0375pt>
 File: reco1.png Graphic file (type png)
  <use reco1.png>
-Package pdftex.def Info: reco1.png used on input line 319.
+Package pdftex.def Info: reco1.png used on input line 309.
 (pdftex.def)             Requested size: 198.67294pt x 111.75267pt.
- [13 <./particle_file.png>] <input.png, id=84, 279.0425pt x 287.0725pt>
+
+[14 <./particle_file.png> <./reco2.png> <./reco1.png>]
+<input.png, id=87, 279.0425pt x 287.0725pt>
 File: input.png Graphic file (type png)
  <use input.png>
-Package pdftex.def Info: input.png used on input line 334.
+Package pdftex.def Info: input.png used on input line 325.
 (pdftex.def)             Requested size: 213.39568pt x 219.54404pt.
- [14 <./reco2.png> <./reco1.png> <./input.png>]
-Overfull \hbox (3.95099pt too wide) in paragraph at lines 342--345
-\T1/cmr/m/n/12 above gen-er-a-tor in-stead the one for .root in-put called $\OM
-L/cmm/m/it/12 CbmUnigenGenerator$\T1/cmr/m/n/12 . There's
- []
-
-<k-k+decayofphi.png, id=89, 1800.7275pt x 521.95pt>
+ [15 <./input.png>]
+<k-k+decayofphi.png, id=92, 1800.7275pt x 521.95pt>
 File: k-k+decayofphi.png Graphic file (type png)
  <use k-k+decayofphi.png>
-Package pdftex.def Info: k-k+decayofphi.png used on input line 355.
+Package pdftex.def Info: k-k+decayofphi.png used on input line 347.
 (pdftex.def)             Requested size: 362.77525pt x 105.14474pt.
 
-[15 <./k-k+decayofphi.png>] [16]
-<phiKK_2500phi.png, id=97, 1662.21pt x 848.16875pt>
+[16 <./k-k+decayofphi.png>] [17]
+<phiKK_2500phi.png, id=100, 1662.21pt x 848.16875pt>
 File: phiKK_2500phi.png Graphic file (type png)
  <use phiKK_2500phi.png>
-Package pdftex.def Info: phiKK_2500phi.png used on input line 431.
+Package pdftex.def Info: phiKK_2500phi.png used on input line 422.
 (pdftex.def)             Requested size: 213.39568pt x 108.88101pt.
 
-<reconstructed_eff_phi2500.png, id=98, 1662.21pt x 848.16875pt>
+<reconstructed_eff_phi2500.png, id=101, 1662.21pt x 848.16875pt>
 File: reconstructed_eff_phi2500.png Graphic file (type png)
 
 <use reconstructed_eff_phi2500.png>
-Package pdftex.def Info: reconstructed_eff_phi2500.png used on input line 439.
+Package pdftex.def Info: reconstructed_eff_phi2500.png used on input line 431.
 (pdftex.def)             Requested size: 213.39568pt x 108.88101pt.
 
-<kshort_phi2500.png, id=99, 1662.21pt x 848.16875pt>
+<kshort_phi2500.png, id=102, 1662.21pt x 848.16875pt>
 File: kshort_phi2500.png Graphic file (type png)
  <use kshort_phi2500.png>
-Package pdftex.def Info: kshort_phi2500.png used on input line 446.
+Package pdftex.def Info: kshort_phi2500.png used on input line 439.
 (pdftex.def)             Requested size: 198.67294pt x 101.37465pt.
 
-<k-_phi2500.png, id=100, 1662.21pt x 848.16875pt>
+<k-_phi2500.png, id=103, 1662.21pt x 848.16875pt>
 File: k-_phi2500.png Graphic file (type png)
  <use k-_phi2500.png>
-Package pdftex.def Info: k-_phi2500.png used on input line 451.
+Package pdftex.def Info: k-_phi2500.png used on input line 444.
 (pdftex.def)             Requested size: 198.67294pt x 101.37465pt.
- [17 <./phiKK_2500phi.png> <./reconstructed_eff_phi2500.png>] [18 <./kshort_phi
-2500.png> <./k-_phi2500.png>] (./gsi.aux) ) 
+ [18 <./phiKK_2500phi.png> <./reconstructed_eff_phi2500.png>] [19 <./kshort_phi
+2500.png> <./k-_phi2500.png>] (./gsiHUN.aux) ) 
 Here is how much of TeX's memory you used:
- 6982 strings out of 493029
- 96692 string characters out of 6136234
- 353897 words of memory out of 5000000
- 10366 multiletter control sequences out of 15000+600000
+ 7920 strings out of 493029
+ 114963 string characters out of 6136234
+ 380881 words of memory out of 5000000
+ 11301 multiletter control sequences out of 15000+600000
  24390 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,9n,61p,276b,1763s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm
--super/cm-super-t1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/p
-ublic/cm-super/sfbx1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1
-200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/
-texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/pu
-blic/cm-super/sfrm0600.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm07
-00.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/t
-exmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/pub
-lic/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm120
-0.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/te
-xmf/fonts/type1/public/cm-super/sfrm2074.pfb></usr/share/texmf/fonts/type1/publ
-ic/cm-super/sfsl1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200
-.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on gsi.pdf (18 pages, 1461909 bytes).
+ 38i,9n,61p,623b,1766s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips
+/cm-super/cm-super-t1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf/fonts/type
+1/public/cm-super/sfbx1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sf
+bx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/sha
+re/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1
+/public/cm-super/sfrm0600.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfr
+m0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></usr/shar
+e/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/
+public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm
+1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share
+/texmf/fonts/type1/public/cm-super/sfrm2074.pfb></usr/share/texmf/fonts/type1/p
+ublic/cm-super/sfsl1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1
+200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on gsiHUN.pdf (19 pages, 1475553 bytes).
 PDF statistics:
- 184 PDF objects out of 1000 (max. 8388607)
- 112 compressed objects within 2 object streams
+ 188 PDF objects out of 1000 (max. 8388607)
+ 115 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  106 words of extra memory for PDF output out of 10000 (max. 10000000)
 
