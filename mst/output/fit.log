@@ -1,0 +1,113 @@
+
+
+*******************************************************************************
+Sun Oct  1 22:21:47 2017
+
+
+FIT:    data read from 'dist-clust.dat'
+        format = z
+        #datapoints = 29
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*x**2 + b*x + c
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b             c            
+   0 1.0356112506e+01   0.00e+00  8.28e-01    1.000000e+00   1.000000e+00   1.000000e+00
+   4 1.2899111507e-01  -1.72e-01  8.28e-05    5.031920e+00  -4.466248e+00   2.056681e+00
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 0.128991
+rel. change during last iteration : -1.71533e-06
+
+degrees of freedom    (FIT_NDF)                        : 26
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0704358
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0049612
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 5.03192          +/- 0.2183       (4.339%)
+b               = -4.46625         +/- 0.3234       (7.241%)
+c               = 2.05668          +/- 0.11         (5.349%)
+
+correlation matrix of the fit parameters:
+                a      b      c      
+a               1.000 
+b              -0.987  1.000 
+c               0.934 -0.976  1.000 
+
+
+*******************************************************************************
+Sun Oct  1 22:23:04 2017
+
+
+FIT:    data read from 'dist-clust.dat'
+        format = z
+        #datapoints = 29
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*e**x
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Sun Oct  1 22:23:11 2017
+
+
+FIT:    data read from 'dist-clust.dat'
+        format = z
+        #datapoints = 29
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*2.71**x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a            
+   0 2.3907776966e+03   0.00e+00  1.10e+01    5.031920e+00
+   3 4.0861239369e+00  -7.71e-03  1.10e-02    8.717120e-01
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 4.08612
+rel. change during last iteration : -7.71164e-08
+
+degrees of freedom    (FIT_NDF)                        : 28
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.382012
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.145933
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 0.871712         +/- 0.03253      (3.732%)
+
+
+*******************************************************************************
+Sun Oct  1 22:23:48 2017
+
+
+FIT:    data read from 'dist-clust.dat'
+        format = z
+        #datapoints = 29
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*2.71**(x**2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a            
+   0 6.2176860278e-01   0.00e+00  1.81e+00    8.717120e-01
+   3 1.6214843424e-01  -3.74e-05  1.81e-03    9.323342e-01
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 0.162148
+rel. change during last iteration : -3.74239e-10
+
+degrees of freedom    (FIT_NDF)                        : 28
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0760987
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00579102
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 0.932334         +/- 0.006805     (0.7299%)
