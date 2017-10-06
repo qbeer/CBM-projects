@@ -13,3 +13,9 @@
 \select@language {hungarian} \contentsline {subsection}{\numberline {IV.3} How-tos}{15}
 \select@language {hungarian} \contentsline {subsection}{\numberline {IV.4} $\Phi $-mezonok gener\IeC {\'a}l\IeC {\'a}sa \IeC {\'e}s a kimen\IeC {\H o} adatok elemz\IeC {\'e}se}{16}
 \select@language {hungarian} \contentsline {subsection}{\numberline {IV.5} \IeC {\"O}sszegz\IeC {\'e}s}{19}
+\select@language {hungarian} \contentsline {section}{\numberline {V.} Neh\IeC {\'e}zion fizika itthon }{19}
+\select@language {hungarian} \contentsline {subsection}{\numberline {V.1} Az algoritmus}{20}
+\select@language {hungarian} \contentsline {subsection}{\numberline {V.2} A k\IeC {\'o}d}{20}
+\select@language {hungarian} \contentsline {subsubsection}{\numberline {V.21} Bemeneti param\IeC {\'e}terek}{30}
+\select@language {hungarian} \contentsline {subsubsection}{\numberline {V.22} A kimenet}{32}
+\select@language {hungarian} \contentsline {subsubsection}{\numberline {V.23} Sebess\IeC {\'e}g}{33}
