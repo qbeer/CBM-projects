@@ -8,12 +8,13 @@
 \usepackage{float}
 \usepackage{enumerate}
 \usepackage{caption}
+\usepackage{setspace}
 \usepackage{subcaption}
 \usepackage{indentfirst}
 \usepackage{color}
 \usepackage{array}
 \bibliographystyle{unsrt}
-\usepackage[top=4cm ,bottom=4cm ,left=3cm ,right=3cm]{geometry}
+\usepackage[top=3cm ,bottom=3cm ,left=2cm ,right=2cm]{geometry}
 \usepackage{multirow}
 \usepackage{url}
 \usepackage{listings}
@@ -25,14 +26,14 @@
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 
 \lstdefinestyle{mystyle}{
+	basicstyle=\footnotesize,
 	backgroundcolor=\color{backcolour},   
 	commentstyle=\color{codegreen},
 	keywordstyle=\color{magenta},
 	numberstyle=\tiny\color{codegray},
 	stringstyle=\color{codepurple},
-	basicstyle=\footnotesize,
 	breakatwhitespace=false,         
-	breaklines=true,                 
+	breaklines=true,               
 	captionpos=b,                    
 	keepspaces=true,                 
 	numbers=left,                    
@@ -45,18 +46,30 @@
 
 \lstset{style=mystyle}
 
-\author{Alex Olar}
-\title{CBM szimuláció}
+\author{Olar Alex - Fizika Bsc III.}
+\title{A FAIR CBM szimuláció használata és részecskere klaszterezés nehézion ütközésekben}
 \date{\today}
 
 \begin{document}
-\maketitle
+\linespread{1.12358}
+\clearpage\maketitle
+\thispagestyle{empty}
 \vfill
-\begin{center}
-	\includegraphics[width=0.66\textwidth]{gsi.png}
-\end{center}
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{.39\textwidth}
+		\includegraphics[width=0.82\textwidth]{gsi.png}
+	\end{subfigure}
+	\begin{subfigure}{.39\textwidth}
+		\includegraphics[width=.82\textwidth]{elte.jpg}
+	\end{subfigure}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\textwidth]{wigner.png}
+\end{figure}
 \newpage
-\renewcommand{\abstractname}{Bevezető}
+\renewcommand{\abstractname}{Kivonat}
 \renewcommand{\thesection}{\Roman{section}.}
 \renewcommand{\thesubsection}{\thesection\arabic{subsection}}
 \renewcommand{\thesubsubsection}{\thesubsection\arabic{subsubsection}}
@@ -64,6 +77,9 @@
 	\par Egy hónapot töltöttem a nyár folyamán, július hónapba, Darmstadtban a GSI nevű kutatóközpontban. Kint tartózkodásom célja az volt, hogy többet megtudjam a  CBM saját szimulációjáról, amely kutató csoport már az épülő FAIR\footnote{ Facility for Antiproton and Ion Research } része. Ezalatt a hónap alatt megismerkedtem mélyebben a ROOT \footnote{ CERN szoftver részecske analízishez} nevű szoftverrel, a helyi cbmROOT-tal \footnote{ CBM ( Compressed Barionic Matter  ) szoftver a GSI/FAIR által fejlesztve}, valamint a C és C++ programozási nyelvekkel.
 	\vspace{5mm}
 	\par A kint létem alatt sokat tanultam a detektor technológiákról, valamint az azokban lejátszódó eseményekről és örömmel voltam részese ennek a nagyszabású projektnek és a mindennapi kutatói életnek.
+	\vspace{5mm}
+	\par Itthoni munkám során a nehézion ütközések szimulációjához kapcsolódva egy klaszterező program fejlesztésével foglalkoztam, 
+	ami a kinyert adatokat csoportosítja térbeli és impulzustérbeli távolságuk alapján, előre definiált klaszterezési mérettel, az MST algoritmus felhasználása segítségével.
 \end{abstract}
 \tableofcontents
 \newpage
@@ -481,128 +497,72 @@ nem tud továbbhaladni egy klaszterben, azaz nem tud több pontot hozzáadni, ki
 azt ki kell írni egy fájlba. Ezután lehet csak választani egy random pontot újra, és lefuttatni az eddigi algoritmust a már redukált gráfon.
 \subsection{ A kód}
 \par A kódot mellékelem, ezután beszélek majd a bemenetéről és kimenetéről.
-\lstinputlisting[language=C++]{main.cpp}
+\lstinputlisting[language=C++]{main.cpp}[basicstyle=\linespread{1.12358}]
 \subsubsection{ Bemeneti paraméterek}
-\par A program első paramétere a bemeneti fájl neve, ami egy szöveges formátum és egyenlőre részecske azonosítókat nem tartalmaz
-csak egyszerűen soronként 6 adatot, amik 3 térbeli, és 3 impulzus térbeli koordinátát jelentenek. A második paraméter a két részecske 
-közötti távolság maximuma.
-\par A példa kedvéért vegyünk egy olyan adatfájlt, ami 6000 sort tartalmaz, 2 db klaszterrel. Ezt én generáltam, vegyesen vannak benne pontok 
-3 dimenzióban leszórva két adott pont környékén.
-\begin{lstlisting}[language=C++]
-...
-24.6087 24.6546 25.1445 218.981 220.67 132.89 
-25.5476 24.6009 24.9727 141.339 77.3168 223.902 
-354.082 353.431 354.283 108.265 134.649 245.746 
-25.2794 25.6063 25.7068 61.4374 162.584 207.442 
-353.984 353.188 354.267 128.43 181.177 98.3733 
-25.1261 24.9143 25.2259 134.311 40.598 226.307 
-...
+\par A program parancssorról működik.  Három paramétert vár a futás során. Az első paraméter a bemeneti fájl neve, a második a maximális 
+klaszeterezési távolság, azaz a maximálisan definiálható élhossz két pont között. A harmadik paraméter pedig a kimeneti fájl neve, ami
+egyesével listázza majd a klaszeterek méreteit és az összes klaszterek számát. A program képernyőre írja a gráf elkészítésének idejét
+és a klaszterezés idejét is $ms$-ban. Ezt parancssorról át lehet irányítani egy tetszőleges fájlba ( >> time.dat ).
+\par A bemeneti fájl formátuma adott. Ebben részecske adatok szerepelnek, és adott időlépésenként haladva követjük végig a részecskéket.
+Sorénként a következő adatokat kapjuk: nukleon (igen/nem), töltés, tömeg(GeV), px, py, pz (GeV/c), rx, ry, rz (fm), ütközések száma.
+\begin{lstlisting}
+  1  1  0.938300 -0.177627  0.025891 -0.077826 -7.935590  0.056308-11.041818   1
+  1  1  0.938300  0.418485  0.316837  0.882886 12.817832  5.254027  6.157795   2
+  1  1  0.938300 -0.247703  0.057946 -0.044372-12.626606  4.831421-19.696069   1
+  1  1  0.938300 -0.022614 -0.215107  0.223749 -4.957242 -6.073233 -4.840523   2
+  1  1  0.938300 -0.208557 -0.300033  0.080906 -5.851900-14.546136-11.728940   4
+  1  0  0.938300 -0.556290  0.208243  0.389433-16.943628 12.829147 -3.252291   7
+  1  1  0.938300 -0.045176 -0.188415  0.277124 -3.621005 -9.789178 -6.976719   3
+  1  1  0.938300 -0.562875 -0.475173  0.274616-17.897499-17.592449 -6.268526   3
+  1  1  0.938300 -0.032136 -0.021516 -0.007764 -5.412685  0.558902-15.674200   1
 \end{lstlisting}
-\par Ezen pontok generálásához az alábbi kódot használtam:
-\begin{lstlisting}[language=C++]
-#include <random>
-#include <fstream>
-#include <algorithm>
-
-int main()
-{
-
-    std::random_device dev;
-    std::mt19937 mersenne(dev());
-    std::normal_distribution<double> pos1_dist(25.,0.4);
-
-    std::normal_distribution<double> pos2_dist(354.,0.54);
-
-    std::normal_distribution<double> mom_dist(120.,73.);
-
-    std::ofstream fout("data.dat",std::ios_base::out);
-
-    // generate 6000 lines
-
-    std::vector<double> output(3);
-
-    for(int i=0; i<2000; i++){
-
-        // 2 line generated with pos1_dist
-        // 1 line genrated with pos2_dist
-
-        // all momenta generated with mom_dist
-
-        std::generate(output.begin(),output.end(),
-                    [&]{ return pos1_dist(mersenne); });
-        
-        std::for_each(output.begin(),output.end(),
-                     [&](double& x){ fout << x << " "; });
-
-        std::generate(output.begin(),output.end(),
-                    [&]{ return mom_dist(mersenne); });
-        
-        std::for_each(output.begin(),output.end(),
-                     [&](double& x){ fout << x << " "; });
-
-        fout << "\n";
-
-        std::generate(output.begin(),output.end(),
-                    [&]{ return pos1_dist(mersenne); });
-        
-        std::for_each(output.begin(),output.end(),
-                     [&](double& x){ fout << x << " "; });
-
-        std::generate(output.begin(),output.end(),
-                    [&]{ return mom_dist(mersenne); });
-        
-        std::for_each(output.begin(),output.end(),
-                     [&](double& x){ fout << x << " "; });
-
-        fout << "\n";
-
-        std::generate(output.begin(),output.end(),
-                    [&]{ return pos2_dist(mersenne); });
-        
-        std::for_each(output.begin(),output.end(),
-                     [&](double& x){ fout << x << " "; });
-
-        std::generate(output.begin(),output.end(),
-                    [&]{ return mom_dist(mersenne); });
-        
-        std::for_each(output.begin(),output.end(),
-                     [&](double& x){ fout << x << " "; });
-
-        fout << "\n";
-
-    }
-
-    fout.close();
-
-    return 0;
-
-}
-\end{lstlisting}
-\subsubsection{ A kimenet}
-\par A kimeneten egy output.txt nevezetű fájl van, ami megmutatja, hogy milyen pontok nem voltak klaszterizálva a futtatás előtt, majd
-azt, hogy melyikek voltak, és megmutatja, hogy melyik pontok között húzta meg a kapcsolatot az algoritmus, azaz pontonként megkapom az
-MST-t.
-\par Minden pontnak az algoritmus futtatása során van egy sorszáma (lényegében ténylegesen a sor száma) és ez által hivatkozik rá a 
-program, azaz a kimenetből részletek:
-\begin{lstlisting}[language=C++]
-Open nodes before: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 ...
-Cluster size: 4000
-Clustered vertices: 0 1 3 4 6 7 9 10 12 13 15 16 18 19 21 22 24 25 27 28 30 31 33 34 36 ...
-MST is set:
- (24.6087;24.6546;25.1445)  -->  (24.6238;24.6868;25.0871) 
- (24.6238;24.6868;25.0871)  -->  (24.5937;24.7339;25.0635) 
- (24.6732;24.7439;25.0026)  -->  (24.6342;24.7192;24.9762) 
- (24.6342;24.7192;24.9762)  -->  (24.6278;24.7047;24.9755) 
-...
-\end{lstlisting}
-\par Majd természetesen ugyan ez ismétlődik, csak a másik 2000 tagú klaszterre. A program helyesen futott, hiszen én pontosan két távoli klasztert
-generáltam, az egyiket 4000 ponttal, a másikat 2000 ponttal.
-\par Természetesen a sorszám által vissza lehet hivatkozni az adott pontra (részecskére) és ezáltal konkrétan megmondani, hogy melyiket
-alkottak egy klasztert.
-\subsubsection{ Sebesség}
-\par A kód sebessége nagyban függ a definiált maximum távolságtól. Ha az előbbi algoritmust egy igen nagy ( itt például 5000 egység ) szám,
-akkor egy nagy klasztert találunk, viszonylag gyorsan, hiszen az MST keresés hiba nélkül lefut. Azonban minél kisebb távolságokra is
-éleket rakunk a kreált gráfba annál több számítást kell végeznünk és a sebesség nagyban leromlik. 
+\par A szimulációban 394 részecske vesz részt, 100 időlépésben ( 1 időlépés 0,5 fm/c időnek felel meg) az általám elemzett adatsorban.
+A következőkben azt vizsgáltam, hogy adott időben a rendszer mennyire érzékeny a klaszterezési méretre. Ehhez több szempontot figyelembe
+kellett venni. Nyilvánvalóan érdekes megvizsgálni, hogy hogyan függ az átlagos klaszterméret a távolságtól, valamint, hogy a maximális 
+klaszterméret hogyan viselkedik a távolság függvényében. Ha az előbbi nem is növekszik gyorsan, az utóbbira ez már nem mondható el. 
+A klaszterezés instabil lesz nagy klaszterezési távolságokra, mert az algoritmus hatalmas klasztereket tud létrehozni, amelyeknek nincs
+fizikai jelentésük. 
+\subsection{ Távolság függés}
+\par Valamelyik időlépésben elvégezve a klaszerezési távolságtól való függés vizsgálatát a következőket kaptam.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.75\textwidth]{dist-mean.png}
+	\caption{ Térbeli klaszterezés eredménye. Klaszterezési távolság - átlagos klaszterméret }
+\end{figure}
+\par A számolást természetesen térbeli, és impulzustérbeli kalszterezésre is elvégeztem.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.75\textwidth]{momdist-mean.png}
+	\caption{ Impulzustérbeli klaszterezés eredménye. Klaszterezési távolság - maximális klaszterméret }
+\end{figure}
+\par Térben a klaszterezés életképes, ha a távolság a részecskék között 1 fm alatt van, míg impulzustérben ez az érték 0.08 Gev/c alatti.
+\par A következő ábrákon jól látható, hogy a klaszterező mérét növelésével a maximális klaszterméret adott klaszterezés során gyorsabban
+növekszik, mint az átlagos klaszterméret:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.75\textwidth]{dist-max.png}
+	\caption{ Térbeli klaszterezés ereménye. Klaszerezési távolság - Maximális klaszterméret }
+\end{figure}
+\par Hasonlóan impulzustérben:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.75\textwidth]{momdist-max.png}
+\end{figure}
+\par A kezelhető átlagos klaszterméretek mind 1,5 alatti értékek, tehát az eredményeim alapján a 394 részecskét nem számottevően, de 10-20\%-al bizonyasan csökkenteni tudtam klasztezés után. A fenti adatok 
+alapján ez elméletileg azt jeleneti, hogy detektáláskot ~330 töltött részecskét lehet csak észlelni az eredeti közel ~400 helyett. 
+\subsection{ Kimenet}
+\par A kimeneten tehát egy olyan fájlt kapunk, amiből meghatározható igen könnyen a maximális klaszterméret és az átlagos klaszterméret is.
+Az fentebbi ábrákat is ezek alapján készítettem egy egyszerű programmal. Ezek mellett még külön fájlokban megkapjuk a klaszterek elemeit is.
+\subsection{ Sebesség, konklúzió}
+\par A kód sebessége nagyban függ a definiált maximum távolságtól. Ha az előbbi algoritmust egy igen nagy szám,
+akkor egy nagy klasztert találunk, viszonylag gyorsan, hiszen az MST keresés hiba nélkül lefut. Azonban minél nagyobb távolságokra is
+éleket rakunk a kreált gráfba annál több számítást kell végeznünk és a sebesség nagyban leromlik. Lényegében mondható az, hogy a
+klaszterezés belátható időn belül lefut tetszőlegesen nagy adathalmazra, hacsak a rendszer ki nem fogy a memóriából. 12 ezer sornyi adat 
+klaszterezése esetén ez már megtörténhet. A program több dologra is képes mint amire jelenleg használva van. Az éleket tudja definiálni és
+menteni is, ez az MST algoritmus sajátossága, de nekem nincs rá szükségem ebben az alkalmazásban. A távolság számítást módosítanom kell majd,
+hiszen jelenleg csak euklideszi normám van, ami nem a legmegfelelőbb, de ez csak egy belső függvény átírást igényel majd. A kommentelt kódrészletek 
+a kimenenti fájlok emberi olvashatóságáért feletek volna részben, valamint a további funkcionalistást kapcsoltam ki, de az adatok feldolgozása során
+ kényelmesebb volt így eljárnom.
 \begin{thebibliography}{9}
 	\bibitem{CBMbook}
 	{\it The CBM Physics Book: Compressed Baryonic Matter in Laboratory Experiments} 2011 ed B Friman {\it et al} (Springer) Lect. Notes Phys.

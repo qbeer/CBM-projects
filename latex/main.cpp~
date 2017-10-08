@@ -94,6 +94,22 @@ int main( int argc, char* argv[] )
 
         }
 
+        /*
+
+        for( unsigned int j=i+1; j < data.pos.size(); j++ ){
+
+            Q = j;
+
+            dist = distance( data.pos[i],data.pos[j] );
+
+            Graph[P].push_back(std::make_pair(Q, dist));
+
+            Graph[Q].push_back(std::make_pair(P, dist));
+
+        }
+
+        */
+
     }
 
     auto t1 = std::chrono::high_resolution_clock::now();
@@ -218,6 +234,16 @@ bool prim(std::ostream& fout,
 
     std::list<int> open_nodes_before = open_nodes;
 
+/*
+
+    fout << "\nOpen nodes before: ";
+
+    std::for_each(open_nodes.begin(),open_nodes.end(),[&](int& x){ fout << x << " "; });
+    
+    fout << "\n";
+
+*/
+
     int start_vertex;
 
     if(open_nodes.size()==0){
@@ -335,6 +361,24 @@ bool prim(std::ostream& fout,
 
     /*
 
+    fout << "Cluster size: " << clustered.size() << "\n";
+
+    if(clustered.size() == 1){
+
+        fout << "Isolated point: " << data.pos[clustered.front()] << "\n";
+
+    }else{
+
+
+    fout << "Clustered vertices: ";
+    std::for_each(clustered.begin(), clustered.end(), [&](int& x){ fout << x << " "; });
+    fout << "\n";
+
+
+    */
+
+    /*
+
     fout << "MST is set:\n";
 
     for( unsigned int i = 0; i < edges.size(); i++ ){
@@ -345,6 +389,7 @@ bool prim(std::ostream& fout,
                 fout << data.pos[edges[i].first] << " --> " << data.pos[edges[i].second] << "\n";
 
             }
+
     }
 
     }
@@ -372,6 +417,14 @@ bool prim(std::ostream& fout,
         }
 
     }
+
+    /*
+
+    fout << "Open nodes after: ";
+    std::for_each(open_nodes.begin(),open_nodes.end(),[&](int& x){ fout << x << " "; });
+    fout << "\n";
+    
+    */
 
     num_of_clusters++;
     std::stringstream ss;
@@ -405,4 +458,7 @@ bool prim(std::ostream& fout,
     }else{
         return false;
     }
+
+    
+
 }

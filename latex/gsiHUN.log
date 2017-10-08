@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  1 OCT 2017 14:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  8 OCT 2017 16:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -478,6 +478,9 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 Package caption Info: hungarian babel option is loaded.
 Package caption Info: float package is loaded.
 )
+(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
 (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2016/02/20 v1.1-142 Sub-captions (AR)
 \c@subfigure=\count105
@@ -560,18 +563,18 @@ Package: listings 2015/06/04 1.6 (Carsten Heinz)
  (./gsiHUN.aux)
 \openout1 = `gsiHUN.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count118
@@ -641,15 +644,15 @@ Package caption Info: End \AtBeginDocument code.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(85.35826pt, 426.79135pt, 85.35826pt)
-* v-part:(T,H,B)=(113.81102pt, 617.4248pt, 113.81102pt)
+* h-part:(L,W,R)=(56.9055pt, 483.69687pt, 56.9055pt)
+* v-part:(T,H,B)=(85.35826pt, 674.33032pt, 85.35826pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=426.79135pt
-* \textheight=617.4248pt
-* \oddsidemargin=13.08827pt
-* \evensidemargin=13.08827pt
-* \topmargin=4.54103pt
+* \textwidth=483.69687pt
+* \textheight=674.33032pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-23.91173pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=12.0pt
@@ -675,12 +678,27 @@ LaTeX Info: Redefining \mit on input line 512.
 <gsi.png, id=1, 419.31656pt x 566.115pt>
 File: gsi.png Graphic file (type png)
  <use gsi.png>
-Package pdftex.def Info: gsi.png used on input line 56.
-(pdftex.def)             Requested size: 281.68385pt x 380.2971pt.
+Package pdftex.def Info: gsi.png used on input line 61.
+(pdftex.def)             Requested size: 154.6874pt x 208.83731pt.
+
+<elte.jpg, id=3, 1333.98375pt x 1333.98375pt>
+File: elte.jpg Graphic file (type jpg)
+ <use elte.jpg>
+Package pdftex.def Info: elte.jpg used on input line 64.
+(pdftex.def)             Requested size: 154.6874pt x 154.67708pt.
+
+<wigner.png, id=4, 1587.9325pt x 611.28375pt>
+File: wigner.png Graphic file (type png)
+ <use wigner.png>
+Package pdftex.def Info: wigner.png used on input line 69.
+(pdftex.def)             Requested size: 193.47578pt x 74.47949pt.
  [1
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./gsi.png>] (./gsiHUN.toc
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./gsi.png> <./elte.jpg> <.
+/wigner.png>]
+(./gsiHUN.toc
 Overfull \hbox (1.95786pt too wide) detected at line 7
 \T1/cmr/bx/n/12 III. 
  []
@@ -690,90 +708,86 @@ Overfull \hbox (1.3469pt too wide) detected at line 10
 \T1/cmr/bx/n/12 IV. 
  []
 
-)
+[2
+
+pdfTeX warning: /usr/bin/pdflatex: pop empty color page stack 0
+])
 \tf@toc=\write3
 \openout3 = `gsiHUN.toc'.
 
- [2
-
-pdfTeX warning: /usr/bin/pdflatex: pop empty color page stack 0
-] <water_phase.jpg, id=23, 794.97pt x 614.295pt>
+ [3] <water_phase.jpg, id=29, 794.97pt x 614.295pt>
 File: water_phase.jpg Graphic file (type jpg)
  <use water_phase.jpg>
-Package pdftex.def Info: water_phase.jpg used on input line 92.
-(pdftex.def)             Requested size: 324.35907pt x 250.64403pt.
+Package pdftex.def Info: water_phase.jpg used on input line 108.
+(pdftex.def)             Requested size: 367.60695pt x 284.06949pt.
 
-Overfull \hbox (10.06993pt too wide) in paragraph at lines 85--94
-[]\T1/cmr/m/n/12 A víz fá-zis-di-ag-ram-ja meg-mu-tat-ja an-nak kü-lön-bö-z® fá
--zi-sa-it egy nyomás-h®mérséklet
- []
-
-[3] <cbm_phase1.png, id=29, 265.99374pt x 260.975pt>
+[4] <cbm_phase1.png, id=35, 265.99374pt x 260.975pt>
 File: cbm_phase1.png Graphic file (type png)
  <use cbm_phase1.png>
-Package pdftex.def Info: cbm_phase1.png used on input line 103.
-(pdftex.def)             Requested size: 192.39929pt x 188.77394pt.
+Package pdftex.def Info: cbm_phase1.png used on input line 119.
+(pdftex.def)             Requested size: 218.05254pt x 213.94513pt.
 
-<cbm_phase2.jpg, id=30, 351.3125pt x 269.005pt>
+<cbm_phase2.jpg, id=36, 351.3125pt x 269.005pt>
 File: cbm_phase2.jpg Graphic file (type jpg)
  <use cbm_phase2.jpg>
-Package pdftex.def Info: cbm_phase2.jpg used on input line 107.
-(pdftex.def)             Requested size: 192.39929pt x 147.32518pt.
- [4 <./water_phase.jpg>] [5 <./cbm_phase1.png> <./cbm_phase2.jpg>]
-<CBM_phase_trans.png, id=38, 563.10374pt x 364.36125pt>
+Package pdftex.def Info: cbm_phase2.jpg used on input line 123.
+(pdftex.def)             Requested size: 218.05254pt x 166.97018pt.
+ [5 <./water_phase.jpg>] <CBM_phase_trans.png, id=40, 563.10374pt x 364.36125pt
+>
 File: CBM_phase_trans.png Graphic file (type png)
 
 <use CBM_phase_trans.png>
-Package pdftex.def Info: CBM_phase_trans.png used on input line 136.
-(pdftex.def)             Requested size: 409.72255pt x 265.11418pt.
- [6 <./CBM_phase_trans.png (PNG copy)>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 142.
+Package pdftex.def Info: CBM_phase_trans.png used on input line 152.
+(pdftex.def)             Requested size: 464.35223pt x 300.46274pt.
+ [6 <./cbm_phase1.png> <./cbm_phase2.jpg>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 158.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 142.
-
-<cbm_detector.png, id=45, 561.09625pt x 365.365pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 158.
+ [7 <./CBM_phase_trans.png (PNG copy)>] <cbm_detector.png, id=53, 561.09625pt x
+ 365.365pt>
 File: cbm_detector.png Graphic file (type png)
- <use cbm_detector.png>
-Package pdftex.def Info: cbm_detector.png used on input line 152.
-(pdftex.def)             Requested size: 281.68385pt x 183.41795pt.
 
-[7 <./cbm_detector.png>] <phi_KK_M.png, id=52, 640.3925pt x 455.7025pt>
+<use cbm_detector.png>
+Package pdftex.def Info: cbm_detector.png used on input line 168.
+(pdftex.def)             Requested size: 319.2417pt x 207.87553pt.
+ [8 <./cbm_detector.png>]
+<phi_KK_M.png, id=58, 640.3925pt x 455.7025pt>
 File: phi_KK_M.png Graphic file (type png)
+ <use phi_KK_M.png>
+Package pdftex.def Info: phi_KK_M.png used on input line 208.
+(pdftex.def)             Requested size: 225.16267pt x 160.2214pt.
 
-<use phi_KK_M.png>
-Package pdftex.def Info: phi_KK_M.png used on input line 192.
-(pdftex.def)             Requested size: 198.67294pt x 141.3706pt.
- <phi_KK_Mzoom.png, id=53, 694.595pt x 842.14626pt>
+<phi_KK_Mzoom.png, id=59, 694.595pt x 842.14626pt>
 File: phi_KK_Mzoom.png Graphic file (type png)
+ <use phi_KK_Mzoom.png>
+Package pdftex.def Info: phi_KK_Mzoom.png used on input line 213.
+(pdftex.def)             Requested size: 225.16267pt x 272.98753pt.
 
-<use phi_KK_Mzoom.png>
-Package pdftex.def Info: phi_KK_Mzoom.png used on input line 197.
-(pdftex.def)             Requested size: 198.67294pt x 240.87514pt.
- [8] <combiback_fit.png, id=58, 694.595pt x 842.14626pt>
+[9] <combiback_fit.png, id=64, 694.595pt x 842.14626pt>
 File: combiback_fit.png Graphic file (type png)
 
 <use combiback_fit.png>
-Package pdftex.def Info: combiback_fit.png used on input line 218.
-(pdftex.def)             Requested size: 149.37958pt x 181.10931pt.
- <phi_KK_Mfit.png, id=59, 640.3925pt x 455.7025pt>
+Package pdftex.def Info: combiback_fit.png used on input line 234.
+(pdftex.def)             Requested size: 169.29684pt x 205.25465pt.
+ <phi_KK_Mfit.png, id=65, 640.3925pt x 455.7025pt>
 File: phi_KK_Mfit.png Graphic file (type png)
 
 <use phi_KK_Mfit.png>
-Package pdftex.def Info: phi_KK_Mfit.png used on input line 227.
-(pdftex.def)             Requested size: 198.67294pt x 141.3706pt.
- <phi_KK_Mfitzoom.png, id=60, 640.3925pt x 455.7025pt>
+Package pdftex.def Info: phi_KK_Mfit.png used on input line 243.
+(pdftex.def)             Requested size: 225.16267pt x 160.2214pt.
+ <phi_KK_Mfitzoom.png, id=66, 640.3925pt x 455.7025pt>
 File: phi_KK_Mfitzoom.png Graphic file (type png)
 
 <use phi_KK_Mfitzoom.png>
-Package pdftex.def Info: phi_KK_Mfitzoom.png used on input line 232.
-(pdftex.def)             Requested size: 198.67294pt x 141.3706pt.
- [9 <./phi_KK_M.png> <./phi_KK_Mzoom.png> <./combiback_fit.png>] (/usr/share/te
-xlive/texmf-dist/tex/latex/listings/lstlang1.sty
+Package pdftex.def Info: phi_KK_Mfitzoom.png used on input line 248.
+(pdftex.def)             Requested size: 225.16267pt x 160.2214pt.
+ [10 <./phi_KK_M.png> <./phi_KK_Mzoom.png> <./combiback_fit.png>] (/usr/share/t
+exlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -785,120 +799,141 @@ File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 3.
 
-[10 <./phi_KK_Mfit.png> <./phi_KK_Mfitzoom.png>])
-<efficieny.png, id=68, 694.595pt x 842.14626pt>
+[11 <./phi_KK_Mfit.png> <./phi_KK_Mfitzoom.png>])
+<efficieny.png, id=74, 694.595pt x 842.14626pt>
 File: efficieny.png Graphic file (type png)
  <use efficieny.png>
-Package pdftex.def Info: efficieny.png used on input line 249.
-(pdftex.def)             Requested size: 277.41176pt x 336.35138pt.
- [11]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 258.
+Package pdftex.def Info: efficieny.png used on input line 265.
+(pdftex.def)             Requested size: 314.40001pt x 381.19824pt.
+ [12]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 274.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-Underfull \hbox (badness 10000) in paragraph at lines 256--259
+Underfull \hbox (badness 10000) in paragraph at lines 272--275
 
  []
 
-[12 <./efficieny.png>] <particle_file.png, id=76, 424.58624pt x 753.81625pt>
+[13 <./efficieny.png>] <particle_file.png, id=83, 424.58624pt x 753.81625pt>
 File: particle_file.png Graphic file (type png)
 
 <use particle_file.png>
-Package pdftex.def Info: particle_file.png used on input line 295.
-(pdftex.def)             Requested size: 179.25157pt x 318.2455pt.
- [13] <reco2.png, id=81, 1445.4pt x 813.0375pt>
+Package pdftex.def Info: particle_file.png used on input line 311.
+(pdftex.def)             Requested size: 203.1518pt x 360.67746pt.
+ [14] <reco2.png, id=87, 1445.4pt x 813.0375pt>
 File: reco2.png Graphic file (type png)
 
 <use reco2.png>
-Package pdftex.def Info: reco2.png used on input line 304.
-(pdftex.def)             Requested size: 198.67294pt x 111.75267pt.
- <reco1.png, id=82, 1445.4pt x 813.0375pt>
+Package pdftex.def Info: reco2.png used on input line 320.
+(pdftex.def)             Requested size: 225.16267pt x 126.6522pt.
+ <reco1.png, id=88, 1445.4pt x 813.0375pt>
 File: reco1.png Graphic file (type png)
  <use reco1.png>
-Package pdftex.def Info: reco1.png used on input line 309.
-(pdftex.def)             Requested size: 198.67294pt x 111.75267pt.
+Package pdftex.def Info: reco1.png used on input line 325.
+(pdftex.def)             Requested size: 225.16267pt x 126.6522pt.
 
-[14 <./particle_file.png> <./reco2.png> <./reco1.png>]
-<input.png, id=87, 279.0425pt x 287.0725pt>
+[15 <./particle_file.png> <./reco2.png> <./reco1.png>]
+<input.png, id=93, 279.0425pt x 287.0725pt>
 File: input.png Graphic file (type png)
  <use input.png>
-Package pdftex.def Info: input.png used on input line 325.
-(pdftex.def)             Requested size: 213.39568pt x 219.54404pt.
- [15 <./input.png>]
-<k-k+decayofphi.png, id=92, 1800.7275pt x 521.95pt>
+Package pdftex.def Info: input.png used on input line 341.
+(pdftex.def)             Requested size: 241.84843pt x 248.81364pt.
+
+<k-k+decayofphi.png, id=94, 1800.7275pt x 521.95pt>
 File: k-k+decayofphi.png Graphic file (type png)
  <use k-k+decayofphi.png>
-Package pdftex.def Info: k-k+decayofphi.png used on input line 347.
-(pdftex.def)             Requested size: 362.77525pt x 105.14474pt.
+Package pdftex.def Info: k-k+decayofphi.png used on input line 363.
+(pdftex.def)             Requested size: 411.14528pt x 119.16989pt.
 
-[16 <./k-k+decayofphi.png>] [17]
-<phiKK_2500phi.png, id=100, 1662.21pt x 848.16875pt>
+[16 <./input.png>] [17 <./k-k+decayofphi.png>]
+<phiKK_2500phi.png, id=103, 1662.21pt x 848.16875pt>
 File: phiKK_2500phi.png Graphic file (type png)
  <use phiKK_2500phi.png>
-Package pdftex.def Info: phiKK_2500phi.png used on input line 422.
-(pdftex.def)             Requested size: 213.39568pt x 108.88101pt.
+Package pdftex.def Info: phiKK_2500phi.png used on input line 438.
+(pdftex.def)             Requested size: 241.84843pt x 123.40193pt.
 
-<reconstructed_eff_phi2500.png, id=101, 1662.21pt x 848.16875pt>
+[18] <reconstructed_eff_phi2500.png, id=107, 1662.21pt x 848.16875pt>
 File: reconstructed_eff_phi2500.png Graphic file (type png)
 
 <use reconstructed_eff_phi2500.png>
-Package pdftex.def Info: reconstructed_eff_phi2500.png used on input line 431.
-(pdftex.def)             Requested size: 213.39568pt x 108.88101pt.
+Package pdftex.def Info: reconstructed_eff_phi2500.png used on input line 447.
+(pdftex.def)             Requested size: 241.84843pt x 123.40193pt.
 
-<kshort_phi2500.png, id=102, 1662.21pt x 848.16875pt>
+<kshort_phi2500.png, id=108, 1662.21pt x 848.16875pt>
 File: kshort_phi2500.png Graphic file (type png)
  <use kshort_phi2500.png>
-Package pdftex.def Info: kshort_phi2500.png used on input line 439.
-(pdftex.def)             Requested size: 198.67294pt x 101.37465pt.
+Package pdftex.def Info: kshort_phi2500.png used on input line 455.
+(pdftex.def)             Requested size: 225.16267pt x 114.8861pt.
 
-<k-_phi2500.png, id=103, 1662.21pt x 848.16875pt>
+<k-_phi2500.png, id=109, 1662.21pt x 848.16875pt>
 File: k-_phi2500.png Graphic file (type png)
  <use k-_phi2500.png>
-Package pdftex.def Info: k-_phi2500.png used on input line 444.
-(pdftex.def)             Requested size: 198.67294pt x 101.37465pt.
- [18 <./phiKK_2500phi.png> <./reconstructed_eff_phi2500.png>]
-Overfull \hbox (31.18564pt too wide) in paragraph at lines 462--467
-[]\T1/cmr/m/n/12 Ennek ki-me-ne-tén töb-bek kö-zött sze-re-pel-het-nek bi-zo-ny
-os ré-szecs-kék és azok momentum-
- []
+Package pdftex.def Info: k-_phi2500.png used on input line 460.
+(pdftex.def)             Requested size: 225.16267pt x 114.8861pt.
+ [19 <./phiKK_2500phi.png> <./reconstructed_eff_phi2500.png> <./kshort_phi2500.
+png> <./k-_phi2500.png>] [20] (./main.cpp [21] [22] [23] [24] [25] [26] [27] [2
+8])
+[29] <dist-mean.png, id=148, 481.8pt x 361.35pt>
+File: dist-mean.png Graphic file (type png)
+ <use dist-mean.png>
+Package pdftex.def Info: dist-mean.png used on input line 529.
+(pdftex.def)             Requested size: 362.77264pt x 272.08702pt.
+ [30]
+<momdist-mean.png, id=152, 481.8pt x 361.35pt>
+File: momdist-mean.png Graphic file (type png)
+ <use momdist-mean.png>
+Package pdftex.def Info: momdist-mean.png used on input line 535.
+(pdftex.def)             Requested size: 362.77264pt x 272.08702pt.
+ [31 <./dist-mean.png> <./momdist-mean.png>] <dist-max.png, id=159, 481.8pt x 3
+61.35pt>
+File: dist-max.png Graphic file (type png)
 
-[19 <./kshort_phi2500.png> <./k-_phi2500.png>] (./main.cpp [20] [21] [22]
-[23] [24] [25] [26] [27] [28] [29]) [30] [31] [32] [33] (./gsiHUN.aux) ) 
+<use dist-max.png>
+Package pdftex.def Info: dist-max.png used on input line 543.
+(pdftex.def)             Requested size: 362.77264pt x 272.08702pt.
+ <momdist-max.png, id=160, 481.8pt x 361.35pt>
+File: momdist-max.png Graphic file (type png)
+
+<use momdist-max.png>
+Package pdftex.def Info: momdist-max.png used on input line 549.
+(pdftex.def)             Requested size: 362.77264pt x 272.08702pt.
+ [32 <./dist-max.png> <./momdist-max.png>] [33]
+(./gsiHUN.aux) ) 
 Here is how much of TeX's memory you used:
- 8184 strings out of 493029
- 117963 string characters out of 6136234
- 431881 words of memory out of 5000000
- 11560 multiletter control sequences out of 15000+600000
+ 8204 strings out of 493029
+ 118489 string characters out of 6136234
+ 448277 words of memory out of 5000000
+ 11570 multiletter control sequences out of 15000+600000
  24703 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,9n,61p,623b,1766s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/s
-hare/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></
-usr/share/texmf/fonts/type1/public/cm-super/sfbx1095.pfb></usr/share/texmf/font
-s/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-su
-per/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></u
-sr/share/texmf/fonts/type1/public/cm-super/sfrm0600.pfb></usr/share/texmf/fonts
-/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf/fonts/type1/public/cm-sup
-er/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></us
-r/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/
-type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-supe
-r/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm2074.pfb></usr
-/share/texmf/fonts/type1/public/cm-super/sfsl1200.pfb></usr/share/texmf/fonts/t
-ype1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm-super
-/sftt1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on gsiHUN.pdf (33 pages, 1544078 bytes).
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1095.pfb
+></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/f
+onts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm
+-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0600.pfb>
+</usr/share/texmf/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf/fo
+nts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-
+super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb><
+/usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fon
+ts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-s
+uper/sfrm2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsl1200.pfb></
+usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf/font
+s/type1/public/cm-super/sftt1000.pfb></usr/share/texmf/fonts/type1/public/cm-su
+per/sftt1200.pfb>
+Output written on gsiHUN.pdf (33 pages, 2723916 bytes).
 PDF statistics:
- 236 PDF objects out of 1000 (max. 8388607)
+ 247 PDF objects out of 1000 (max. 8388607)
  148 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 106 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 136 words of extra memory for PDF output out of 10000 (max. 10000000)
 

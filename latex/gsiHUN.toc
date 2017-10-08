@@ -1,21 +1,22 @@
-\select@language {hungarian} \contentsline {section}{\numberline {I.} Alapok}{3}
-\select@language {hungarian} \contentsline {subsection}{\numberline {I.1} QCD - BSc-s szemmel}{3}
-\select@language {hungarian} \contentsline {subsection}{\numberline {I.2} CBM fizika }{3}
+\select@language {hungarian} \contentsline {section}{\numberline {I.} Alapok}{4}
+\select@language {hungarian} \contentsline {subsection}{\numberline {I.1} QCD - BSc-s szemmel}{4}
+\select@language {hungarian} \contentsline {subsection}{\numberline {I.2} CBM fizika }{4}
 \select@language {hungarian} \contentsline {section}{\numberline {II.} A CBM detektor}{6}
 \select@language {hungarian} \contentsline {subsection}{\numberline {II.1} Elm\IeC {\'e}let}{6}
 \select@language {hungarian} \contentsline {subsection}{\numberline {II.2} Detektor elrendez\IeC {\'e}s \IeC {\'e}s a szimul\IeC {\'a}ci\IeC {\'o}}{7}
-\select@language {hungarian} \contentsline {section}{\numberline {III.} A $\Phi $-mezonr\IeC {\'o}l r\IeC {\"o}viden}{8}
-\select@language {hungarian} \contentsline {subsection}{\numberline {III.1} $\Phi $-mezon rekonstrukci\IeC {\'o}}{8}
-\select@language {hungarian} \contentsline {subsection}{\numberline {III.2}$\Phi $-mezon a CBM-ben}{11}
-\select@language {hungarian} \contentsline {section}{\numberline {IV.} A szimul\IeC {\'a}ci\IeC {\'o}}{12}
-\select@language {hungarian} \contentsline {subsection}{\numberline {IV.1} Telep\IeC {\'\i }t\IeC {\'e}s}{12}
-\select@language {hungarian} \contentsline {subsection}{\numberline {IV.2} Bevezet\IeC {\'e}s}{13}
+\select@language {hungarian} \contentsline {section}{\numberline {III.} A $\Phi $-mezonr\IeC {\'o}l r\IeC {\"o}viden}{9}
+\select@language {hungarian} \contentsline {subsection}{\numberline {III.1} $\Phi $-mezon rekonstrukci\IeC {\'o}}{9}
+\select@language {hungarian} \contentsline {subsection}{\numberline {III.2}$\Phi $-mezon a CBM-ben}{12}
+\select@language {hungarian} \contentsline {section}{\numberline {IV.} A szimul\IeC {\'a}ci\IeC {\'o}}{13}
+\select@language {hungarian} \contentsline {subsection}{\numberline {IV.1} Telep\IeC {\'\i }t\IeC {\'e}s}{13}
+\select@language {hungarian} \contentsline {subsection}{\numberline {IV.2} Bevezet\IeC {\'e}s}{14}
 \select@language {hungarian} \contentsline {subsection}{\numberline {IV.3} How-tos}{15}
-\select@language {hungarian} \contentsline {subsection}{\numberline {IV.4} $\Phi $-mezonok gener\IeC {\'a}l\IeC {\'a}sa \IeC {\'e}s a kimen\IeC {\H o} adatok elemz\IeC {\'e}se}{16}
-\select@language {hungarian} \contentsline {subsection}{\numberline {IV.5} \IeC {\"O}sszegz\IeC {\'e}s}{19}
-\select@language {hungarian} \contentsline {section}{\numberline {V.} Neh\IeC {\'e}zion fizika itthon }{19}
+\select@language {hungarian} \contentsline {subsection}{\numberline {IV.4} $\Phi $-mezonok gener\IeC {\'a}l\IeC {\'a}sa \IeC {\'e}s a kimen\IeC {\H o} adatok elemz\IeC {\'e}se}{17}
+\select@language {hungarian} \contentsline {subsection}{\numberline {IV.5} \IeC {\"O}sszegz\IeC {\'e}s}{20}
+\select@language {hungarian} \contentsline {section}{\numberline {V.} Neh\IeC {\'e}zion fizika itthon }{20}
 \select@language {hungarian} \contentsline {subsection}{\numberline {V.1} Az algoritmus}{20}
-\select@language {hungarian} \contentsline {subsection}{\numberline {V.2} A k\IeC {\'o}d}{20}
+\select@language {hungarian} \contentsline {subsection}{\numberline {V.2} A k\IeC {\'o}d}{21}
 \select@language {hungarian} \contentsline {subsubsection}{\numberline {V.21} Bemeneti param\IeC {\'e}terek}{30}
-\select@language {hungarian} \contentsline {subsubsection}{\numberline {V.22} A kimenet}{32}
-\select@language {hungarian} \contentsline {subsubsection}{\numberline {V.23} Sebess\IeC {\'e}g}{33}
+\select@language {hungarian} \contentsline {subsection}{\numberline {V.3} T\IeC {\'a}vols\IeC {\'a}g f\IeC {\"u}gg\IeC {\'e}s}{30}
+\select@language {hungarian} \contentsline {subsection}{\numberline {V.4} Kimenet}{33}
+\select@language {hungarian} \contentsline {subsection}{\numberline {V.5} Sebess\IeC {\'e}g, konkl\IeC {\'u}zi\IeC {\'o}}{33}
