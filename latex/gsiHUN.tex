@@ -8,6 +8,7 @@
 \usepackage{float}
 \usepackage{enumerate}
 \usepackage{caption}
+\usepackage{pdfpages}
 \usepackage{setspace}
 \usepackage{subcaption}
 \usepackage{indentfirst}
@@ -43,38 +44,17 @@
 	showtabs=false,                  
 	tabsize=2
 }
-
 \lstset{style=mystyle}
-
-\author{Olar Alex - Fizika Bsc III.}
-\title{A FAIR CBM szimuláció használata és részecskere klaszterezés nehézion ütközésekben}
-\date{\today}
-
 \begin{document}
-\linespread{1.12358}
-\clearpage\maketitle
-\thispagestyle{empty}
-\vfill
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}{.39\textwidth}
-		\includegraphics[width=0.82\textwidth]{gsi.png}
-	\end{subfigure}
-	\begin{subfigure}{.39\textwidth}
-		\includegraphics[width=.82\textwidth]{elte.jpg}
-	\end{subfigure}
-\end{figure}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.4\textwidth]{wigner.png}
-\end{figure}
-\newpage
 \renewcommand{\abstractname}{Kivonat}
 \renewcommand{\thesection}{\Roman{section}.}
 \renewcommand{\thesubsection}{\thesection\arabic{subsection}}
 \renewcommand{\thesubsubsection}{\thesubsection\arabic{subsubsection}}
+\includepdf{gsiTitlePage.pdf}
 \begin{abstract}
-	\par Egy hónapot töltöttem a nyár folyamán, július hónapba, Darmstadtban a GSI nevű kutatóközpontban. Kint tartózkodásom célja az volt, hogy többet megtudjam a  CBM saját szimulációjáról, amely kutató csoport már az épülő FAIR\footnote{ Facility for Antiproton and Ion Research } része. Ezalatt a hónap alatt megismerkedtem mélyebben a ROOT \footnote{ CERN szoftver részecske analízishez} nevű szoftverrel, a helyi cbmROOT-tal \footnote{ CBM ( Compressed Barionic Matter  ) szoftver a GSI/FAIR által fejlesztve}, valamint a C és C++ programozási nyelvekkel.
+	\par Egy hónapot töltöttem a nyár folyamán, július hónapba, Darmstadtban a GSI nevű kutatóközpontban. Kint tartózkodásom célja az volt, hogy többet megtudjak a  CBM saját szimulációjáról, amely kutató csoport már az
+	 épülő FAIR\footnote{ Facility for Antiproton and Ion Research } része. Ezalatt a hónap alatt megismerkedtem mélyebben a ROOT \footnote{ CERN szoftver részecske analízishez} nevű szoftverrel, a
+	  helyi cbmROOT-tal \footnote{ CBM ( Compressed Barionic Matter  ) szoftver a CBM/FAIR által fejlesztve}, valamint a C és C++ programozási nyelvekkel.
 	\vspace{5mm}
 	\par A kint létem alatt sokat tanultam a detektor technológiákról, valamint az azokban lejátszódó eseményekről és örömmel voltam részese ennek a nagyszabású projektnek és a mindennapi kutatói életnek.
 	\vspace{5mm}
@@ -82,20 +62,27 @@
 	ami a kinyert adatokat csoportosítja térbeli és impulzustérbeli távolságuk alapján, előre definiált klaszterezési mérettel, az MST algoritmus felhasználása segítségével.
 \end{abstract}
 \tableofcontents
-\newpage
 \section{ Alapok}
 \subsection{ QCD - BSc-s szemmel}
 \vspace{5mm}
-\par A 20. század folyamán fizikusok szembeszültek azzal, hogy milyen abszolút fontos szerepet töltenek be a szimmetriák az univerzum és a körülöttünk lévő világ megismerésében. A szimmetriák vezették el őket a megmaradási tételekig, valamint az antirészecskék és kvarkok felfedezéséig többek között. 
+\par A 20. század folyamán fizikusok szembesültek azzal, hogy milyen abszolút fontos szerepet töltenek be a szimmetriák az univerzum és a körülöttünk lévő világ
+ megismerésében, miután a megmaradási tételekből következtettek rájuk.
 \vspace{5mm}
-\par A kvarkok felfedezése végre rendet teremtett a részecske állatkertben (particle ZOO), ahogy az elemi részecskék folyamatosan növő számára Niels Nohr szellemesen referált.  Kezdetben csak három kvark volt ismert, úgy mint: $\textsl{u}$ (up), $\textsl{d}$ (down), $\textsl{s}$ (strange). A hadronok két csoportba oszthatók szét: $\textsl{mezonok}$ és $\textsl{barionok}$, amelyek rendre egy kvark-antikvark párt vagy három kvarkot tartalmaznak. A mennyiséget ami a különböző kvarkokat bizonyos szempontból jellemzi $\textsl{íz}$nek hívjuk.
+\par A kvarkok felfedezése végre rendet teremtett a részecske állatkertben (particle ZOO), ahogy az elemi részecskék folyamatosan növő számára Niels Bohr szellemesen referált.
+ A mennyiséget ami a különböző kvarkokat bizonyos szempontból jellemzi $\textsl{íz}$nek hívjuk, kezdetben
+csak három kvarkíz volt ismert, úgy mint: $\textsl{u}$ (up), $\textsl{d}$ (down), $\textsl{s}$ (strange).
+ A hadronok két csoportba oszthatók szét: $\textsl{mezonok}$ és $\textsl{barionok}$, amelyek rendre 
+ egy kvark-antikvark párt vagy három kvarkot tartalmaznak.
 \vspace{5mm}
-\par Az erős kölcsönhatás, ami a kvarkok között ható elemi kölcsönhatás, egyedi tulajdonsága a bezárás, ami megakadályozza a kvarkokat abban, hogy elszeparálva, izoláltan megtalálhatóak legyenek. Az erős kölcsönhatás töltését színnek hívjuk. A bezárás miatt, az elemi részecskék csak úgynevezett semleges színben létezhet, amit gyakran `fehérnek' nevezünk. Az erős kölcsönhatást leíró alapvető elmélet a Kvantumszíndinamika (Quantum Chromo Dynamics) - QCD.
+\par Az erős kölcsönhatás, ami a kvarkok között ható elemi kölcsönhatás, egyedi tulajdonsága a bezárás, ami megakadályozza a kvarkokat abban, hogy elszeparálva,
+ izoláltan megtalálhatóak legyenek. Az erős kölcsönhatás töltését színnek hívjuk. A bezárás miatt, az elemi részecskék csak úgynevezett semleges színben létezhet, amit gyakran `fehérnek' nevezünk. 
+Az erős kölcsönhatást leíró alapvető elmélet a Kvantumszíndinamika (Quantum Chromo Dynamics) - QCD.
 \vspace{5mm}
-\par A QCD elemi részecskéi a kvarkok és antikvarkok, amelyek a gluonok által hatnak kölcsön, melyek szintén színtöltést hordoznak. A gluonoknak 8 fajtájuk van, hogy minden színtranszformáció leírható legyen segítségükkel. A gluonok önmagukkal is kölcsön tudnak hatni.
+\par A QCD elemi részecskéi a kvarkok és antikvarkok, amelyek a gluonok által hatnak kölcsön, melyek szintén
+ színtöltést hordoznak. A gluonoknak 8 fajtájuk van, hogy minden színtranszformáció leírható legyen segítségükkel. A gluonok önmagukkal is kölcsön tudnak hatni.
 \subsection{ CBM fizika }
 \vspace{5mm}
-\par A barionanyaggal foglalkozva az elsődleges cél, hogy megértsük és jobban megismerjük a fázisátmenetekhez tartozó diagramot és magukat az átmeneti folyamatokat.
+\par A barionanyaggal foglalkozva az elsődleges cél, hogy megértsük és jobban megismerjük a fázisdiagramot és magukat az átmeneti folyamatokat.
 Először is rövid bevezetőként egy kis termodinamikai áttekintéssel kezdek a fázisokról és a fázisátalakulásokról, alapul véve a The CBM Book-ot:
 \vspace{5mm}
 \par A víz fázisdiagramja megmutatja annak különböző fázisait egy nyomás-hőmérséklet rendszerben. Ismeretes, hogy adott körülmények között van egy
@@ -109,8 +96,8 @@ csak egy úgynevezett sima $\textsl{crossover}$ figyelhető meg, nem elsőrendű
 	\caption{ A víz fázisdiagramja. }
 \end{figure}
 \par Most, hogy gyorsan áttekintettem a víz fázisdiagramját, vagy legalábbis egy részét, ideje továbblépni és feltenni a kérdést, hogy mi 
-a helyzet az erősen kölcsönható anyaggal. Az erősen kölcsönható anyag fázisdiagramja ugyanis elméleti stádiumban van, még nincs teljesen
-kísérletileg bizonyítva. Az ábrákon olyan különböző és elengedhetetlenül fontos fázisok vannak, amelyek a korai univerzumot jellemezték vagy éppen
+a helyzet az erősen kölcsönható anyaggal. Az erősen kölcsönható anyag fázisdiagramja ugyanis elméleti stádiumban van, még nincs teljesen feltárva.
+Az ábrákon olyan különböző és elengedhetetlenül fontos fázisok vannak, amelyek a korai univerzumot jellemezték vagy éppen
 a neutron csillagok anyagát alkothatják. Itt mindkét ábrán egy hőmérséklet-sűrűség diagramot láthatunk.
 \begin{figure}[H]
 	\centering
@@ -128,13 +115,14 @@ a neutron csillagok anyagát alkothatják. Itt mindkét ábrán egy hőmérsékl
 nem maradt fenn, a hőmérséklet hirtelen csökkenése miatt. Látható az is, hogy a neutron csillagok belseje is kvark-gluon plazmát tartalmazhat,
 de azokban nem a hőmérséklet kell igen magas legyen, hanem a csillag sűrűsége. 
 \vspace{5mm}
-\par Nyilvánvalóan, a kvark-gluon plazma földi megfigyelésének egyetlen lehetőségét a nagy energiás részecske gyorsítók és azok
+\par Nyilvánvalóan, a kvark-gluon plazma földi megfigyelésének egyetlen lehetőségét a nagy energiás részecskegyorsítók és azok
 ütköztetése biztosítja. A QCD jellemző tulajdonsága, hogy a kvarkok közti összetartás csökken, ahogy az ütközési energiát
-növeljük, ez a crossover jelensége. A szakirodalom aszimptotikus szabadságként hivatkozik rá. A részecske fizika egy másik fontos
+növeljük, ez az aszimptotikus szabadság jelensége. A szakirodalom aszimptotikus szabadságként hivatkozik rá. A részecskefizika egy másik fontos
 szimmetriája a kiralitással kapcsolatos. Ez lényegében arról beszél, hogy egy tömegtelen részecske spinje és sebességének iránya egymáshoz 
 képest milyen irányba mutat. Hogyha azok egyirányúak, akkor a részecske jobb kezes, ha ellentétes irányúak akkor pedig bal kezes. Mivel
-az up és down kvarkok tömege közel azonos, ezért azt szokták mondani, hogy a QCD-nek körülbelüli királis szimmetriája van. Ellenben, ez spontán
-sérülhet alacsony hőmérsékleteken és sűrűségeken, ahol ez a kicsi tömegbeli különbség is jelentős lehet. Emiatt az egyik királis irány ekkor 
+az up és down kvarkok tömege közel azonos és igen kicsi (nagy energiákon jó közelítéssel 0)
+ezért azt szokták mondani, hogy a QCD-nek körülbelüli királis szimmetriája van. Ellenben, ez spontán
+sérülhet alacsony hőmérsékleteken és sűrűségeken a párkölcsönhatások miatt. Emiatt az egyik királis irány ekkor 
 gyakoribb lesz, mint a másik, ezt nevezzük lényegében királis szimmetriasértésnek. 
 \section{ A CBM detektor}
 \subsection{ Elmélet}
@@ -144,7 +132,7 @@ Lényegében az a cél, hogy az ütközés során, $10^{-22}~s$-ig fennálló á
 fázisdiagramjára, a jelenség természetére. Az idő természetesen nagyon rövid, és az egész jelenség csak a melléktermékek révén vizsgálható. 
 \par  Az elmúlt évtizedben a fő tudományos tevékenység a témában a brookheaven-i RHIC  \footnote{ Relativistic Heavy Ion Collider - Brookhaven } központban 
 és a CERN-ben található LHC \footnote{ CERN - Large Hadron Collider } gyorsítónál zajlott. Ezek a központok nagyon fontos, és érdemleges 
-adatot biztosítanak a fázisdiagram vizsgálatához. Ellenben ezek mind az alacsony sűrűségű régiót vizsgálják és csak a crossovert tudják
+adatot biztosítanak a fázisdiagram vizsgálatához. Ellenben ezek mind az alacsony sűrűségű régiót vizsgálják és csak az aszimptotikus szabadságot tudják
 feltérképezni a hadron gáz és a kvark-gluon plazma között. A FAIR projekt ezekkel szemben sokkal magasabb barion sűrűséget tervez elérni, hogy 
 lehetőséget biztosítson az első rendű fázisátmenet vizsgálatára, valamint a kritikus pont környékének feltérképezésére. 
 \begin{figure}[H]
@@ -173,14 +161,14 @@ de képes mérni a töltés nagyságát és az impulzust is tud mérni. A TOF fa
 lehetőség van.
 \vspace{5mm}
 \par A CBM projekt még egyenlőre csak terv szintjén létezik, a szimulációt folyamatosan fejlesztik. Jövőre, vagy legkésőbb 2019-re már tervben 
-van egy miniCBM detektor építése az esetleg később felmerülő tervezési, kivitelezési problémák kivitelezésére. A FAIR létesítmény építése idén 
+van egy miniCBM detektor építése az esetleg később felmerülő tervezési, kivitelezési problémák elkerülésére. A FAIR létesítmény építése idén 
 nyáron kezdődött és az első részecskenyaláb 2022-ben várható. A miniCBM projekt a meglévő GSI gyorsítónál fog tevékenykedni az addig fennmaradó
 időben, ahol megpróbálják a számítógépfarmot tökéletesíteni, hogy az adatokat minél gyorsabban feldolgozhassák.
 \vspace{5mm}
 \par A FAIR tudósai kifejlesztettek egy több tízezer soros szimulációt, ami a ROOT-on alapszik. Ezt ők cbmROOT-nak hívják, mivel teljes
 egészében a CBM-hez igazodik és ingyenesen elérhető bárki számára. Sok jól ismert nehézion szimulációs eljárást használnak, amik a CBM
 környezetre vannak szabva, úgy mint: UrQMD \footnote{ Ultra Relativistic Quantum Molecular Dynamics }, valamint  PHSD \footnote{ Parton Hadron String Dynamics }.
- Ezek a szimulációs kódok széles körben használtak nem csak itt, hanem az egész tudomány területen. 
+ Ezek a szimulációs kódok széles körben használtak nem csak itt, hanem az egész nehézion fizika területén. 
 \section{ A $\Phi$-mezonról röviden}
 \subsection{ $\Phi$-mezon rekonstrukció}
 \vspace{5mm}
@@ -189,18 +177,20 @@ rezonanciák nagyon fontosak, hogy a sűrű anyagot vizsgálni tudjuk az ütköz
 fázisdiagram vizsgálatának szempontjából pedig a $\Phi$-mezon, aminek nagyon kicsi a hadronokra vett hatáskeresztmetszete így eléggé 
 valószínűtlen, hogy kölcsönhat a nagy mennyiségű hadronnal, ami a reakció során keletkezik, vagyis jó indikátora a sűrű, kezdeti eseménynek.
 A $\Phi$-mezon egy strange és egy anti-strange kvarkot tartalmaz és a kulcsa lehet az s kvark partonikus anyagban lévő keletkezésére. A
-$\Phi$-mezon $K^{+}, K^{-}$ párokra bomlik nagyjából 50$\%$-os eséllyel és egyebekre (pl. dileptonokra is). Az közepes élettartama egészen
-kicsi, nagyjából $1.55\cdot10^{-22}$ s tehát még a TOF falat sem éri el, csak a bomlástermékei lesznek detektálva már korábban is. 
+$\Phi$-mezon $K^{+}, K^{-}$ párokra bomlik nagyjából 50$\%$-os eséllyel és egyebekre (pl. dileptonokra is). A közepes élettartama egészen
+kicsi a az ütközés idejéhez képest, nagyjából $1.55\cdot10^{-22}$ s tehát még a TOF falat sem éri el, csak a bomlástermékei lesznek detektálva már korábban is. 
 A tömege $1.019$ MeV ami a kaonok invariáns tömegével kifejezve egy rezonancia csúcsként látható az ütközés/szimuláció után kinyert 
-adatok között. 
+adatok között. Ahol a kaonok invariáns tömege:
+\begin{equation*}
+M_{KK} = \sqrt{(E_{1}+E_{2})^{2} - (\underline{p}_{1} + \underline{p}_{2})^{2}}
+\end{equation*}
 \vspace{5mm}
 \par Én a PHSD adatait vizsgáltam, amin lefuttattam a CBM szimulációt. Egy Au+Au centrális ütközést vizsgáltam $\sqrt{s} = 10$ GeV energián. 
 A CBM szimuláció kimenetét a cbmROOT-tal rekonstruáltam. Több mint 5 millió esemény szerepelt a kezdeti $.root$ fájlban amit a szimulációhoz 
 használtam.
 \vspace{5mm}
 \par A hisztogramokon az x-tengelyen a kaon párok invariáns tömege szerepel, az y-tengelyen pedig az adott energián a `beütések' száma. Egy 
-apró kiugrás látható a nagy kombinatorikus háttéren nagyjából $1.02$ GeV környékén ami pontosan a $\Phi$-mezonra utal. Azok voltak
-a keletkezett $\Phi$-mezonok az ütközés során. 
+apró kiugrás látható a nagy kombinatorikus háttéren nagyjából $1.02$ GeV környékén ami pontosan a többlet $\Phi$-mezonok bomlásából adódik.
 \begin{figure}[H]
 	\centering
 	\begin{subfigure}{0.49\textwidth}
@@ -234,7 +224,7 @@ a keletkezett $\Phi$-mezonok az ütközés során.
 	\includegraphics[width=0.35\textwidth]{combiback_fit.png}
 	\caption{ A háttérre vett illesztés a másodfokú polinommal. }
 \end{figure}
-\par A csúcshoz más módszert alkalmaztam. Egy alacsony multiplicitású jelet használtam a csúcs alakjának becsléséhez, amit egy
+\par A csúcs közelítéséhez más módszert alkalmaztam. Egy alacsony multiplicitású jelet használtam a csúcs alakjának becsléséhez, amit egy
 Gauss-függvénnyel illesztettem, majd ezt skáláztam fel a csúcshoz, az állandó nagyságú háttér mellett, az eredmények a következők:
 \begin{figure}[H]
 	\centering
@@ -251,6 +241,7 @@ Gauss-függvénnyel illesztettem, majd ezt skáláztam fel a csúcshoz, az álla
 \end{figure}
 \par Itt a ROOT makróm, amit az `illesztéshez' használtam:
 \lstinputlisting[language=C++]{fit.C}
+\par Ez nem igazán pontos közelítés, de jól szemlélteti, hogy a háttér jól közelíthető ellenben ekkora számú eltérés már megmutatkozik benne.
 \subsection{$\Phi$-mezon a CBM-ben}
 \vspace{5mm}
 \par Igen nehéz feladat lesz hatékonyan detektálni a $\Phi$-mezonokat a CBM detektorrendszerrel. A részecskék nem csak rövid 
@@ -365,9 +356,9 @@ detektort átláthatjuk vele. Megjeleníthető benne az összes trajektória és
 \end{figure}
 \subsection{ $\Phi$-mezonok generálása és a kimenő adatok elemzése}
 \vspace{5mm}
-\par A jelgenerátorral 2500 eseményt generáltam ahol a $\Phi$-mezonok pont a céltárgy közepében helyezkedtek el, tehát minta éppen 
+\par A jelgenerátorral 2500 eseményt generáltam ahol a $\Phi$-mezonok pont a céltárgy közepében helyezkedtek el, tehát mintha éppen 
 ott keletkeztek volna az ütközés során. Az ilyen adatok elemzése azért fontos, mert ekkor kontrollált körülmények között, adott részecske számmal
-tudjuk vizsgálni a kimenő részeskék számít, eloszlását és ebből ismeretlen kezdeti részecskénél következtethetünk a $\Phi$-mezonok számára
+tudjuk vizsgálni a kimenő részeskék számít, eloszlását és ebből ismeretlen mennyiségű kezdeti részecskénél következtethetünk a $\Phi$-mezonok számára
 így a strange keltés folyamatára. 
 \par A generátor makróban a bemenő nyaláb energiáját is változtathatjuk, valamint a környezet hőmérsékletét is (mindkettő GeV-ben) és persze
 azt is, hogy milyen részecskét akarunk generálni.
@@ -440,8 +431,8 @@ KFParticleFinder megtalálja a pályákhoz tartozó részecskéket. A kimeneti .
 \end{figure}
 \par A jelben 2500 esemény volt, azaz 2500 db mezont generáltam. Nagyjából 50$\%$-os eséllyel bomlottak el ezek kaon párokra, 
 valamint a digitalizáció során, nagyjából 15$\%$-os hatékonysággal tudott a program rekonstruálni, azaz nagyjából 180 db rekonstruált
-$\Phi$-mezonra lehet számítani a $KFParticleFinder.root$ fájlban. Mivel valószínűségekről van szó, így a fájlban lévő 120 db nem is rossz
-statisztikailag.
+$\Phi$-mezonra lehet számítani a $KFParticleFinder.root$ fájlban. A fájlban ezzel ellentétben még csak 120 db-ot sikerült rekonstruálni, tehát
+a szimuláció további tökéletesítésre szorul.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\textwidth]{reconstructed_eff_phi2500.png}
@@ -488,10 +479,10 @@ gráfban a lehető legrövidebb utat találja meg. Két pont akkor van összekö
 Természetesen ez a minimális távolság is a bemenetről állítható. Egy részecske egy klaszter része, ha legalább az egyik részecskéhez a
 klaszterben kellően közel van. 
 \par Ennek az algoritmusnak talán az a legnagyobb előnye, hogy nem kell előre feltételezni, hogy hány klaszter van és azt sem, hogy 
-azok vajon hol helyezkedhetnek el. Elméletben az algoritmus hatékonysága O($\log{m} + n$) vagy O($\log{n}\cdot n + m$), ahol n a pontok
+azok vajon hol helyezkedhetnek el. Elméletben az algoritmus hatékonysága O($\log{m}\cdot n$) vagy O($\log{n}\cdot n + m$), ahol n a pontok
 száma a gráfban, míg m az élek száma. A hatékonyság a használt adatstruktúráktól függ. Ez természetesen Prim algoritmusára \footnote{\url{https://en.wikipedia.org/wiki/Prim\%27s_algorithm}}
-igaz, vannak ennél hatékonyabb megoldások is, de számomra ez tűnt a legkényelmesebb, legmegvalósíthatóbb választásnak. Továbbá egy orosz 
-kutatócsoport Dubnában hasonló nehézion fizikai szimulációjában is ezt az algoritmust javasolják \footnote{PHQMD - J. Aichelin}.
+igaz, vannak ennél hatékonyabb megoldások is, de számomra ez tűnt a legkényelmesebb, legmegvalósíthatóbb választásnak. Továbbá egy francia 
+kutatócsoport Nantes-ban hasonló nehézion fizikai szimulációjában is ezt az algoritmust javasolják.
 \par  Az egyik elméleti nehézség a megvalósítás során az volt, hogy az algoritmus képes legyen több klasztert formálni. Hiszen miután 
 nem tud továbbhaladni egy klaszterben, azaz nem tud több pontot hozzáadni, ki kell venni az adathalmazból a klaszterezett pontokat és 
 azt ki kell írni egy fájlba. Ezután lehet csak választani egy random pontot újra, és lefuttatni az eddigi algoritmust a már redukált gráfon.
@@ -516,40 +507,42 @@ Sorénként a következő adatokat kapjuk: nukleon (igen/nem), töltés, tömeg(
   1  1  0.938300 -0.562875 -0.475173  0.274616-17.897499-17.592449 -6.268526   3
   1  1  0.938300 -0.032136 -0.021516 -0.007764 -5.412685  0.558902-15.674200   1
 \end{lstlisting}
-\par A szimulációban 394 részecske vesz részt, 100 időlépésben ( 1 időlépés 0,5 fm/c időnek felel meg) az általám elemzett adatsorban.
-A következőkben azt vizsgáltam, hogy adott időben a rendszer mennyire érzékeny a klaszterezési méretre. Ehhez több szempontot figyelembe
+\par A szimulációban 394 részecske vesz részt, 100 különböző eseményt kaptam az általam elemzett adatsorban.
+A következőkben azt vizsgáltam, hogy a rendszer mennyire érzékeny a klaszterezési méretre. Ehhez több szempontot figyelembe
 kellett venni. Nyilvánvalóan érdekes megvizsgálni, hogy hogyan függ az átlagos klaszterméret a távolságtól, valamint, hogy a maximális 
 klaszterméret hogyan viselkedik a távolság függvényében. Ha az előbbi nem is növekszik gyorsan, az utóbbira ez már nem mondható el. 
 A klaszterezés instabil lesz nagy klaszterezési távolságokra, mert az algoritmus hatalmas klasztereket tud létrehozni, amelyeknek nincs
 fizikai jelentésük. 
 \subsection{ Távolság függés}
-\par Valamelyik időlépésben elvégezve a klaszerezési távolságtól való függés vizsgálatát a következőket kaptam.
+\par Valamelyik eseményre elvégezve a klaszterezési távolságtól való függés vizsgálatát a következőket kaptam.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.75\textwidth]{dist-mean.png}
+	\includegraphics[width=0.7\textwidth]{dist-mean.png}
 	\caption{ Térbeli klaszterezés eredménye. Klaszterezési távolság - átlagos klaszterméret }
 \end{figure}
-\par A számolást természetesen térbeli, és impulzustérbeli kalszterezésre is elvégeztem.
+\par A számolást természetesen térbeli, és impulzustérbeli klaszterezésre is elvégeztem.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.75\textwidth]{momdist-mean.png}
+	\includegraphics[width=0.7\textwidth]{momdist-mean.png}
 	\caption{ Impulzustérbeli klaszterezés eredménye. Klaszterezési távolság - maximális klaszterméret }
 \end{figure}
 \par Térben a klaszterezés életképes, ha a távolság a részecskék között 1 fm alatt van, míg impulzustérben ez az érték 0.08 Gev/c alatti.
-\par A következő ábrákon jól látható, hogy a klaszterező mérét növelésével a maximális klaszterméret adott klaszterezés során gyorsabban
+\par A következő ábrákon jól látható, hogy a klaszterező méret növelésével a maximális klaszterméret adott klaszterezés során gyorsabban
 növekszik, mint az átlagos klaszterméret:
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.75\textwidth]{dist-max.png}
-	\caption{ Térbeli klaszterezés ereménye. Klaszerezési távolság - Maximális klaszterméret }
+	\includegraphics[width=0.7\textwidth]{dist-max.png}
+	\caption{ Térbeli klaszterezés eredménye. Klaszterezési távolság - Maximális klaszterméret }
 \end{figure}
 \par Hasonlóan impulzustérben:
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.75\textwidth]{momdist-max.png}
+	\includegraphics[width=0.7\textwidth]{momdist-max.png}
+	\caption{ Impulzustérbeli klaszterezés eredménye. Klaszterezési távolság - Maximális klaszterméret }
 \end{figure}
-\par A kezelhető átlagos klaszterméretek mind 1,5 alatti értékek, tehát az eredményeim alapján a 394 részecskét nem számottevően, de 10-20\%-al bizonyasan csökkenteni tudtam klasztezés után. A fenti adatok 
-alapján ez elméletileg azt jeleneti, hogy detektáláskot ~330 töltött részecskét lehet csak észlelni az eredeti közel ~400 helyett. 
+\par A kezelhető átlagos klaszterméretek mind 1,5 alatti értékek, tehát az eredményeim alapján a 394 részecskét nem számottevően, de 10-20 százalékkal
+ bizonyosan csökkenteni tudtam klaszterezés után. A fenti adatok 
+alapján ez elméletileg azt jeleneti, hogy detektáláskor ~330 töltött részecskét lehet csak észlelni az eredeti közel ~400 helyett. 
 \subsection{ Kimenet}
 \par A kimeneten tehát egy olyan fájlt kapunk, amiből meghatározható igen könnyen a maximális klaszterméret és az átlagos klaszterméret is.
 Az fentebbi ábrákat is ezek alapján készítettem egy egyszerű programmal. Ezek mellett még külön fájlokban megkapjuk a klaszterek elemeit is.
@@ -560,23 +553,31 @@ akkor egy nagy klasztert találunk, viszonylag gyorsan, hiszen az MST keresés h
 klaszterezés belátható időn belül lefut tetszőlegesen nagy adathalmazra, hacsak a rendszer ki nem fogy a memóriából. 12 ezer sornyi adat 
 klaszterezése esetén ez már megtörténhet. A program több dologra is képes mint amire jelenleg használva van. Az éleket tudja definiálni és
 menteni is, ez az MST algoritmus sajátossága, de nekem nincs rá szükségem ebben az alkalmazásban. A távolság számítást módosítanom kell majd,
-hiszen jelenleg csak euklideszi normám van, ami nem a legmegfelelőbb, de ez csak egy belső függvény átírást igényel majd. A kommentelt kódrészletek 
-a kimenenti fájlok emberi olvashatóságáért feletek volna részben, valamint a további funkcionalistást kapcsoltam ki, de az adatok feldolgozása során
+hiszen jelenleg csak euklideszi normám van, ami nem a legmegfelelőbb, de ez csak egy belső függvény átírást igényel majd. A kommentált kódrészletek 
+a kimeneti fájlok emberi olvashatóságáért feleltek volna részben, valamint a további funkcionalitást kapcsoltam ki, de az adatok feldolgozása során
  kényelmesebb volt így eljárnom.
 \begin{thebibliography}{9}
 	\bibitem{CBMbook}
-	{\it The CBM Physics Book: Compressed Baryonic Matter in Laboratory Experiments} 2011 ed B Friman {\it et al} (Springer) Lect. Notes Phys.
+	Friman, Höhne, Knoll, Leupold, Randrup, Rapp, Senger
+	\\\texttt{The CBM Physics Book - Compressed Baryonic Matter in Laboratory Experiments 2011 (Springer) Lect. Notes Phys.}
 				
-	\bibitem{phiALICE} Tapia Takaki, J.~D., ALICE Collaboration 2008, Journal of Physics G Nuclear Physics, 35, 044058
+	\bibitem{phiALICE}
+	 Tapia Takaki, J.D.
+	 \\\texttt{ALICE Collaboration Journal of Physics G Nuclear Physics, 35, 044058 2008}
 				
-	\bibitem{CBMexp} V.Vovchenko \and I.Vassiliev \and I.Kisel \and M.Zyzak, $\Phi$-meson production in Au+Au collisions and its feasibility in the CBM experiment, CBM Progress Report 2014
+	\bibitem{CBMexp}
+	 V.Vovchenko, I.Vassiliev, I.Kisel, M.Zyzak
+	 \\\texttt{$\Phi$-meson production in Au+Au collisions and its feasibility in the CBM experiment, CBM Progress Report 2014}
 				
-	\bibitem{phiRICH} Bravina, L., Csernai, L., Faessler, A., et al.\ 2003, Nuclear Physics A, 715, 665 
+	\bibitem{phiRICH}
+	Bravina, L., Csernai, L., Faessler, A., et al. 2003, Nuclear Physics A, 715, 665 
 				
-	\bibitem{phiSTAR} F. Wang, R. Bossingham, Q. Li, I. Sakrejda, and N. Xu, $\Phi$-meson reconstruction in the STAR TPC, 1998
+	\bibitem{phiSTAR}
+	F. Wang, R. Bossingham, Q. Li, I. Sakrejda,  N. Xu 
+	\\\texttt{$\Phi$-meson reconstruction in the STAR TPC, 1998}
 				
-	\bibitem{cbmFAIR} Hans Rudolf Schmidt Hyperons at CBM-FAIR, Journal of Physics: Conference Series
-	736
+	\bibitem{cbmFAIR}
+	Hans Rudolf Schmidt
+	\\\texttt{Hyperons at CBM-FAIR, Journal of Physics: Conference Series 736}
 \end{thebibliography}
 \end{document}
-\grid
