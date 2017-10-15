@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  12 OCT 2017 20:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  15 OCT 2017 19:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -940,47 +940,170 @@ Package pdftex.def Info: k-_phi2500.png used on input line 451.
 (pdftex.def)             Requested size: 225.16267pt x 114.8861pt.
  [18 <./reconstructed_eff_phi2500.png> <./kshort_phi2500.png> <./k-_phi2500.png
 >]
-(./main.cpp [19] [20] [21] [22] [23] [24] [25] [26]) [27]
-<dist-mean.png, id=172, 481.8pt x 361.35pt>
+(./main.cpp [19] [20] [21] [22] [23])
+<dist-mean.png, id=159, 481.8pt x 361.35pt>
 File: dist-mean.png Graphic file (type png)
  <use dist-mean.png>
-Package pdftex.def Info: dist-mean.png used on input line 520.
+Package pdftex.def Info: dist-mean.png used on input line 517.
 (pdftex.def)             Requested size: 338.58632pt x 253.94678pt.
-
-<momdist-mean.png, id=173, 481.8pt x 361.35pt>
+ [24]
+<momdist-mean.png, id=163, 481.8pt x 361.35pt>
 File: momdist-mean.png Graphic file (type png)
  <use momdist-mean.png>
-Package pdftex.def Info: momdist-mean.png used on input line 526.
+Package pdftex.def Info: momdist-mean.png used on input line 523.
 (pdftex.def)             Requested size: 338.58632pt x 253.94678pt.
- [28 <./dist-mean.png>] <dist-max.png, id=178, 481.8pt x 361.35pt>
-File: dist-max.png Graphic file (type png)
- <use dist-max.png>
-Package pdftex.def Info: dist-max.png used on input line 534.
-(pdftex.def)             Requested size: 338.58632pt x 253.94678pt.
+ [25 <./dist-mean.png> <./momdist-mean.png>]
+<ShiftInDistro80.png, id=170, 752.8125pt x 602.25pt>
+File: ShiftInDistro80.png Graphic file (type png)
+ <use ShiftInDistro80.png>
+Package pdftex.def Info: ShiftInDistro80.png used on input line 537.
+(pdftex.def)             Requested size: 208.95708pt x 167.1677pt.
 
-<momdist-max.png, id=179, 481.8pt x 361.35pt>
-File: momdist-max.png Graphic file (type png)
- <use momdist-max.png>
-Package pdftex.def Info: momdist-max.png used on input line 540.
-(pdftex.def)             Requested size: 338.58632pt x 253.94678pt.
- [29 <./momdist-mean.png> <./dist-max.png>] [30 <./momdist-max.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 561--563
+<ShiftInDistro100.png, id=171, 752.8125pt x 602.25pt>
+File: ShiftInDistro100.png Graphic file (type png)
+
+<use ShiftInDistro100.png>
+Package pdftex.def Info: ShiftInDistro100.png used on input line 541.
+(pdftex.def)             Requested size: 208.95708pt x 167.1677pt.
+
+<ShiftInDistro120.png, id=172, 752.8125pt x 602.25pt>
+File: ShiftInDistro120.png Graphic file (type png)
+
+<use ShiftInDistro120.png>
+Package pdftex.def Info: ShiftInDistro120.png used on input line 547.
+(pdftex.def)             Requested size: 314.40001pt x 251.52808pt.
+ [26 <./ShiftInDistro80.png> <./ShiftInDistro100.png> <./ShiftInDistro120.png>]
+ <mean-max8_80.png, id=179, 752.8125pt x 602.25pt>
+File: mean-max8_80.png Graphic file (type png)
+
+<use mean-max8_80.png>
+Package pdftex.def Info: mean-max8_80.png used on input line 562.
+(pdftex.def)             Requested size: 218.05254pt x 174.43666pt.
+
+<distribution_zoomed_8_80.png, id=180, 752.8125pt x 752.8125pt>
+File: distribution_zoomed_8_80.png Graphic file (type png)
+
+<use distribution_zoomed_8_80.png>
+Package pdftex.def Info: distribution_zoomed_8_80.png used on input line 566.
+(pdftex.def)             Requested size: 218.05254pt x 218.04582pt.
+
+<mean-max12_80.png, id=181, 752.8125pt x 602.25pt>
+File: mean-max12_80.png Graphic file (type png)
+ <use mean-max12_80.png>
+Package pdftex.def Info: mean-max12_80.png used on input line 573.
+(pdftex.def)             Requested size: 218.05254pt x 174.43666pt.
+
+<distribution_zoomed_12_80.png, id=182, 752.8125pt x 752.8125pt>
+File: distribution_zoomed_12_80.png Graphic file (type png)
+
+<use distribution_zoomed_12_80.png>
+Package pdftex.def Info: distribution_zoomed_12_80.png used on input line 577.
+(pdftex.def)             Requested size: 218.05254pt x 218.04582pt.
+ [27 <./mean-max8_80.png> <./distribution_zoomed_8_80.png>] <mean-max9_100.png,
+ id=188, 752.8125pt x 602.25pt>
+File: mean-max9_100.png Graphic file (type png)
+
+<use mean-max9_100.png>
+Package pdftex.def Info: mean-max9_100.png used on input line 586.
+(pdftex.def)             Requested size: 218.05254pt x 174.43666pt.
+
+<distribution_zoomed_9_100.png, id=189, 752.8125pt x 752.8125pt>
+File: distribution_zoomed_9_100.png Graphic file (type png)
+
+<use distribution_zoomed_9_100.png>
+Package pdftex.def Info: distribution_zoomed_9_100.png used on input line 590.
+(pdftex.def)             Requested size: 218.05254pt x 218.04582pt.
+
+<mean-max13_100.png, id=190, 752.8125pt x 602.25pt>
+File: mean-max13_100.png Graphic file (type png)
+ <use mean-max13_100.png>
+Package pdftex.def Info: mean-max13_100.png used on input line 597.
+(pdftex.def)             Requested size: 218.05254pt x 174.43666pt.
+
+<distribution_zoomed_13_100.png, id=191, 752.8125pt x 752.8125pt>
+File: distribution_zoomed_13_100.png Graphic file (type png)
+
+<use distribution_zoomed_13_100.png>
+Package pdftex.def Info: distribution_zoomed_13_100.png used on input line 601.
+
+(pdftex.def)             Requested size: 218.05254pt x 218.04582pt.
+
+<mean-max16_100.png, id=192, 752.8125pt x 602.25pt>
+File: mean-max16_100.png Graphic file (type png)
+ <use mean-max16_100.png>
+Package pdftex.def Info: mean-max16_100.png used on input line 608.
+(pdftex.def)             Requested size: 218.05254pt x 174.43666pt.
+
+<distribution_zoomed_16_100.png, id=193, 752.8125pt x 752.8125pt>
+File: distribution_zoomed_16_100.png Graphic file (type png)
+
+<use distribution_zoomed_16_100.png>
+Package pdftex.def Info: distribution_zoomed_16_100.png used on input line 612.
+
+(pdftex.def)             Requested size: 218.05254pt x 218.04582pt.
+ [28 <./mean-max12_80.png> <./distribution_zoomed_12_80.png> <./mean-max9_100.p
+ng> <./distribution_zoomed_9_100.png>]
+<mean-max10_120.png, id=201, 752.8125pt x 602.25pt>
+File: mean-max10_120.png Graphic file (type png)
+ <use mean-max10_120.png>
+Package pdftex.def Info: mean-max10_120.png used on input line 622.
+(pdftex.def)             Requested size: 218.05254pt x 174.43666pt.
+
+<distribution_zoomed_10_120.png, id=202, 752.8125pt x 752.8125pt>
+File: distribution_zoomed_10_120.png Graphic file (type png)
+
+<use distribution_zoomed_10_120.png>
+Package pdftex.def Info: distribution_zoomed_10_120.png used on input line 626.
+
+(pdftex.def)             Requested size: 218.05254pt x 218.04582pt.
+
+<mean-max14_120.png, id=203, 752.8125pt x 602.25pt>
+File: mean-max14_120.png Graphic file (type png)
+ <use mean-max14_120.png>
+Package pdftex.def Info: mean-max14_120.png used on input line 633.
+(pdftex.def)             Requested size: 218.05254pt x 174.43666pt.
+
+<distribution_zoomed_14_120.png, id=204, 752.8125pt x 752.8125pt>
+File: distribution_zoomed_14_120.png Graphic file (type png)
+
+<use distribution_zoomed_14_120.png>
+Package pdftex.def Info: distribution_zoomed_14_120.png used on input line 637.
+
+(pdftex.def)             Requested size: 218.05254pt x 218.04582pt.
+ [29 <./mean-max13_100.png> <./distribution_zoomed_13_100.png> <./mean-max16_10
+0.png> <./distribution_zoomed_16_100.png>]
+<mean-max18_120.png, id=212, 752.8125pt x 602.25pt>
+File: mean-max18_120.png Graphic file (type png)
+ <use mean-max18_120.png>
+Package pdftex.def Info: mean-max18_120.png used on input line 644.
+(pdftex.def)             Requested size: 218.05254pt x 174.43666pt.
+
+<distribution_zoomed_18_120.png, id=213, 752.8125pt x 752.8125pt>
+File: distribution_zoomed_18_120.png Graphic file (type png)
+
+<use distribution_zoomed_18_120.png>
+Package pdftex.def Info: distribution_zoomed_18_120.png used on input line 648.
+
+(pdftex.def)             Requested size: 218.05254pt x 218.04582pt.
+ [30 <./mean-max10_120.png> <./distribution_zoomed_10_120.png> <./mean-max14_12
+0.png> <./distribution_zoomed_14_120.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 669--671
 \T1/cmtt/m/n/12 The CBM Physics Book - Compressed Baryonic Matter in Laboratory
  Experiments
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 569--571
+[31 <./mean-max18_120.png> <./distribution_zoomed_18_120.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 677--679
 \OT1/cmr/m/n/12 ^^H$\T1/cmtt/m/n/12 -meson production in Au+Au collisions and i
 ts feasibility in the CBM
  []
 
-[31] (./gsiHUN.aux) ) 
+[32] (./gsiHUN.aux) ) 
 Here is how much of TeX's memory you used:
- 9417 strings out of 493029
- 135940 string characters out of 6136234
- 491986 words of memory out of 5000000
- 12757 multiletter control sequences out of 15000+600000
+ 9484 strings out of 493029
+ 138341 string characters out of 6136234
+ 426998 words of memory out of 5000000
+ 12807 multiletter control sequences out of 15000+600000
  23247 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,18n,61p,311b,1768s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1007,10 +1130,10 @@ sr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts
 /type1/public/cm-super/sfsl1200.pfb></usr/share/texmf/fonts/type1/public/cm-sup
 er/sfti1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb></us
 r/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on gsiHUN.pdf (31 pages, 2767173 bytes).
+Output written on gsiHUN.pdf (32 pages, 2869843 bytes).
 PDF statistics:
- 269 PDF objects out of 1000 (max. 8388607)
- 165 compressed objects within 2 object streams
+ 306 PDF objects out of 1000 (max. 8388607)
+ 167 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 141 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 226 words of extra memory for PDF output out of 10000 (max. 10000000)
 

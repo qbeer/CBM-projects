@@ -16,7 +16,7 @@
 \select@language {hungarian} \contentsline {section}{\numberline {V.} Neh\IeC {\'e}zion fizika itthon }{18}
 \select@language {hungarian} \contentsline {subsection}{\numberline {V.1} Az algoritmus}{19}
 \select@language {hungarian} \contentsline {subsection}{\numberline {V.2} A k\IeC {\'o}d}{19}
-\select@language {hungarian} \contentsline {subsubsection}{\numberline {V.21} Bemeneti param\IeC {\'e}terek}{27}
-\select@language {hungarian} \contentsline {subsection}{\numberline {V.3} T\IeC {\'a}vols\IeC {\'a}g f\IeC {\"u}gg\IeC {\'e}s}{28}
-\select@language {hungarian} \contentsline {subsection}{\numberline {V.4} Kimenet}{30}
-\select@language {hungarian} \contentsline {subsection}{\numberline {V.5} Sebess\IeC {\'e}g, konkl\IeC {\'u}zi\IeC {\'o}}{30}
+\select@language {hungarian} \contentsline {subsubsection}{\numberline {V.21} Bemeneti param\IeC {\'e}terek}{24}
+\select@language {hungarian} \contentsline {subsection}{\numberline {V.3} T\IeC {\'a}vols\IeC {\'a}g f\IeC {\"u}gg\IeC {\'e}s}{24}
+\select@language {hungarian} \contentsline {subsection}{\numberline {V.4} Kimenet}{31}
+\select@language {hungarian} \contentsline {subsection}{\numberline {V.5} Sebess\IeC {\'e}g, konkl\IeC {\'u}zi\IeC {\'o}}{31}

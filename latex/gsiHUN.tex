@@ -27,7 +27,7 @@
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 
 \lstdefinestyle{mystyle}{
-	basicstyle=\footnotesize,
+	basicstyle=\footnotesize\linespread{1.1},
 	backgroundcolor=\color{backcolour},   
 	commentstyle=\color{codegreen},
 	keywordstyle=\color{magenta},
@@ -38,11 +38,11 @@
 	captionpos=b,                    
 	keepspaces=true,                 
 	numbers=left,                    
-	numbersep=2pt,                  
+	numbersep=1pt,                  
 	showspaces=false,                
 	showstringspaces=false,
 	showtabs=false,                  
-	tabsize=2
+	tabsize=1
 }
 \lstset{style=mystyle}
 \begin{document}
@@ -56,7 +56,7 @@
 	 épülő FAIR\footnote{ Facility for Antiproton and Ion Research } része. Ezalatt a hónap alatt megismerkedtem mélyebben a ROOT \footnote{ CERN szoftver részecske analízishez} nevű szoftverrel, a
 	  helyi cbmROOT-tal \footnote{ CBM ( Compressed Barionic Matter  ) szoftver a CBM/FAIR által fejlesztve}, valamint a C és C++ programozási nyelvekkel.
 	\vspace{5mm}
-	\par A kint létem alatt sokat tanultam a detektor technológiákról, valamint az azokban lejátszódó eseményekről és örömmel voltam részese ennek a nagyszabású projektnek és a mindennapi kutatói életnek.
+	\par A kint létem alatt sokat tanultam a detektor technológiákról, valamint az azokban lejátszódó eseményekről.
 	\vspace{5mm}
 	\par Itthoni munkám során a nehézion ütközések szimulációjához kapcsolódva egy klaszterező program fejlesztésével foglalkoztam, 
 	ami a kinyert adatokat csoportosítja térbeli és impulzustérbeli távolságuk alapján, előre definiált klaszterezési mérettel, az MST algoritmus felhasználása segítségével.
@@ -488,7 +488,7 @@ nem tud továbbhaladni egy klaszterben, azaz nem tud több pontot hozzáadni, ki
 azt ki kell írni egy fájlba. Ezután lehet csak választani egy random pontot újra, és lefuttatni az eddigi algoritmust a már redukált gráfon.
 \subsection{ A kód}
 \par A kódot mellékelem, ezután beszélek majd a bemenetéről és kimenetéről.
-\lstinputlisting[language=C++]{main.cpp}[basicstyle=\linespread{1.12358}]
+\lstinputlisting[language=C++]{main.cpp}
 \subsubsection{ Bemeneti paraméterek}
 \par A program parancssorról működik.  Három paramétert vár a futás során. Az első paraméter a bemeneti fájl neve, a második a maximális 
 klaszeterezési távolság, azaz a maximálisan definiálható élhossz két pont között. A harmadik paraméter pedig a kimeneti fájl neve, ami
@@ -507,12 +507,9 @@ Sorénként a következő adatokat kapjuk: nukleon (igen/nem), töltés, tömeg(
   1  1  0.938300 -0.562875 -0.475173  0.274616-17.897499-17.592449 -6.268526   3
   1  1  0.938300 -0.032136 -0.021516 -0.007764 -5.412685  0.558902-15.674200   1
 \end{lstlisting}
-\par A szimulációban 394 részecske vesz részt, 100 különböző eseményt kaptam az általam elemzett adatsorban.
-A következőkben azt vizsgáltam, hogy a rendszer mennyire érzékeny a klaszterezési méretre. Ehhez több szempontot figyelembe
-kellett venni. Nyilvánvalóan érdekes megvizsgálni, hogy hogyan függ az átlagos klaszterméret a távolságtól, valamint, hogy a maximális 
-klaszterméret hogyan viselkedik a távolság függvényében. Ha az előbbi nem is növekszik gyorsan, az utóbbira ez már nem mondható el. 
-A klaszterezés instabil lesz nagy klaszterezési távolságokra, mert az algoritmus hatalmas klasztereket tud létrehozni, amelyeknek nincs
-fizikai jelentésük. 
+\par Három szimulációs fájlt kaptam, mindegyik más időpillanatban állt meg. Az első 40 fm/c után, a második 50 fm/c, a harmadik pedig 60 fm/c
+idő után. A fájlok 100 eseményt tárolnak, mindegyikben 394 db nukleon szerepel. Az ütközések 3 fm-es impakt paraméterrel játszódtak le. A részecskék
+távolságának definícióját még tökéletesíteni kell. Először is elvégeztem egy klaszterezést külön térben és impulzus térben:
 \subsection{ Távolság függés}
 \par Valamelyik eseményre elvégezve a klaszterezési távolságtól való függés vizsgálatát a következőket kaptam.
 \begin{figure}[H]
@@ -526,26 +523,137 @@ fizikai jelentésük.
 	\includegraphics[width=0.7\textwidth]{momdist-mean.png}
 	\caption{ Impulzustérbeli klaszterezés eredménye. Klaszterezési távolság - maximális klaszterméret }
 \end{figure}
-\par Térben a klaszterezés életképes, ha a távolság a részecskék között 1 fm alatt van, míg impulzustérben ez az érték 0.08 Gev/c alatti.
-\par A következő ábrákon jól látható, hogy a klaszterező méret növelésével a maximális klaszterméret adott klaszterezés során gyorsabban
-növekszik, mint az átlagos klaszterméret:
+\par Térben a klaszterezés életképes, ha a távolság a részecskék között 1 fm alatt van, míg impulzustérben ez az érték 0.08 GeV/c alatti. Így jól látható,
+hogy az impulzustérbeli távolság nagyjából egy nagyságrenddel kisebb, mint a térbeli távolság. Az előbbi klaszterezések még a kód korábbi verziójával
+készültek, ez megtalálható a GitHub profilom alatt \footnote{github link}. Ahhoz, hogy ténylegesen összeálljanak a részecskék az kell, hogy mind térben,
+mind impulzustérben közel legyenek egymáshoz. Ehhez felvettem egy olyan vektort aminek az első 3 komponense a térbeli koordinátákat tartalmazza,
+második három komponenese az impulzustérbeli koordinátákat és ezeket beszoroztam egy $scalingFactor$-ral, hogy kompenzáljak a nagyságrendi különbség
+miatt. Ezután különböző klaszterezési távolságkora, amelyek lineárisan nőttek lefuttattam a klaszterezést a 100 adatsorra és ebből készítettem eloszlás
+hiszrogrammokat.
+\par Az klaszterméret eloszlások változása a klaszterező távolság növekedésével rendere 40, 50, 60 fm/c után:
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\textwidth]{dist-max.png}
-	\caption{ Térbeli klaszterezés eredménye. Klaszterezési távolság - Maximális klaszterméret }
+	\begin{subfigure}{.45\textwidth}
+		\includegraphics[width=0.96\textwidth]{ShiftInDistro80.png}
+		\caption{ Klaszterszám - klaszterméret eloszlás 40 fm/c idő után }
+	\end{subfigure}
+	\begin{subfigure}{.45\textwidth}
+		\includegraphics[width=.96\textwidth]{ShiftInDistro100.png}
+		\caption{ Klaszterszám - klaszterméret eloszlás 50 fm/c idő után} 
+	\end{subfigure}
 \end{figure}
-\par Hasonlóan impulzustérben:
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.65\textwidth]{ShiftInDistro120.png}
+		\caption{ Klaszterszám - klaszterméret eloszlás 60 fm/c idő után} 
+\end{figure}
+\par Jól megfigyelhető, ahogy a klaszter távolság növelésével egyre gyakoriabbak lesznek a nagyméretű klaszterek. Ezek jelenthetnek nagyobb/kisebb
+magokat. Szemléletes, például, hogy kis impakt paraméternél nagy számú 'törmelék' keletkezik, hiszen a 1/2 nukleonos klaszterek száma végig magas.
+\par A továbbiakban vizsgáltam, hogy mi történik a klaszterező méret növelésével. Itt azt vizsgáltam, hogy az adott 100 párhuzamos fájlra nagyjából 
+hasonló eredményeket kapok-e a klaszterezés után. Ezt úgy állapítottam meg, hogy felvettem egy diagramot aminek vízszintes tengelyén az átlagos 
+klaszterméret, függőleges tengelyén pedig a maximum klaszter méret szerepelt mindegyik fájlra. Ez 100 pontot jelent a diagrammon. Ha ezt ábrázolom
+akkor hasonló eredmény az, ha adott pontcsoportok nagyjából egy helyre koncentrálódnak, hiszen ezek részecske csoportosulásokat jelentenek. Elnyújtott
+formájuk amiatt lehet, mivel az 1/2 részecskés klaszterek száma nagyon nagy. Ennél pontosabb definíciót nem fogok adni, mivel a távolság számítása
+ebben kulcsfontossága és azon még javítanom kell a későbbiekben. Különböző, egyre növekedő klaszterező távolságokra az eredeményeim a következőek.
+\par 40 fm/c esetén:
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\textwidth]{momdist-max.png}
-	\caption{ Impulzustérbeli klaszterezés eredménye. Klaszterezési távolság - Maximális klaszterméret }
+	\begin{subfigure}{.49\textwidth}
+		\includegraphics[width=0.92\textwidth]{mean-max8_80.png}
+		\caption{ Átlagos klaszterméret - Maxmimális klaszterméret diagram }
+	\end{subfigure}
+	\begin{subfigure}{.49\textwidth}
+		\includegraphics[width=.92\textwidth]{distribution_zoomed_8_80.png}
+		\caption{ Klaszterméret eloszlás 100 eseményből } 
+	\end{subfigure}
 \end{figure}
-\par A kezelhető átlagos klaszterméretek mind 1,5 alatti értékek, tehát az eredményeim alapján a 394 részecskét nem számottevően, de 10-20 százalékkal
- bizonyosan csökkenteni tudtam klaszterezés után. A fenti adatok 
-alapján ez elméletileg azt jeleneti, hogy detektáláskor ~330 töltött részecskét lehet csak észlelni az eredeti közel ~400 helyett. 
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{.49\textwidth}
+		\includegraphics[width=0.92\textwidth]{mean-max12_80.png}
+		\caption{ Átlagos klaszterméret - Maxmimális klaszterméret diagram }
+	\end{subfigure}
+	\begin{subfigure}{.49\textwidth}
+		\includegraphics[width=.92\textwidth]{distribution_zoomed_12_80.png}
+		\caption{ Klaszterméret eloszlás 100 eseményből } 
+	\end{subfigure}
+\end{figure}
+\par Látható az eloszlásban történő eltolódás és az is, hogy az események nagyjából hasonlóak. 
+\par 50 fm/c esetén:
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{.49\textwidth}
+		\includegraphics[width=0.92\textwidth]{mean-max9_100.png}
+		\caption{ Átlagos klaszterméret - Maxmimális klaszterméret diagram }
+	\end{subfigure}
+	\begin{subfigure}{.49\textwidth}
+		\includegraphics[width=.92\textwidth]{distribution_zoomed_9_100.png}
+		\caption{ Klaszterméret eloszlás 100 eseményből } 
+	\end{subfigure}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{.49\textwidth}
+		\includegraphics[width=0.92\textwidth]{mean-max13_100.png}
+		\caption{ Átlagos klaszterméret - Maxmimális klaszterméret diagram }
+	\end{subfigure}
+	\begin{subfigure}{.49\textwidth}
+		\includegraphics[width=.92\textwidth]{distribution_zoomed_13_100.png}
+		\caption{ Klaszterméret eloszlás 100 eseményből } 
+	\end{subfigure}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{.49\textwidth}
+		\includegraphics[width=0.92\textwidth]{mean-max16_100.png}
+		\caption{ Átlagos klaszterméret - Maxmimális klaszterméret diagram }
+	\end{subfigure}
+	\begin{subfigure}{.49\textwidth}
+		\includegraphics[width=.92\textwidth]{distribution_zoomed_16_100.png}
+		\caption{ Klaszterméret eloszlás 100 eseményből } 
+	\end{subfigure}
+\end{figure}
+\par Itt már a második diagramon jól látszik, hogy kezd szétválni a ponthalmaz két részre. A következő esetben már ez sokkal jobban 
+látszik majd.
+\par 60 fm/c esetén:
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{.49\textwidth}
+		\includegraphics[width=0.92\textwidth]{mean-max10_120.png}
+		\caption{ Átlagos klaszterméret - Maxmimális klaszterméret diagram }
+	\end{subfigure}
+	\begin{subfigure}{.49\textwidth}
+		\includegraphics[width=.92\textwidth]{distribution_zoomed_10_120.png}
+		\caption{ Klaszterméret eloszlás 100 eseményből } 
+	\end{subfigure}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{.49\textwidth}
+		\includegraphics[width=0.92\textwidth]{mean-max14_120.png}
+		\caption{ Átlagos klaszterméret - Maxmimális klaszterméret diagram }
+	\end{subfigure}
+	\begin{subfigure}{.49\textwidth}
+		\includegraphics[width=.92\textwidth]{distribution_zoomed_14_120.png}
+		\caption{ Klaszterméret eloszlás 100 eseményből } 
+	\end{subfigure}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{.49\textwidth}
+		\includegraphics[width=0.92\textwidth]{mean-max18_120.png}
+		\caption{ Átlagos klaszterméret - Maxmimális klaszterméret diagram }
+	\end{subfigure}
+	\begin{subfigure}{.49\textwidth}
+		\includegraphics[width=.92\textwidth]{distribution_zoomed_18_120.png}
+		\caption{ Klaszterméret eloszlás 100 eseményből } 
+	\end{subfigure}
+\end{figure}
+\par Az utolsó (a) ábrán jól látszik, ahogy a ponthalmazok tükrözik az eloszlás diagrammot, amint az két jól elkülöníthető részre esik szét.
 \subsection{ Kimenet}
 \par A kimeneten tehát egy olyan fájlt kapunk, amiből meghatározható igen könnyen a maximális klaszterméret és az átlagos klaszterméret is.
-Az fentebbi ábrákat is ezek alapján készítettem egy egyszerű programmal. Ezek mellett még külön fájlokban megkapjuk a klaszterek elemeit is.
+Az fentebbi ábrákat is ezek alapján készítettem egy egyszerű programmal. Ezek mellett még külön fájlokban megkapjuk a klaszterek elemeit is
+a program korábbi verziójában.
 \subsection{ Sebesség, konklúzió}
 \par A kód sebessége nagyban függ a definiált maximum távolságtól. Ha az előbbi algoritmust egy igen nagy szám,
 akkor egy nagy klasztert találunk, viszonylag gyorsan, hiszen az MST keresés hiba nélkül lefut. Azonban minél nagyobb távolságokra is
