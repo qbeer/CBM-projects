@@ -85,9 +85,9 @@ Az erős kölcsönhatást leíró alapvető elmélet a Kvantumszíndinamika (Qua
 \par A barionanyaggal foglalkozva az elsődleges cél, hogy megértsük és jobban megismerjük a fázisdiagramot és magukat az átmeneti folyamatokat.
 Először is rövid bevezetőként egy kis termodinamikai áttekintéssel kezdek a fázisokról és a fázisátalakulásokról, alapul véve a The CBM Book-ot:
 \vspace{5mm}
-\par A víz fázisdiagramja megmutatja annak különböző fázisait egy nyomás-hőmérséklet rendszerben. Ismeretes, hogy adott körülmények között van egy
+\par A víz fázisdiagramja megmutatja annak különböző fázisait egy nyomás-hőmérséklet diagramon. Ismeretes, hogy adott körülmények között van egy
 hármaspont, amelyben a víz mindhárom halmazállapotában előfordul. A fázisok közötti vonalak mentén a víz szintén több (itt kettő) halmazállapotban
-előfordulhat és ezek kölcsönösen megtalálhatóak a megfelelő körülmények között. Elsőrendű fázisátmenetnek hívjuk, amikor ezen vonalakon `áthaladva' halmazállapot-változás
+előfordulhat és ezek mindketten megtalálhatóak a megfelelő körülmények között. Elsőrendű fázisátmenetnek hívjuk, amikor ezen vonalakon `áthaladva' halmazállapot-változás
 történik. Továbbá megkülönböztetünk egy kritikus pontot is, amely után a fázisok nem különülnek el jelentős mértékben, ezután
 csak egy úgynevezett sima $\textsl{crossover}$ figyelhető meg, nem elsőrendű fázisátmenet.
 \begin{figure}[H]
@@ -117,8 +117,8 @@ de azokban nem a hőmérséklet kell igen magas legyen, hanem a csillag sűrűs�
 \vspace{5mm}
 \par Nyilvánvalóan, a kvark-gluon plazma földi megfigyelésének egyetlen lehetőségét a nagy energiás részecskegyorsítók és azok
 ütköztetése biztosítja. A QCD jellemző tulajdonsága, hogy a kvarkok közti összetartás csökken, ahogy az ütközési energiát
-növeljük, ez az aszimptotikus szabadság jelensége. A szakirodalom aszimptotikus szabadságként hivatkozik rá. A részecskefizika egy másik fontos
-szimmetriája a kiralitással kapcsolatos. Ez lényegében arról beszél, hogy egy tömegtelen részecske spinje és sebességének iránya egymáshoz 
+növeljük, ez az aszimptotikus szabadság jelensége. A részecskefizika egy másik fontos
+szimmetriája a kiralitással kapcsolatos. Ez lényegében azt jelenti, hogy egy tömegtelen részecske spinje és sebességének iránya egymáshoz 
 képest milyen irányba mutat. Hogyha azok egyirányúak, akkor a részecske jobb kezes, ha ellentétes irányúak akkor pedig bal kezes. Mivel
 az up és down kvarkok tömege közel azonos és igen kicsi (nagy energiákon jó közelítéssel 0)
 ezért azt szokták mondani, hogy a QCD-nek körülbelüli királis szimmetriája van. Ellenben, ez spontán
@@ -147,9 +147,10 @@ lehetőséget biztosítson az első rendű fázisátmenet vizsgálatára, valami
 	\item a micro vertex detektor ( MVD ) az előbbi belsejében
 	\item a szilícium követő rendszer ( STS ) is
 	\item Cserenkov-detektor ( RICH - ring imaging Cherenkov detector - világos kék )
+	\item müon sprektrométer ( fekete )
 	\item ezt követi 4 réteg átmeneti sugárzás ( TRD - transition radiation detector ) detektor
 	\item és egy time-of-flight ( TOF ) fal
-	\item a fő detektorok után található még egy müon spektrométer és egy célfigyelő detektor (PSD)  
+	\item a fő detektorok után található még  egy célfigyelő detektor (PSD)  
 \end{itemize}
 \begin{figure}[H]
 	\centering
@@ -185,12 +186,12 @@ adatok között. Ahol a kaonok invariáns tömege:
 M_{KK} = \sqrt{(E_{1}+E_{2})^{2} - (\underline{p}_{1} + \underline{p}_{2})^{2}}
 \end{equation*}
 \vspace{5mm}
-\par Én a PHSD adatait vizsgáltam, amin lefuttattam a CBM szimulációt. Egy Au+Au centrális ütközést vizsgáltam $\sqrt{s} = 10$ GeV energián. 
+\par Én a PHSD adatait vizsgáltam, amin lefuttattam a CBM szimulációt. Egy Au+Au centrális ütközést vizsgáltam $10$ GeV-es bombázó energián. 
 A CBM szimuláció kimenetét a cbmROOT-tal rekonstruáltam. Több mint 5 millió esemény szerepelt a kezdeti $.root$ fájlban amit a szimulációhoz 
 használtam.
 \vspace{5mm}
 \par A hisztogramokon az x-tengelyen a kaon párok invariáns tömege szerepel, az y-tengelyen pedig az adott energián a `beütések' száma. Egy 
-apró kiugrás látható a nagy kombinatorikus háttéren nagyjából $1.02$ GeV környékén ami pontosan a többlet $\Phi$-mezonok bomlásából adódik.
+apró kiugrás látható a nagy kombinatorikus háttéren nagyjából $1.02$ GeV környékén ami pontosan a $\Phi$-mezonok bomlásából adódik.
 \begin{figure}[H]
 	\centering
 	\begin{subfigure}{0.49\textwidth}
@@ -358,7 +359,7 @@ detektort átláthatjuk vele. Megjeleníthető benne az összes trajektória és
 \vspace{5mm}
 \par A jelgenerátorral 2500 eseményt generáltam ahol a $\Phi$-mezonok pont a céltárgy közepében helyezkedtek el, tehát mintha éppen 
 ott keletkeztek volna az ütközés során. Az ilyen adatok elemzése azért fontos, mert ekkor kontrollált körülmények között, adott részecske számmal
-tudjuk vizsgálni a kimenő részeskék számít, eloszlását és ebből ismeretlen mennyiségű kezdeti részecskénél következtethetünk a $\Phi$-mezonok számára
+tudjuk vizsgálni a kimenő részeskék számát, eloszlását és ebből ismeretlen mennyiségű kezdeti részecskénél következtethetünk a $\Phi$-mezonok számára
 így a strange keltés folyamatára. 
 \par A generátor makróban a bemenő nyaláb energiáját is változtathatjuk, valamint a környezet hőmérsékletét is (mindkettő GeV-ben) és persze
 azt is, hogy milyen részecskét akarunk generálni.
@@ -484,8 +485,7 @@ száma a gráfban, míg m az élek száma. A hatékonyság a használt adatstruk
 igaz, vannak ennél hatékonyabb megoldások is, de számomra ez tűnt a legkényelmesebb, legmegvalósíthatóbb választásnak. Továbbá egy francia 
 kutatócsoport Nantes-ban hasonló nehézion fizikai szimulációjában is ezt az algoritmust javasolják.
 \par  Az egyik elméleti nehézség a megvalósítás során az volt, hogy az algoritmus képes legyen több klasztert formálni. Hiszen miután 
-nem tud továbbhaladni egy klaszterben, azaz nem tud több pontot hozzáadni, ki kell venni az adathalmazból a klaszterezett pontokat és 
-azt ki kell írni egy fájlba. Ezután lehet csak választani egy random pontot újra, és lefuttatni az eddigi algoritmust a már redukált gráfon.
+nem tud továbbhaladni egy klaszterben, azaz nem tud több pontot hozzáadni, ki kell venni az adathalmazból a klaszterezett pontokat. Ezután lehet csak választani egy random pontot újra, és lefuttatni az eddigi algoritmust a már redukált gráfon.
 \subsection{ A kód}
 \par A kódot mellékelem, ezután beszélek majd a bemenetéről és kimenetéről.
 \lstinputlisting[language=C++]{main.cpp}
