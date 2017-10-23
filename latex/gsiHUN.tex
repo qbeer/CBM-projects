@@ -475,7 +475,7 @@ környezetben.
 \subsection{ Az algoritmus}
 \par Nem tökéletesítettem még a programot, ha későbbiekben erre igény van természetesen fejlesztem. Egyenlőre hely- és impulzus-koordinátákat
 olvas be, majd ezután próbálja meg klaszterezni a részecskéket. A klaszterezéshez nem a legjobban ismert klaszterező algoritmust
-használtam hanem az úgynevezett minimális feszítő fa ( vagy MST \footnote{Minimal Spanning Tree} a későbbiekben ) algoritmust. Ezt egy 
+használtam hanem az úgynevezett minimális feszítő fa ( vagy MST \footnote{Minimal Spanning Tree} a későbbiekben ) algoritmust. Ez egy 
 gráfban a lehető legrövidebb utat találja meg. Két pont akkor van összekötve a gráfban, ha egy adott minimum távolságnál közelebb vannak.
 Természetesen ez a minimális távolság is a bemenetről állítható. Egy részecske egy klaszter része, ha legalább az egyik részecskéhez a
 klaszterben kellően közel van. 
@@ -547,13 +547,13 @@ hiszrogrammokat.
 		\includegraphics[width=0.65\textwidth]{ShiftInDistro120.png}
 		\caption{ Klaszterszám - klaszterméret eloszlás 60 fm/c idő után} 
 \end{figure}
-\par Jól megfigyelhető, ahogy a klaszter távolság növelésével egyre gyakoriabbak lesznek a nagyméretű klaszterek. Ezek jelenthetnek nagyobb/kisebb
-magokat. Szemléletes, például, hogy kis impakt paraméternél nagy számú 'törmelék' keletkezik, hiszen a 1/2 nukleonos klaszterek száma végig magas.
-\par A továbbiakban vizsgáltam, hogy mi történik a klaszterező méret növelésével. Itt azt vizsgáltam, hogy az adott 100 párhuzamos fájlra nagyjából 
+\par Jól megfigyelhető, ahogy a klaszter távolság növelésével egyre gyakoriabbak lesznek a nagyméretű klaszterek. Ezek jelenthetnek kisebb/nagyobb
+magokat. Jól látható az is, hogy minél tovább futott a program, a klaszeretek átlagos mérete egyre csökkent, azaz távolodtak egymástól a részecskék
+Szemléletes, például, hogy kis impakt paraméternél nagy számú 'törmelék' keletkezik, hiszen a 1/2 nukleonos klaszterek száma végig magas.
+\par A továbbiakban vizsgáltam, hogy mi történik a klaszterező méret növelésével. Itt azt néztem meg, hogy az adott 100 párhuzamos fájlra nagyjából 
 hasonló eredményeket kapok-e a klaszterezés után. Ezt úgy állapítottam meg, hogy felvettem egy diagramot aminek vízszintes tengelyén az átlagos 
 klaszterméret, függőleges tengelyén pedig a maximum klaszter méret szerepelt mindegyik fájlra. Ez 100 pontot jelent a diagrammon. Ha ezt ábrázolom
-akkor hasonló eredmény az, ha adott pontcsoportok nagyjából egy helyre koncentrálódnak, hiszen ezek részecske csoportosulásokat jelentenek. Elnyújtott
-formájuk amiatt lehet, mivel az 1/2 részecskés klaszterek száma nagyon nagy. Ennél pontosabb definíciót nem fogok adni, mivel a távolság számítása
+akkor hasonló eredmény az, ha adott pontcsoportok nagyjából egy helyre koncentrálódnak. ne szórjanak nagyon, hiszen ezek részecske csoportosulásokat jelentenek. Elnyújtott formájuk amiatt lehet, mivel az 1/2 részecskés klaszterek száma nagyon nagy. Ennél pontosabb definíciót nem fogok adni, mivel a távolság számítása
 ebben kulcsfontossága és azon még javítanom kell a későbbiekben. Különböző, egyre növekedő klaszterező távolságokra az eredeményeim a következőek.
 \par 40 fm/c esetén:
 \begin{figure}[H]
@@ -649,7 +649,7 @@ látszik majd.
 		\caption{ Klaszterméret eloszlás 100 eseményből } 
 	\end{subfigure}
 \end{figure}
-\par Az utolsó (a) ábrán jól látszik, ahogy a ponthalmazok tükrözik az eloszlás diagrammot, amint az két jól elkülöníthető részre esik szét.
+\par Az utolsó (a) ábrán jól látszik, hogy a ponthalmazok jól szemléltetik az eloszlás diagrammot, amint az két jól elkülöníthető részre esik szét.
 \subsection{ Kimenet}
 \par A kimeneten tehát egy olyan fájlt kapunk, amiből meghatározható igen könnyen a maximális klaszterméret és az átlagos klaszterméret is.
 Az fentebbi ábrákat is ezek alapján készítettem egy egyszerű programmal. Ezek mellett még külön fájlokban megkapjuk a klaszterek elemeit is
