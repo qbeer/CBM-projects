@@ -115,11 +115,13 @@ a neutron csillagok anyagát alkothatják. Itt mindkét ábrán egy hőmérsékl
 nem maradt fenn, a hőmérséklet hirtelen csökkenése miatt. Látható az is, hogy a neutron csillagok belseje is kvark-gluon plazmát tartalmazhat,
 de azokban nem a hőmérséklet kell igen magas legyen, hanem a csillag sűrűsége. 
 \vspace{5mm}
-\par Nyilvánvalóan, a kvark-gluon plazma földi megfigyelésének egyetlen lehetőségét a nagy energiás részecskegyorsítók és azok
-ütköztetése biztosítja. A QCD jellemző tulajdonsága, hogy a kvarkok közti összetartás csökken, ahogy az ütközési energiát
+\par Nyilvánvalóan, a kvark-gluon plazma földi megfigyelésének egyetlen lehetőségét a nagy energiás részecskegyorsítók és
+az általuk létrehozott nehézionok ütköztetése biztosítják. 
+A QCD jellemző tulajdonsága, hogy a kvarkok közti összetartás csökken, ahogy az ütközési energiát
 növeljük, ez az aszimptotikus szabadság jelensége. A részecskefizika egy másik fontos
 szimmetriája a kiralitással kapcsolatos. Ez lényegében azt jelenti, hogy egy tömegtelen részecske spinje és sebességének iránya egymáshoz 
-képest milyen irányba mutat. Hogyha azok egyirányúak, akkor a részecske jobb kezes, ha ellentétes irányúak akkor pedig bal kezes. Mivel
+képest milyen irányba mutat. Hogyha azok egyirányúak, akkor a részecske jobb kezes, ha ellentétes irányúak akkor pedig bal kezes. 
+Tömeggel rendelkező részecskék esetén a kiralitásnak nincs értelme, mert az egy Lorentz-transzformációval ellenkezőjére változtatható. Mivel
 az up és down kvarkok tömege közel azonos és igen kicsi (nagy energiákon jó közelítéssel 0)
 ezért azt szokták mondani, hogy a QCD-nek körülbelüli királis szimmetriája van. Ellenben, ez spontán
 sérülhet alacsony hőmérsékleteken és sűrűségeken a párkölcsönhatások miatt. Emiatt az egyik királis irány ekkor 
@@ -178,8 +180,8 @@ rezonanciák nagyon fontosak, hogy a sűrű anyagot vizsgálni tudjuk az ütköz
 fázisdiagram vizsgálatának szempontjából pedig a $\Phi$-mezon, aminek nagyon kicsi a hadronokra vett hatáskeresztmetszete így eléggé 
 valószínűtlen, hogy kölcsönhat a nagy mennyiségű hadronnal, ami a reakció során keletkezik, vagyis jó indikátora a sűrű, kezdeti eseménynek.
 A $\Phi$-mezon egy strange és egy anti-strange kvarkot tartalmaz és a kulcsa lehet az s kvark partonikus anyagban lévő keletkezésére. A
-$\Phi$-mezon $K^{+}, K^{-}$ párokra bomlik nagyjából 50$\%$-os eséllyel és egyebekre (pl. dileptonokra is). A közepes élettartama egészen
-kicsi a az ütközés idejéhez képest, nagyjából $1.55\cdot10^{-22}$ s tehát még a TOF falat sem éri el, csak a bomlástermékei lesznek detektálva már korábban is. 
+$\Phi$-mezon $K^{+}, K^{-}$ párokra bomlik nagyjából 50$\%$-os eséllyel és egyebekre (pl. dileptonokra is). A közepes élettartama nagyjából $1.55\cdot10^{-22}$ s
+ tehát még a TOF falat sem éri el, csak a bomlástermékei lesznek detektálva már korábban is. 
 A tömege $1.019$ MeV ami a kaonok invariáns tömegével kifejezve egy rezonancia csúcsként látható az ütközés/szimuláció után kinyert 
 adatok között. Ahol a kaonok invariáns tömege:
 \begin{equation*}
@@ -528,9 +530,9 @@ távolságának definícióját még tökéletesíteni kell. Először is elvég
 hogy az impulzustérbeli távolság nagyjából egy nagyságrenddel kisebb, mint a térbeli távolság. Az előbbi klaszterezések még a kód korábbi verziójával
 készültek, ez megtalálható a GitHub profilom alatt \footnote{github link}. Ahhoz, hogy ténylegesen összeálljanak a részecskék az kell, hogy mind térben,
 mind impulzustérben közel legyenek egymáshoz. Ehhez felvettem egy olyan vektort aminek az első 3 komponense a térbeli koordinátákat tartalmazza,
-második három komponenese az impulzustérbeli koordinátákat és ezeket beszoroztam egy $scalingFactor$-ral, hogy kompenzáljak a nagyságrendi különbség
-miatt. Ezután különböző klaszterezési távolságkora, amelyek lineárisan nőttek lefuttattam a klaszterezést a 100 adatsorra és ebből készítettem eloszlás
-hiszrogrammokat.
+második három komponenese az impulzustérbeli koordinátákat és ezeket beszoroztam egy $scalingFactor = 13.7$-ral, hogy kompenzáljak a nagyságrendi különbség
+miatt. Ez még nagyon kezdetleges és további finomításra szorul. Ezután különböző klaszterezési távolságkora, amelyek lineárisan nőttek lefuttattam a klaszterezést a 100 adatsorra és ebből készítettem eloszlás
+hiszrogrammokat. A különböző színek különböző klaszterező távolságokat jelölnek ugyanazon a mintán.
 \par Az klaszterméret eloszlások változása a klaszterező távolság növekedésével rendere 40, 50, 60 fm/c után:
 \begin{figure}[H]
 	\centering
@@ -693,4 +695,7 @@ a kimeneti fájlok emberi olvashatóságáért feleltek volna részben, valamint
 	The European Physics Journal A
 	\\\texttt{Challenges in QCD matter physics - The scientific programme of the Compressed Baryonic Matter experiment at FAIR}
 \end{thebibliography}
+\newpage
+\section{Köszenetnyílvánítás}
+Ezúton is szeretném megköszönni témevezetőmnek, Wolf Györgynek a sok segítséget és lehetőséget amit nyújtott nekem. 
 \end{document}
