@@ -5,10 +5,10 @@
 \usepackage{graphicx}
 \usepackage{geometry}
 \geometry{a4paper,
-		     tmargin = 2mm, 
-		     lmargin = 2mm,
-		     rmargin = 2mm,
-		     bmargin = 2mm}
+		     tmargin = 15mm, 
+		     lmargin = 9mm,
+		     rmargin = 9mm,
+		     bmargin = 15mm}
 \usepackage{mathtools}
 \usepackage{amsmath}
 \usepackage{color}
@@ -88,5 +88,16 @@ használtam hanem az úgynevezett minimális feszítő fa ( vagy MST (Minimal Sp
 \par Ennek az algoritmusnak talán az a legnagyobb előnye, hogy nem kell előre feltételezni, hogy hány klaszter van és azt sem, hogy azok vajon hol helyezkedhetnek el. Elméletben az algoritmus hatékonysága O($\log{m}\cdot n$) vagy O($\log{n}\cdot n + m$), ahol n a pontok
 száma a gráfban, míg m az élek száma. A hatékonyság a használt adatstruktúráktól függ. Ez természetesen Prim algoritmusára igaz, vannak ennél hatékonyabb megoldások is, de számomra ez tűnt a legkényelmesebb, legmegvalósíthatóbb választásnak. Továbbá egy francia kutatócsoport Nantes-ban hasonló nehézion fizikai szimulációjában is ezt az algoritmust javasolják.
 \par  Az egyik elméleti nehézség a megvalósítás során az volt, hogy az algoritmus képes legyen több klasztert formálni. Hiszen miután nem tud továbbhaladni egy klaszterben, azaz nem tud több pontot hozzáadni, ki kell venni az adathalmazból a klaszterezett pontokat. Ezután lehet csak választani egy random pontot újra, és lefuttatni az eddigi algoritmust a már redukált gráfon.
-\section{Összegzés}
+\par A kimeneten tehát egy olyan fájlt kapunk, amiből meghatározható igen könnyen a maximális klaszterméret és az átlagos klaszterméret is.
+Az fentebbi ábrákat is ezek alapján készítettem egy egyszerű programmal. Ezek mellett még külön fájlokban megkapjuk a klaszterek elemeit is
+a program korábbi verziójában.
+\par A kód sebessége nagyban függ a definiált maximum távolságtól. Ha az előbbi algoritmust egy igen nagy szám,
+akkor egy nagy klasztert találunk, viszonylag gyorsan, hiszen az MST keresés hiba nélkül lefut. Azonban minél nagyobb távolságokra is
+éleket rakunk a kreált gráfba annál több számítást kell végeznünk és a sebesség nagyban leromlik. Lényegében mondható az, hogy a
+klaszterezés belátható időn belül lefut tetszőlegesen nagy adathalmazra, hacsak a rendszer ki nem fogy a memóriából. 12 ezer sornyi adat 
+klaszterezése esetén ez már megtörténhet. A program több dologra is képes mint amire jelenleg használva van. Az éleket tudja definiálni és
+menteni is, ez az MST algoritmus sajátossága, de nekem nincs rá szükségem ebben az alkalmazásban. A távolság számítást módosítanom kell majd,
+hiszen jelenleg csak euklideszi normám van, ami nem a legmegfelelőbb, de ez csak egy belső függvény átírást igényel majd. A kommentált kódrészletek 
+a kimeneti fájlok emberi olvashatóságáért feleltek volna részben, valamint a további funkcionalitást kapcsoltam ki, de az adatok feldolgozása során
+ kényelmesebb volt így eljárnom.
 \end{document}
